@@ -13,6 +13,7 @@ public class TestAnnotation {
      */
     public static void main(String[] args) throws Exception {
         //加载类
+        //
         String CLASS_NAME = "com.Annotation.OpenSource";
         Class test = Class.forName(CLASS_NAME);
         //判断是否带@Description注解
