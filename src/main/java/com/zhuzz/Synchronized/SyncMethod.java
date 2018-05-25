@@ -26,7 +26,7 @@ public class SyncMethod {
 
         @Override
         public void run() {
-        	System.out.println("Thread1 running ...");
+            System.out.println("Thread1 running ...");
             syncMethod.syncMethod1();
         }
     }

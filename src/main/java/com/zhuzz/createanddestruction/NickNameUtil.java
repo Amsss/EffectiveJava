@@ -2,6 +2,7 @@ package com.zhuzz.createanddestruction;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
 public class NickNameUtil {
 
     private static StringBuilder regEx = new StringBuilder("[")
@@ -31,7 +32,7 @@ public class NickNameUtil {
         Matcher matcher = nickPattern.matcher(nickName);
         int count = 0;
         StringBuffer sb = new StringBuffer();
-        while(matcher.find()){
+        while (matcher.find()) {
             if (count >= 4) {
                 matcher.appendReplacement(sb, "*");
             }
@@ -40,12 +41,12 @@ public class NickNameUtil {
         return matcher.appendTail(sb).toString();
     }
 
-    public static boolean hasBlank(String nickName){
+    public static boolean hasBlank(String nickName) {
         return !blankPattern.matcher(nickName).matches();
     }
-    
+
     public static void main(String[] args) {
-		System.out.println(normalize("$$$$111$$11$$$"));
+        System.out.println(normalize("$$$$111$$11$$$"));
 		/*Pattern pattern = Pattern.compile("(another) (test)");
 	    StringBuffer sb = new StringBuffer();
 
@@ -59,5 +60,5 @@ public class NickNameUtil {
 	    //m.appendTail(sb);
 	    String msg = sb.toString();
 	    System.out.println(msg);*/
-	}
+    }
 }

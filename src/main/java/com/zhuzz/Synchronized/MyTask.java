@@ -2,7 +2,7 @@ package com.zhuzz.Synchronized;
 
 import java.util.TimerTask;
 
-class MyTask extends TimerTask{
+class MyTask extends TimerTask {
 
     @Override
     public void run() {
