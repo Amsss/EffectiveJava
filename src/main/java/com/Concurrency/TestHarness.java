@@ -31,9 +31,9 @@ public class TestHarness {
 							endGate.countDown();
 						}
 					}catch (InterruptedException ignored) {
-						
+
 					}
-					
+
 				}
 			};
 			t.sleep(1);
