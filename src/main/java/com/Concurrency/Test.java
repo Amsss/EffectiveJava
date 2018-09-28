@@ -13,7 +13,7 @@ package com.Concurrency;
  * @创建时间:2018-1-24 下午10:37:27
  */
 public class Test {
-	
+
 	public static void timeRun() {
 		
 	}

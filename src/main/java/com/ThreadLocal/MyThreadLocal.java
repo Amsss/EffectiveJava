@@ -1,12 +1,12 @@
 package com.ThreadLocal;
 
 /**
- * @Description:
+ * @Description: ThreadLocal测试
  * @author: zhuzz
  * @date: 2018-06-25 9:49
  */
 public class MyThreadLocal {
-
+    //避免弱引用
     private static final ThreadLocal<Object> threadLocal = new ThreadLocal<Object>() {
         /**
          * ThreadLocal没有被当前线程赋值时或当前线程刚调用remove方法后调用get方法，返回此方法值

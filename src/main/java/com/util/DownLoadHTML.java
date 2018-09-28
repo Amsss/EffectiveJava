@@ -18,7 +18,7 @@ import java.util.Map;
 public class DownLoadHTML {
 
     public static void main(String[] args) {
-        String pageURL = "http://www.jsdaima.com/d-473.html";
+        String pageURL = "https://blog.csdn.net/u014685516/article/details/54428018";
         String filePath = "D:/3.html";
         try {
             downHTML(pageURL, filePath);

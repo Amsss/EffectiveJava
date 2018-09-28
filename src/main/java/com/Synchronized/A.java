@@ -44,6 +44,7 @@ public class A {
                 }
             }.start();
         }
+
         System.out.println(A.i);
     }
 

@@ -7,7 +7,7 @@ import java.io.Serializable;
  * @author: zhuzz
  * @date: 2018-06-19 10:15
  */
-public class Overload {
+public class Overload extends Father{
     public static void sayHello(Object arg) {
         System.out.println("hello Object");
     }
@@ -24,9 +24,9 @@ public class Overload {
         System.out.println("hello Character");
     }
 
-    public static void sayHello(char arg) {
+    /*public static void sayHello(char arg) {
         System.out.println("hello char");
-    }
+    }*/
 
     /**
      * 变长参数的重载优先级是最低的

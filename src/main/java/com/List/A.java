@@ -4,14 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @Description:
+ * @Description: 测试list为final的情况下对for each 循环的影响
  * @author: zhuzz
  * @date: 2018-06-12 14:50
  */
 public class A {
-    /**
-     * 测试list为final的情况下对for each 循环的影响
-     * */
+
     public static void main(String[] args) {
         List<String> list = new ArrayList<String>();
         list.add("a");

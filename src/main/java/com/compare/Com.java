@@ -10,17 +10,5 @@ public class Com implements Comparable<String> {
         return 0;
     }
 
-    public static void main(String[] args) {
 
-        Date a = new Date();
-        try {
-            TimeUnit.SECONDS.sleep(1);
-        } catch (InterruptedException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-        Date b = new Date();
-        boolean aa = b.after(a);
-        System.out.println(aa);
-    }
 }
