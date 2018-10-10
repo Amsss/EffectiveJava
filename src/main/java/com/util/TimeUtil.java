@@ -572,6 +572,7 @@ public class TimeUtil {
     }
 
     public static void main(String[] args) {
+        LocalDateTime current = LocalDateTime.now();
         System.out.println(TimeUtil.getCurrentDateTime());
         System.out.println(Instant.now().toEpochMilli());
     }

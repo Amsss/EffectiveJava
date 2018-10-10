@@ -6,7 +6,7 @@ import java.math.BigInteger;
 import java.math.RoundingMode;
 
 /**
- * @Description: BigIntegerMath提供BigInteger的实用方法
+ * @description: BigIntegerMath提供BigInteger的实用方法
  * @author: zhuzz
  * @date: 2018-09-28 16:07
  */

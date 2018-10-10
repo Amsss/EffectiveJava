@@ -93,8 +93,9 @@ public class ByteUtils {
         byte[] arrayOfByte = new byte[paramInt2];
         int i = 0;
         while (true) {
-            if (i >= paramInt2)
+            if (i >= paramInt2) {
                 return arrayOfByte;
+            }
             arrayOfByte[i] = paramArrayOfByte[(i + paramInt1)];
             i += 1;
         }
@@ -110,8 +111,9 @@ public class ByteUtils {
         byte[] arrayOfByte = new byte[paramArrayOfInt.length];
         int i = 0;
         while (true) {
-            if (i >= paramArrayOfInt.length)
+            if (i >= paramArrayOfInt.length) {
                 return arrayOfByte;
+            }
             arrayOfByte[i] = (byte) paramArrayOfInt[i];
             i += 1;
         }
@@ -126,8 +128,9 @@ public class ByteUtils {
      */
     public static byte[] stringToBytes(String paramString, int paramInt) {
         while (true) {
-            if (paramString.getBytes().length >= paramInt)
+            if (paramString.getBytes().length >= paramInt) {
                 return paramString.getBytes();
+            }
             paramString = paramString + " ";
         }
     }

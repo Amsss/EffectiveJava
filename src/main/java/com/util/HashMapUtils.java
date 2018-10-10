@@ -3,9 +3,9 @@ package com.util;
 import java.util.*;
 
 /**
+ * @description: Map工具类
  * @author zhuzz
- * @类功能说明: Map工具类
- * @创建时间: 2017-10-27 上午10:31:04
+ * @date: 2017-10-27 上午10:31:04
  */
 public class HashMapUtils<K, V> extends HashMap<K, V> {
     /**
@@ -13,13 +13,12 @@ public class HashMapUtils<K, V> extends HashMap<K, V> {
      */
     private static final long serialVersionUID = 1L;
 
-    //单实例构造方法
     private HashMapUtils() {
 
     }
 
     public static <K, V> HashMap<K, V> newInstance() {
-        return new HashMap<K, V>();
+        return new HashMap<>(16);
     }
 
     public static void main(String[] args) {
