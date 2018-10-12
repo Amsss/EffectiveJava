@@ -1,10 +1,9 @@
 package com.AsyncCallback;
 
 /**
- * 
  * @author zhuzz
- * @类功能说明:回调接口
- * @创建时间:2017-11-29 上午9:40:42
+ * @description: 回调接口
+ * @data: 2017-11-29 上午9:40:42
  */
 public interface CallBack {
 

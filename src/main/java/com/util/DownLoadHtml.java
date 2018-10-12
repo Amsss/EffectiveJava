@@ -10,12 +10,11 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @Author: Zezhao.Zhu
- * @Description: 下载指定网页的html源码
- * @Create: 2018/5/24 18:12
- * @Modified By：
+ * @author: zhuzz
+ * @description: 下载指定网页的html源码
+ * @date: 2018/5/24 18:12
  */
-public class DownLoadHTML {
+public class DownLoadHtml {
 
     public static void main(String[] args) {
         String pageURL = "https://blog.csdn.net/u014685516/article/details/54428018";
@@ -29,11 +28,11 @@ public class DownLoadHTML {
         System.out.println("下载HTML页面完成");
     }
 
-    public static void downHTML(String pageURL, String filePath) throws IOException {
-        FileWriter fw = null;
-        BufferedReader br = null;
+    private static void downHTML(String pageURL, String filePath) throws IOException {
+        FileWriter fileWriter = null;
+        BufferedReader bufferedReader = null;
         try {
-            fw = new FileWriter(filePath);
+            fileWriter = new FileWriter(filePath);
             URL url = new URL(pageURL);
             //打开连接
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
@@ -45,26 +44,31 @@ public class DownLoadHTML {
             Map<String, List<String>> map = connection.getHeaderFields();
             List<String> contentTypelist = map.get("Content-Type");
             String[] contents = contentTypelist.get(0).split("; ");
-            String encoding = null;
+            String encoding;
             if (contents.length == 1) {
                 encoding = "gb2312";
             } else {
                 encoding = contents[1].substring(contents[1].indexOf("=") + 1);
             }
-
             //建立带缓冲的字符输入流
-            br = new BufferedReader(new InputStreamReader(connection.getInputStream(), encoding));
-
-            String line = null;
+            bufferedReader = new BufferedReader(new InputStreamReader(connection.getInputStream(), encoding));
+            String line;
             //不断读取，直至读到结尾
-            while ((line = br.readLine()) != null) {
-                fw.write(line + "\r\n");
+            while ((line = bufferedReader.readLine()) != null) {
+                fileWriter.write(line + "\r\n");
             }
             //断开连接
             connection.disconnect();
+        } catch (Exception e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
         } finally {
-            fw.close();
-            br.close();
+            if (fileWriter != null) {
+                fileWriter.close();
+            }
+            if (bufferedReader != null) {
+                bufferedReader.close();
+            }
         }
     }
 }

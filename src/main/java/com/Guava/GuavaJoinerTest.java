@@ -11,6 +11,8 @@ import java.util.Arrays;
  */
 public class GuavaJoinerTest {
     public static void main(String args[]) {
+        String[] string = "".split(",");
+        System.out.println(string);
         GuavaJoinerTest tester = new GuavaJoinerTest();
         tester.testJoiner();
     }
