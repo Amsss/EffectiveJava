@@ -23,9 +23,11 @@ public class HashMapUtils<K, V> extends HashMap<K, V> {
 
     public static void main(String[] args) {
         Map<String, Object> map = HashMapUtils.newInstance();
+
         map.put("A", 1);
         map.put("B", 2);
         map.put("C", 3);
+
         //测试Jdk1.8特性 Lambda
         map.forEach((k, v) -> {
             if ("C".equals(k)) {
@@ -34,4 +36,5 @@ public class HashMapUtils<K, V> extends HashMap<K, V> {
         });
         System.out.println(map);
     }
+
 }
