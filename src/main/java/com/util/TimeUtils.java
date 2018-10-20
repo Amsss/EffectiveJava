@@ -17,9 +17,9 @@ import java.util.GregorianCalendar;
  * @author: zhuzz
  * @date: 2018-06-25 17:18
  */
-public class TimeUtil {
+public class TimeUtils {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(TimeUtil.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(TimeUtils.class);
 
     /**
      * the milli second of a day
@@ -572,7 +572,6 @@ public class TimeUtil {
     }
 
     public static void main(String[] args) {
-        System.out.println(TimeUtil.getCurrentDateTime());
         System.out.println(Instant.now().toEpochMilli());
     }
 
