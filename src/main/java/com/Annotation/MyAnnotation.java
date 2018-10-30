@@ -3,7 +3,7 @@ package com.Annotation;
 import java.lang.annotation.*;
 
 /**
- * @Description:
+ * @description:
  * @author: zhuzz
  * @date: 2018-06-12 16:19
  */
