@@ -1,7 +1,7 @@
 package com.json.fastjson.pojo;
 
 /**
- * @description:
+ * @description: 学生
  * @author: zhuzz
  * @date: 2018-10-30 17:15
  */

@@ -3,7 +3,7 @@ package com.json.fastjson.pojo;
 import java.util.List;
 
 /**
- * @description:
+ * @description: 教师
  * @author: zhuzz
  * @date: 2018-10-30 17:15
  */

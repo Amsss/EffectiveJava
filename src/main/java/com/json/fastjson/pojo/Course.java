@@ -1,13 +1,13 @@
 package com.json.fastjson.pojo;
 
 /**
- * @description:
+ * @description: 课程pojo
  * @author: zhuzz
  * @date: 2018-10-30 17:14
  */
 public class Course {
-    private String courseName;
     private Integer code;
+    private String courseName;
 
     public Course() {
     }
