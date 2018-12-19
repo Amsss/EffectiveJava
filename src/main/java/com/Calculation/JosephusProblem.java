@@ -1,7 +1,7 @@
 package com.Calculation;
 
 /**
- * @Description: 约瑟夫问题
+ * @description: 约瑟夫问题
  * @author: zhuzz
  * @date: 2018-09-12 13:47
  */

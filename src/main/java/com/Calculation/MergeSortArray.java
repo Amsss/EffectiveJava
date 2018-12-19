@@ -1,7 +1,7 @@
 package com.Calculation;
 
 /**
- * @Description: 合并搜索算法
+ * @description: 合并搜索算法
  * @author: zhuzz
  * @date: 2018-09-12 16:30
  */

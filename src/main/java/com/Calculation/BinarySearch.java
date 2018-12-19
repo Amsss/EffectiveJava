@@ -1,7 +1,7 @@
 package com.Calculation;
 
 /**
- * @Description: 二分查找法
+ * @description: 二分查找法
  * @author: zhuzz
  * @date: 2018-09-12 16:20
  */
@@ -21,6 +21,7 @@ public class BinarySearch {
         }
         return -1;
     }
+
     public static void main(String[] args) {
         int[] number = {
                 1, 4, 2, 6, 7, 3, 9, 8

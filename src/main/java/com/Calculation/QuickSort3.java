@@ -1,7 +1,7 @@
 package com.Calculation;
 
 /**
- * @Description: 快速排序（三）
+ * @description: 快速排序（三）
  * @author: zhuzz
  * @date: 2018-09-12 16:14
  */

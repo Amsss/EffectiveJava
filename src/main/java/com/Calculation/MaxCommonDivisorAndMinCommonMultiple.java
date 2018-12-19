@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.Scanner;
 
 /**
- * @Description:
+ * @description:
  * @author: zhuzz
  * @date: 2018-09-12 12:06
  */

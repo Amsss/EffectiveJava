@@ -1,7 +1,7 @@
 package com.Calculation;
 
 /**
- * @Description: 循序查找法（使用卫兵）
+ * @description: 循序查找法（使用卫兵）
  * @author: zhuzz
  * @date: 2018-09-12 16:19
  */

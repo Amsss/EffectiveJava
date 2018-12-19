@@ -1,7 +1,7 @@
 package com.Calculation;
 
 /**
- * @Description: 多维矩阵转一维矩阵
+ * @description: 多维矩阵转一维矩阵
  * @author: zhuzz
  * @date: 2018-09-12 16:24
  */
@@ -16,6 +16,7 @@ public class TwoDimArray {
         }
         return arr;
     }
+
     public static int[] toOneDimByColumn(int[][] array) {
         int[] arr = new int[array.length * array[0].length];
         for (int row = 0; row < array.length; row++) {

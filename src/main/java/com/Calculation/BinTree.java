@@ -1,17 +1,13 @@
 package com.Calculation;
 
 /**
- * @Description:
+ * @description:
  * @author: zhuzz
  * @date: 2018-09-12 16:27
  */
-//******************************************************************************************************//
 //*****本程序包括简单的二叉树类的实现和前序,中序,后序,层次遍历二叉树算法,*******//
 //******以及确定二叉树的高度,制定对象在树中的所处层次以及将树中的左右***********//
 //******孩子节点对换位置,返回叶子节点个数删除叶子节点,并输出所删除的叶子节点**//
-//*******************************CopyRight By phoenix*******************************************//
-//************************************Jan 12,2008*************************************************//
-//****************************************************************************************************//
 public class BinTree {
     public final static int MAX = 40;
     BinTree[] elements = new BinTree[MAX]; // 层次遍历时保存各个节点
@@ -95,7 +91,9 @@ public class BinTree {
     // 结果返回树的高度
     public int height() {
         int heightOfTree;
-        if (this == null) return -1;
+        if (this == null) {
+            return -1;
+        }
         int leftHeight = (left == null ? 0 : left.height());
         int rightHeight = (right == null ? 0 : right.height());
         heightOfTree = leftHeight < rightHeight ? rightHeight : leftHeight;
@@ -135,7 +133,9 @@ public class BinTree {
     }
     // 将树中的所有节点移走,并输出移走的节点
     public void defoliate() {
-        if (this == null) return;
+        if (this == null) {
+            return;
+        }
         // 若本节点是叶节点，则将其移走
         if (left == null && right == null) {
             System.out.print(this + " ");

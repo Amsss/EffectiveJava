@@ -1,7 +1,7 @@
 package com.Calculation;
 
 /**
- * @Description: 斐波那契数列
+ * @description: 斐波那契数列
  * @author: zhuzz
  * @date: 2018-09-12 10:29
  */

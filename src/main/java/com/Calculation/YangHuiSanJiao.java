@@ -3,7 +3,7 @@ package com.Calculation;
 import java.util.Scanner;
 
 /**
- * @Description: 杨辉三角
+ * @description: 杨辉三角
  * @author: zhuzz
  * @date: 2018-09-12 10:35
  */

@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 /**
- * @Description: 得分排行 ----假设有一教师依学生座号输入考试分数，现希望在输入完毕后自动显示学生分数的排行，当然学生的分数可能相同
+ * @description: 得分排行 ----假设有一教师依学生座号输入考试分数，现希望在输入完毕后自动显示学生分数的排行，当然学生的分数可能相同
  * @author: zhuzz
  * @date: 2018-09-12 16:04
  */

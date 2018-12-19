@@ -1,7 +1,7 @@
 package com.Calculation;
 
 /**
- * @Description: 合并排序
+ * @description: 合并排序
  * @author: zhuzz
  * @date: 2018-09-12 16:18
  */
@@ -10,11 +10,18 @@ public class MergeSort {
         int[] number3 = new int[number1.length + number2.length];
         int i = 0, j = 0, k = 0;
         while (i < number1.length && j < number2.length) {
-            if (number1[i] <= number2[j]) number3[k++] = number1[i++];
-            else number3[k++] = number2[j++];
+            if (number1[i] <= number2[j]) {
+                number3[k++] = number1[i++];
+            } else {
+                number3[k++] = number2[j++];
+            }
         }
-        while (i < number1.length) number3[k++] = number1[i++];
-        while (j < number2.length) number3[k++] = number2[j++];
+        while (i < number1.length) {
+            number3[k++] = number1[i++];
+        }
+        while (j < number2.length) {
+            number3[k++] = number2[j++];
+        }
         return number3;
     }
 }

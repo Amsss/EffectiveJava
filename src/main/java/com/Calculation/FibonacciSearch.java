@@ -1,7 +1,7 @@
 package com.Calculation;
 
 /**
- * @Description: 费式查找法
+ * @description: 费式查找法
  * @author: zhuzz
  * @date: 2018-09-12 16:22
  */

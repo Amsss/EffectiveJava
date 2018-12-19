@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 /**
- * @Description: 河内塔
+ * @description: 河内塔
  * @author: zhuzz
  * @date: 2018-09-12 9:41
  */

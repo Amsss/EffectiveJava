@@ -1,7 +1,7 @@
 package com.Calculation;
 
 /**
- * @Description: 判断是否阿姆斯壮数
+ * @description: 判断是否阿姆斯壮数
  * @author: zhuzz
  * @date: 2018-09-12 12:11
  */

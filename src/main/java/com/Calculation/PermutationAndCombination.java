@@ -1,7 +1,7 @@
 package com.Calculation;
 
 /**
- * @Description: 排列组合
+ * @description: 排列组合
  * @author: zhuzz
  * @date: 2018-09-12 13:50
  */

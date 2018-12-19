@@ -1,7 +1,7 @@
 package com.Calculation;
 
 /**
- * @Description: 上三角、下三角、对称矩阵
+ * @description: 上三角、下三角、对称矩阵
  * @author: zhuzz
  * @date: 2018-09-12 16:24
  */

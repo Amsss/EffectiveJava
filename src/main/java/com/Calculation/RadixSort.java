@@ -1,7 +1,7 @@
 package com.Calculation;
 
 /**
- * @Description: 基数排序
+ * @description: 基数排序
  * @author: zhuzz
  * @date: 2018-09-12 16:19
  */

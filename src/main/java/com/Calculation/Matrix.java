@@ -1,7 +1,7 @@
 package com.Calculation;
 
 /**
- * @Description: 奇数魔方阵
+ * @description: 奇数魔方阵
  * @author: zhuzz
  * @date: 2018-09-12 16:25
  */

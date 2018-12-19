@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Random;
 
 /**
- * @Description: 扑克洗牌
+ * @description: 扑克洗牌
  * @author: zhuzz
  * @date: 2018-09-12 12:25
  */

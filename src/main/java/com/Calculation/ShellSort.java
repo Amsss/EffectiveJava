@@ -1,7 +1,7 @@
 package com.Calculation;
 
 /**
- * @Description: 希尔排序
+ * @description: 希尔排序
  * @author: zhuzz
  * @date: 2018-09-12 16:29
  */

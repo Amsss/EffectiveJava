@@ -1,7 +1,7 @@
 package com.Calculation;
 
 /**
- * @Description: 快速排序（一）
+ * @description: 快速排序（一）
  * @author: zhuzz
  * @date: 2018-09-12 16:13
  */
@@ -16,10 +16,14 @@ public class QuickSort {
             int j = right + 1;
             while (true) {
                 // 向右找
-                while (i + 1 < number.length && number[++i] < s);
+                while (i + 1 < number.length && number[++i] < s) {
+                }
                 // 向左找
-                while (j - 1 > -1 && number[--j] > s);
-                if (i >= j) break;
+                while (j - 1 > -1 && number[--j] > s) {
+                }
+                if (i >= j) {
+                    break;
+                }
                 swap(number, i, j);
             }
             number[left] = number[j];

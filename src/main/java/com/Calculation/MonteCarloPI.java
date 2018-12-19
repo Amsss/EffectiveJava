@@ -1,7 +1,7 @@
 package com.Calculation;
 
 /**
- * @Description: 蒙地卡罗法求IP
+ * @description: 蒙地卡罗法求IP
  * @author: zhuzz
  * @date: 2018-09-12 11:03
  */
