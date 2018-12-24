@@ -1,7 +1,7 @@
 package com.Calculation;
 
 /**
- * @description: 2(2n+1)魔方阵
+ * @Description: 2(2n + 1)魔方阵
  * @author: zhuzz
  * @date: 2018-09-12 16:26
  */
@@ -13,6 +13,7 @@ public class Matrix3 {
         exchange(square, n);
         return square;
     }
+
     private static void magic_o(int[][] square, int n) {
         int row = 0;
         int column = n / 2;
@@ -32,6 +33,7 @@ public class Matrix3 {
             }
         }
     }
+
     private static void exchange(int[][] x, int n) {
         int i, j;
         int m = n / 4;
@@ -51,12 +53,14 @@ public class Matrix3 {
             }
         }
     }
+
     private static void swap(int[][] number, int i, int j, int k, int l) {
         int t;
         t = number[i][j];
         number[i][j] = number[k][l];
         number[k][l] = t;
     }
+
     public static void main(String[] args) {
         int[][] magic = Matrix3.magic22mp1(6);
         for (int k = 0; k < magic.length; k++) {

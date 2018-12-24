@@ -22,7 +22,6 @@ public class DownLoadHtml {
         try {
             downHTML(pageURL, filePath);
         } catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
         System.out.println("下载HTML页面完成");
@@ -60,7 +59,6 @@ public class DownLoadHtml {
             //断开连接
             connection.disconnect();
         } catch (Exception e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         } finally {
             if (fileWriter != null) {

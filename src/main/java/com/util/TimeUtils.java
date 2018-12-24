@@ -150,7 +150,7 @@ public class TimeUtils {
      * localDateTime 转 自定义格式String
      *
      * @param localDateTime
-     * @param format 例：yyyy-MM-dd hh:mm:ss
+     * @param format        例：yyyy-MM-dd hh:mm:ss
      * @return String 若失败为null
      */
     public static String formatLocalDateTimeToString(LocalDateTime localDateTime, String format) {
@@ -167,7 +167,7 @@ public class TimeUtils {
      * String 转 LocalDateTime
      *
      * @param dateStr 例："2017-08-11 01:00:00"
-     * @param format 例："yyyy-MM-dd HH:mm:ss"
+     * @param format  例："yyyy-MM-dd HH:mm:ss"
      * @return LocalDateTime 若失败为null
      */
     public static LocalDateTime stringToLocalDateTime(String dateStr, String format) {
@@ -321,7 +321,7 @@ public class TimeUtils {
     /**
      * 修改日期时间的时间部分
      *
-     * @param date 日期
+     * @param date       日期
      * @param customTime customTime 必须为"hh:mm:ss"这种格式
      * @return
      */
@@ -333,7 +333,7 @@ public class TimeUtils {
     /**
      * 修改日期时间的时间部分
      *
-     * @param date 日期
+     * @param date       日期
      * @param customTime customTime 必须为"hh:mm:ss"这种格式
      * @return
      */

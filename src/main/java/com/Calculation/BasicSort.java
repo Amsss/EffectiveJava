@@ -86,7 +86,7 @@ public class BasicSort {
                 10, 9, 1, 100, 20, 200, 39, 45, 23, 18, 2, 2, 15
         };
         //测试选择排序：
-        System.out.println("选择排序前：");
+        /*System.out.println("选择排序前：");
         for (int x : a) {
             System.out.print(x + " ");
         }
@@ -98,7 +98,7 @@ public class BasicSort {
         for (int x : b) {
             System.out.print(x + " ");
         }
-        System.out.println();
+        System.out.println();*/
         //测试插入排序：
         System.out.println("插入排序前：");
         for (int x : a) {

@@ -6,11 +6,10 @@ import java.io.InputStreamReader;
 import java.util.Scanner;
 
 /**
- * @description:
+ * @description: 求最大公约数和最小公倍数
  * @author: zhuzz
  * @date: 2018-09-12 12:06
  */
-/*求最大公约数和最小公倍数*/
 public class MaxCommonDivisorAndMinCommonMultiple {
 
     public static int gcdOf(int m, int n) {

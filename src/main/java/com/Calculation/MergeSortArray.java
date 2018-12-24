@@ -8,28 +8,37 @@ package com.Calculation;
 public class MergeSortArray {
     private long[] theArray;
     private int nElems;
+
     public MergeSortArray(int max) {
         theArray = new long[max];
         nElems = 0;
     }
-    public void insert(long value) {
-        theArray[nElems] = value; // insert it
-        nElems++; // increment size
+
+    private void insert(long value) {
+        // insert it
+        theArray[nElems] = value;
+        // increment size
+        nElems++;
     }
-    public void display() {
+
+    private void display() {
         for (int j = 0; j < nElems; j++) {
             System.out.print(theArray[j] + " ");
         }
         System.out.println("");
     }
-    public void mergeSort() {
+
+    private void mergeSort() {
         long[] workSpace = new long[nElems];
         recMergeSort(workSpace, 0, nElems - 1);
     }
+
     private void recMergeSort(long[] workSpace, int lowerBound, int upperBound) {
-        if (lowerBound == upperBound) // if range is 1,
-            return; // no use sorting
-        else { // find midpoint
+        // if range is 1,
+        if (lowerBound == upperBound) {
+            // no use sorting
+        } else {
+            // find midpoint
             int mid = (lowerBound + upperBound) / 2;
             // sort low half
             recMergeSort(workSpace, lowerBound, mid);
@@ -39,11 +48,14 @@ public class MergeSortArray {
             merge(workSpace, lowerBound, mid + 1, upperBound);
         }
     }
+
     private void merge(long[] workSpace, int lowPtr, int highPtr, int upperBound) {
-        int j = 0; // workspace index
+        // workspace index
+        int j = 0;
         int lowerBound = lowPtr;
         int mid = highPtr - 1;
-        int n = upperBound - lowerBound + 1; // # of items
+        // # of items
+        int n = upperBound - lowerBound + 1;
         while (lowPtr <= mid && highPtr <= upperBound) {
             if (theArray[lowPtr] < theArray[highPtr]) {
                 workSpace[j++] = theArray[lowPtr++];
@@ -61,9 +73,12 @@ public class MergeSortArray {
             theArray[lowerBound + j] = workSpace[j];
         }
     }
+
     public static void main(String[] args) {
-        int maxSize = 100; // array size
-        MergeSortArray arr = new MergeSortArray(maxSize); // create the array
+        // array size
+        int maxSize = 100;
+        // create the array
+        MergeSortArray arr = new MergeSortArray(maxSize);
         arr.insert(14);
         arr.insert(21);
         arr.insert(43);

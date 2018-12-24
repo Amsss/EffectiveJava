@@ -24,4 +24,14 @@ public class MergeSort {
         }
         return number3;
     }
+
+    public static void main(String[] args) {
+        int[] a = {
+                1, 9, 100, 200
+        };
+        int[] b = {
+                1, 9, 100, 200,250,400
+        };
+        int[] c = sort(a, b);
+    }
 }

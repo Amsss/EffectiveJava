@@ -9,11 +9,7 @@ import java.lang.reflect.Method;
 import java.net.JarURLConnection;
 import java.net.URL;
 import java.net.URLDecoder;
-import java.util.ArrayList;
-import java.util.Enumeration;
-import java.util.LinkedHashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 
@@ -236,6 +232,7 @@ public class ClassUtils {
         // 如果存在 就获取包下的所有文件 包括目录
         File[] dirfiles = dir.listFiles(new FileFilter() {
             // 自定义过滤规则 如果可以循环(包含子目录) 或则是以.class结尾的文件(编译好的java类文件)
+            @Override
             public boolean accept(File file) {
                 return (recursive && file.isDirectory()) || (file.getName().endsWith(".class"));
             }
@@ -268,22 +265,26 @@ public class ClassUtils {
      * @return a {@link java.util.List} object.
      */
     public static List<Class<?>> getAllClassByInterface(Class<?> c) {
-        List<Class<?>> returnClassList = new ArrayList<Class<?>>(); // 返回结果
+        // 返回结果
+        List<Class<?>> returnClassList = new ArrayList<Class<?>>();
         // 如果不是一个接口，则不做处理
         if (!c.isInterface()) {
             return returnClassList;
         }
-        String packageName = c.getPackage().getName(); // 获得当前的包名
-        Set<Class<?>> allClass = getClasses(packageName, true); // 获得当前包下以及子包下的所有类
+        // 获得当前的包名
+        String packageName = c.getPackage().getName();
+        // 获得当前包下以及子包下的所有类
+        Set<Class<?>> allClass = getClasses(packageName, true);
         // 判断是否是同一个接口
         for (Class<?> clazz : allClass) {
-            if (c.isAssignableFrom(clazz)) { // 判断是不是一个接口
-                if (!c.equals(clazz)) { // 本身不加进去
+            // 判断是不是一个接口
+            if (c.isAssignableFrom(clazz)) {
+                // 本身不加进去
+                if (!c.equals(clazz)) {
                     returnClassList.add(clazz);
                 }
             }
         }
         return returnClassList;
     }
-
 }

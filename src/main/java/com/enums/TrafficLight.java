@@ -1,4 +1,4 @@
-package com.enumd;
+package com.enums;
 
 /**
  * @author: zhuzz
@@ -19,6 +19,7 @@ public class TrafficLight {
             case GREEN:
                 color = Color.YELLOW;
                 break;
+            default:
         }
     }
 }

@@ -4,10 +4,13 @@ import com.alibaba.fastjson.TypeReference;
 import com.json.fastjson.pojo.Course;
 import com.json.fastjson.pojo.Student;
 import com.json.fastjson.pojo.Teacher;
-import org.junit.Test;
+import org.junit.*;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 /**
  * @description: FastJsonDemo
@@ -24,6 +27,48 @@ public class FastJson {
     //复杂格式json字符串
     private static final String COMPLEX_JSON_STR =
             "{\"teacherName\":\"crystall\",\"teacherAge\":27,\"course\":{\"courseName\":\"english\",\"code\":1270},\"students\":[{\"studentName\":\"lily\",\"studentAge\":12},{\"studentName\":\"lucy\",\"studentAge\":15}]}";
+
+    /**
+     * @BeforeClass修饰的方法会在所有方法被调用前被执行，
+     * 而且该方法是静态的，所以当测试类被加载后接着就会运行它，
+     * 而且在内存中它只会存在一份实例，它比较适合加载配置文件。
+     *
+     *
+     */
+    @BeforeClass
+    public static void setUpBeforeClass() throws Exception {
+        System.out.println("this is beforeClass...");
+    }
+
+    /**
+     * @AfterClass 所修饰的方法通常用来对资源的清理，如关闭数据库的连接
+     *
+     * @throws Exception
+     */
+    @AfterClass
+    public static void tearDownAfterClass() throws Exception {
+        System.out.println("this is afterClass...");
+    }
+
+    /**
+     *
+     *
+     * @throws Exception
+     */
+    @Before
+    public void setUp() throws Exception {
+        System.out.println("this is before...");
+    }
+
+    /**
+     * @Before和@After 会在每个测试方法的前后各执行一次。
+     * 即使在@Before注解方法、@Test注解方法中抛出了异常，
+     * 所有的@After注解方法依然会被执行
+     */
+    @After
+    public void tearDown() throws Exception {
+        System.out.println("this is after");
+    }
 
 
 //     -------------------------------示例1：JSON格式字符串与JSON对象之间的转换--------------------------------
@@ -229,7 +274,7 @@ public class FastJson {
             String studentName = jsonObjectone.getString("studentName");
             Integer studentAge = jsonObjectone.getInteger("studentAge");
 
-            student = new Student(studentName,studentAge);
+            student = new Student(studentName, studentAge);
             students.add(student);
         }
 
@@ -237,7 +282,8 @@ public class FastJson {
 
 
 //      第二种方式,使用TypeReference<T>类,由于其构造方法使用protected进行修饰,故创建其子类
-        List<Student> studentList = JSONArray.parseObject(JSON_ARRAY_STR, new TypeReference<ArrayList<Student>>() {});
+        List<Student> studentList = JSONArray.parseObject(JSON_ARRAY_STR, new TypeReference<ArrayList<Student>>() {
+        });
         System.out.println("studentList:  " + studentList);
 
 //      第三种方式,使用Gson的思想
@@ -272,11 +318,12 @@ public class FastJson {
      * 复杂json格式字符串到JavaBean_obj的转换
      */
     @Test
-    public void testComplexJSONStrToJavaBean(){
+    public void testComplexJSONStrToJavaBean() {
 
 
 //      第一种方式,使用TypeReference<T>类,由于其构造方法使用protected进行修饰,故创建其子类
-        Teacher teacher = JSONObject.parseObject(COMPLEX_JSON_STR, new TypeReference<Teacher>() {});
+        Teacher teacher = JSONObject.parseObject(COMPLEX_JSON_STR, new TypeReference<Teacher>() {
+        });
         System.out.println(teacher);
 
 //      第二种方式,使用Gson思想
@@ -290,10 +337,11 @@ public class FastJson {
      * 复杂JavaBean_obj到json格式字符串的转换
      */
     @Test
-    public void testJavaBeanToComplexJSONStr(){
+    public void testJavaBeanToComplexJSONStr() {
 
 //       已知复杂JavaBean_obj
-        Teacher teacher = JSONObject.parseObject(COMPLEX_JSON_STR, new TypeReference<Teacher>() {});
+        Teacher teacher = JSONObject.parseObject(COMPLEX_JSON_STR, new TypeReference<Teacher>() {
+        });
         String jsonString = JSONObject.toJSONString(teacher);
         System.out.println(jsonString);
 
@@ -310,10 +358,10 @@ public class FastJson {
      * 简单JavaBean_obj到json对象的转换
      */
     @Test
-    public void testJavaBeanToJSONObject(){
+    public void testJavaBeanToJSONObject() {
 
 //       已知简单JavaBean_obj
-        Student student = new Student("lily", 12);
+        Student student = null;
 
 //        方式一
         String jsonString = JSONObject.toJSONString(student);
@@ -323,22 +371,25 @@ public class FastJson {
 //        方式二
         JSONObject jsonObject1 = (JSONObject) JSONObject.toJSON(student);
         System.out.println(jsonObject1);
+        //assertTrue(false);
+        assertEquals(1,2);
+        //throw new NullPointerException();
 
     }
-
 
 
     /**
      * 简单json对象到JavaBean_obj的转换
      */
     @Test
-    public void testJSONObjectToJavaBean(){
+    public void testJSONObjectToJavaBean() {
 
 //       已知简单json对象
         JSONObject jsonObject = JSONObject.parseObject(JSON_OBJ_STR);
 
 //       第一种方式,使用TypeReference<T>类,由于其构造方法使用protected进行修饰,故创建其子类
-        Student student = JSONObject.parseObject(jsonObject.toJSONString(), new TypeReference<Student>() {});
+        Student student = JSONObject.parseObject(jsonObject.toJSONString(), new TypeReference<Student>() {
+        });
         System.out.println(student);
 
 //       第二种方式,使用Gson的思想
@@ -388,7 +439,8 @@ public class FastJson {
 
 //       第一种方式,使用TypeReference<T>类,由于其构造方法使用protected进行修饰,故创建其子类
         ArrayList<Student> students = JSONArray.parseObject(jsonArray.toJSONString(),
-                new TypeReference<ArrayList<Student>>() {});
+                new TypeReference<ArrayList<Student>>() {
+                });
 
         System.out.println(students);
 
@@ -396,7 +448,6 @@ public class FastJson {
         List<Student> students1 = JSONArray.parseArray(jsonArray.toJSONString(), Student.class);
         System.out.println(students1);
     }
-
 
 
 //     ----------------------------示例3.3-复杂JavaBean_obj与json对象之间的转换----------------------------
@@ -441,7 +492,8 @@ public class FastJson {
         JSONObject jsonObject = JSONObject.parseObject(COMPLEX_JSON_STR);
 
 //       第一种方式,使用TypeReference<T>类,由于其构造方法使用protected进行修饰,故创建其子类
-        Teacher teacher = JSONObject.parseObject(jsonObject.toJSONString(), new TypeReference<Teacher>() {});
+        Teacher teacher = JSONObject.parseObject(jsonObject.toJSONString(), new TypeReference<Teacher>() {
+        });
         System.out.println(teacher);
 
 //       第二种方式,使用Gson的思想
@@ -465,11 +517,11 @@ public class FastJson {
         Integer age = 18;
         Integer age2 = 28;
 
-        String jsontest = "[{\"name\":\""+ name +"\",\"age\":"+ age +"},{\"name\":\""+ name2 +"\",\"age\":"+ age2 +"}]";
+        String jsontest = "[{\"name\":\"" + name + "\",\"age\":" + age + "},{\"name\":\"" + name2 + "\",\"age\":" + age2 + "}]";
 
 //        "+ name +"  "+ age +"  "+ name2 +"  "+ age2 +"
 //        json字符串拼接,先写2个双引号,然后双引号里面写2个++号,然后把变量的名称写进去就OK
-        String json = "[{\"name\":\""+ name +"\",\"age\":"+ age +"},{\"name\":\""+ name2 +"\",\"age\":"+ age2 +"}]";
+        String json = "[{\"name\":\"" + name + "\",\"age\":" + age + "},{\"name\":\"" + name2 + "\",\"age\":" + age2 + "}]";
 
         System.out.println(jsontest);
         System.out.println(json);
