@@ -1,7 +1,7 @@
 package com.DataStructures;
 
 /**
- * @Description: 节点类
+ * @description: 节点类
  * @author: zhuzz
  * @date: 2018-09-11 12:14
  */
@@ -13,20 +13,20 @@ public class Node<T> {
 
     private Node<T> next;
 
-    public Node(){
+    public Node() {
         super();
         this.pre = null;
         this.next = null;
     }
 
-    public Node(T data){
+    public Node(T data) {
         super();
         this.data = data;
         this.pre = null;
         this.next = null;
     }
 
-    public Node(T data, Node<T> pre, Node<T> next){
+    public Node(T data, Node<T> pre, Node<T> next) {
         super();
         this.data = data;
         this.pre = pre;

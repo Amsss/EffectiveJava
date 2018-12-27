@@ -1,7 +1,7 @@
 package com.DataStructures;
 
 /**
- * @Description:
+ * @description:
  * @author: zhuzz
  * @date: 2018-09-11 12:12
  */

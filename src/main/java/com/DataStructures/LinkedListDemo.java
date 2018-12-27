@@ -4,30 +4,36 @@ import java.util.Iterator;
 import java.util.NoSuchElementException;
 
 /**
- * @Description: 链表类
+ * @description: 链表类
  * @author: zhuzz
  * @date: 2018-09-11 12:15
  */
 public class LinkedListDemo<T> {
+    /**
+     * 头结点
+     */
+    private Node<T> head;
+    /**
+     * 尾节点
+     */
+    private Node<T> tail;
+    /**
+     * 链表大小
+     */
+    private int size;
 
-    private Node<T> head;//头结点
-
-    private Node<T> tail;//尾节点
-
-    private int size;//链表大小
-
-    public LinkedListDemo(){
+    public LinkedListDemo() {
         head = new Node<T>(null, null, null);
         tail = new Node<T>(null, head, null);
         head.setNext(tail);
         size = 0;
     }
 
-    public MyIterator<T> iterator(){
+    public MyIterator<T> iterator() {
         return new MyIterator<T>();
     }
 
-    public void add(T data){
+    public void add(T data) {
         Node<T> node = new Node<T>(data);
         node.setPre(tail.getPre());
         tail.getPre().setNext(node);
@@ -36,11 +42,11 @@ public class LinkedListDemo<T> {
         size++;
     }
 
-    public void remove(T data){
+    public void remove(T data) {
         Node<T> node = head;
-        while(tail != node.getNext()){
+        while (tail != node.getNext()) {
             Node<T> currentNode = node.getNext();
-            if(currentNode.getData().equals(data)){
+            if (currentNode.getData().equals(data)) {
                 currentNode.getPre().setNext(currentNode.getNext());
                 currentNode.getNext().setPre(currentNode.getPre());
                 size--;
@@ -50,9 +56,9 @@ public class LinkedListDemo<T> {
         }
     }
 
-    public void print(){
+    public void print() {
         Node<T> node = head;
-        while(tail != node.getNext()){
+        while (tail != node.getNext()) {
             Node<T> currentNode = node.getNext();
             System.out.println(currentNode.getData().toString());
             node = currentNode;
@@ -60,13 +66,13 @@ public class LinkedListDemo<T> {
     }
 
     /**
-     *
      * 项目名： adt
      * 类名： LinkedListDemo.java
      * 类描述： 定义一个该链表的迭代器来访问
      * 备注：
      * 创建日期：2014-10-10
      * 创建时间：上午12:10:46
+     *
      * @param <T>
      */
     @SuppressWarnings("hiding")
@@ -79,12 +85,12 @@ public class LinkedListDemo<T> {
 
         @Override
         public boolean hasNext() {
-            return currentNode == tail? false:true;
+            return currentNode == tail ? false : true;
         }
 
         @Override
         public T next() {
-            if(!hasNext()){
+            if (!hasNext()) {
                 throw new IndexOutOfBoundsException();
             }
             returnedNode = currentNode;
@@ -94,7 +100,7 @@ public class LinkedListDemo<T> {
 
         @Override
         public void remove() {
-            if(!hasNext()){
+            if (!hasNext()) {
                 throw new NoSuchElementException();
             }
             returnedNode.getPre().setNext(returnedNode.getNext());

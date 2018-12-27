@@ -10,13 +10,12 @@ import java.io.InputStreamReader;
  * @date: 2018-09-12 16:04
  */
 public class ScoreRank {
-    public static void main(String[] args)
-            throws NumberFormatException, IOException {
+    public static void main(String[] args) throws NumberFormatException, IOException {
         final int MAX = 100;
         final int MIN = 0;
         int[] score = new int[MAX + 1];
         int[] juni = new int[MAX + 2];
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System. in ));
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         int count = 0;
         do {
             System.out.print("输入分数，-1结束：");
@@ -35,5 +34,4 @@ public class ScoreRank {
             System.out.println(score[i] + "\t" + juni[score[i] + 1]);
         }
     }
-
 }

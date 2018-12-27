@@ -1,18 +1,25 @@
 package com.Annotation;
 
-import java.lang.annotation.Documented;   
-import java.lang.annotation.ElementType;   
-import java.lang.annotation.Retention;   
-import java.lang.annotation.RetentionPolicy;   
-import java.lang.annotation.Target;
+import java.lang.annotation.*;
 
 /**
- * 注意这里的@Target与@Description里的不同,参数成员也不同
- * */
+ * @description: 注意这里的@Target与@Description里的不同,参数成员也不同
+ * @author: zhuzz
+ * @date: 2018/12/24 19:39
+ */
 @Target(ElementType.METHOD)
-@Retention(RetentionPolicy.RUNTIME)   
-@Documented  
-public @interface Name {   
-    String originate();   
-    String community();   
+@Retention(RetentionPolicy.RUNTIME)
+@Documented
+public @interface Name {
+    /**
+     *
+     * @return
+     */
+    String originate();
+
+    /**
+     *
+     * @return
+     */
+    String community();
 } 

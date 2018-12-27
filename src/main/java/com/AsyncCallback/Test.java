@@ -1,9 +1,9 @@
 package com.AsyncCallback;
 
 /**
- * @author zhuzz
- * @类功能说明:测试类
- * @创建时间:2017-11-29 上午9:42:42
+ * @description: 测试类
+ * @author: zhuzz
+ * @date: 2018/12/24 19:44
  */
 public class Test {
     public static void main(String[] args) {

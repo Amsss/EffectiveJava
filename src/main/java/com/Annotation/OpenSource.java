@@ -7,8 +7,9 @@ package com.Annotation;
  */
 @Description("OpenSource,You are what you read.")
 public class OpenSource {
+
     @Name(originate = "主办方：China", community = "sky")
-    public String getName() {
+    public String getName1() {
         return null;
     }
 

@@ -3,7 +3,7 @@ package com.DataStructures;
 import java.util.Iterator;
 
 /**
- * @Description:
+ * @description:
  * @author: zhuzz
  * @date: 2018-09-11 12:17
  */

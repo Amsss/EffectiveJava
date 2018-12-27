@@ -17,9 +17,11 @@ public class QuickSort {
             while (true) {
                 // 向右找
                 while (i + 1 < number.length && number[++i] < s) {
+                    System.out.println("向右找");
                 }
                 // 向左找
                 while (j - 1 > -1 && number[--j] > s) {
+                    System.out.println("向左找");
                 }
                 if (i >= j) {
                     break;

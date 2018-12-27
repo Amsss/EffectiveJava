@@ -6,9 +6,11 @@ package com.Calculation;
  * @date: 2018-09-12 16:14
  */
 public class QuickSort3 {
+
     public static void sort(int[] number) {
         sort(number, 0, number.length - 1);
     }
+
     private static void sort(int[] number, int left, int right) {
         if (left < right) {
             int q = partition(number, left, right);

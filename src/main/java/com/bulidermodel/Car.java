@@ -1,13 +1,21 @@
 package com.bulidermodel;
 
+/**
+ * @description:
+ * @author: zhuzz
+ * @date: 2018/12/24 11:38
+ */
 public class Car {
-    private final String manufacturer; // 制造商
+    /**
+     * 制造商
+     */
+    private final String manufacturer;
     private final String brand; // 品牌
     private final String model; // 型号
     private final String producingArea; // 产地
     private final String producingDate; // 生产时间
     private final Engine engine; // 发动机
-    private final Wheel wheel; // 轮胎
+    private final Wheel wheel; //
     private final Light light; // 车灯
 
     Car(String manufacturer, String brand, String model, String producingArea,

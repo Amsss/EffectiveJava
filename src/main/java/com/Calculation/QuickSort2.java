@@ -33,11 +33,11 @@ public class QuickSort2 {
             // 对右边进行递回
         }
     }
+
     private static void swap(int[] number, int i, int j) {
         int t;
         t = number[i];
         number[i] = number[j];
         number[j] = t;
     }
-
 }

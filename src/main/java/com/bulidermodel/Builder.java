@@ -1,10 +1,15 @@
 package com.bulidermodel;
 
 /**
- * @author zhuzz
- * @类功能说明:
- * @创建时间:2017-10-27 上午11:16:16
+ * @description:
+ * @author: zhuzz
+ * @date: 2018/12/24 19:45
  */
 public interface Builder<T> {
+
+    /**
+     *
+     * @return
+     */
     T build();
 }
