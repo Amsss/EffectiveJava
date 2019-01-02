@@ -17,7 +17,7 @@ import java.util.Map;
 public class DownLoadHtml {
 
     public static void main(String[] args) {
-        String pageURL = "https://blog.csdn.net/u014685516/article/details/54428018";
+        String pageURL = "https://m.8wenku.com/chapter/view?id=1690&chapter_no=20";
         String filePath = "D:/3.html";
         try {
             downHTML(pageURL, filePath);

@@ -3,8 +3,8 @@ package com.util;
 import java.util.*;
 
 /**
- * @description: Map工具类
  * @author zhuzz
+ * @description: Map工具类
  * @date: 2017-10-27 上午10:31:04
  */
 public class HashMapUtils<K, V> extends HashMap<K, V> {
@@ -21,9 +21,14 @@ public class HashMapUtils<K, V> extends HashMap<K, V> {
     }
 
     public static void main(String[] args) {
+        Map<String, Object> map2 = new HashMap<String, Object>(16) {
+            {
+                put("11", "22");
+            }
+        };
         Map<String, Object> map1 = new HashMap<>(16);
-        map1.put("11","222");
-        Double a = -1.0/0.0;
+        map1.put("11", "222");
+        Double a = -1.00 / 1.00;
         System.out.println(a.isNaN());
         /*System.out.println(map1);
         Map<String, Object> map = HashMapUtils.newInstance();
