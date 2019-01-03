@@ -1,10 +1,10 @@
 package com.reordering;
 
-/**
- * @Description: "重排序"现象
+/**d
+ * @escription: "重排序"现象
  * @author: zhuzz
  * @date: 2018-07-10 14:04
- */
+ */d
 public class NoVisibility {
     private static boolean ready = false;
     private static int number;

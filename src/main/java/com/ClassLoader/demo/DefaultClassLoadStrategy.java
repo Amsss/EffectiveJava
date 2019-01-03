@@ -1,7 +1,13 @@
 package com.ClassLoader.demo;
 
+/**
+ * @description: 
+ * @author: zhuzz
+ * @date: 2019/1/3 16:00
+ */
 public class DefaultClassLoadStrategy implements IClassLoadStrategy {
 
+    @Override
     public ClassLoader getClassLoader(final ClassLoadContext ctx) {
         final ClassLoader callerLoader = ctx.getCallerClass().getClassLoader();
         final ClassLoader contextLoader = Thread.currentThread().getContextClassLoader();
@@ -9,11 +15,11 @@ public class DefaultClassLoadStrategy implements IClassLoadStrategy {
 
         // 如果调用者加载器和上下文加载器是父子关系，则一直选择子加载器：
 
-        if (isChild(contextLoader, callerLoader))
+        if (isChild(contextLoader, callerLoader)) {
             result = callerLoader;
-        else if (isChild(callerLoader, contextLoader))
+        } else if (isChild(callerLoader, contextLoader)) {
             result = contextLoader;
-        else {
+        } else {
             // else分支可以被合并到前一个，单独列出来是要强调在模棱两可的情况下：
             result = contextLoader;
         }
@@ -21,8 +27,9 @@ public class DefaultClassLoadStrategy implements IClassLoadStrategy {
         final ClassLoader systemLoader = ClassLoader.getSystemClassLoader();
 
         // 部署时作为启动类或启动扩展类的注意事项：
-        if (isChild(result, systemLoader))
+        if (isChild(result, systemLoader)) {
             result = systemLoader;
+        }
 
         return result;
     }

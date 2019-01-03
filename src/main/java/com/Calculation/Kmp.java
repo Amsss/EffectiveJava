@@ -1,7 +1,7 @@
 package com.Calculation;
 
 /**
- * @description:
+ * @description: KMP：Knuth-Morris-Pratt算法（简称KMP）核心原理是利用一个“部分匹配表”，跳过已经匹配过的元素
  * @author: zhuzz
  * @date: 2018-12-29 16:26
  */

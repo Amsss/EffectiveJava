@@ -2,6 +2,11 @@ package com.ClassLoader.demo;
 
 import java.net.URL;
 
+/**
+ * @description:
+ * @author: zhuzz
+ * @date: 2019/1/3 15:59
+ */
 public abstract class ResourceLoader {
 
     /**
@@ -18,9 +23,10 @@ public abstract class ResourceLoader {
      */
     public static URL getResource(final String name) {
         final ClassLoader loader = ClassLoaderResolver.getClassLoader();
-        if (loader != null)
+        if (loader != null) {
             return loader.getResource(name);
-        else
+        } else {
             return ClassLoader.getSystemResource(name);
+        }
     }
 }

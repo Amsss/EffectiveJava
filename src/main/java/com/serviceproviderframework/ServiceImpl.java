@@ -1,9 +1,9 @@
 package com.serviceproviderframework;
 
 /**
- * @Author: Zezhao.Zhu
- * @Description: 服务
- * @Date: 11:12 2018/5/25
+ * @description: 服务
+ * @author: zhuzz
+ * @date: 2019/1/3 16:24
  */
 public class ServiceImpl implements Service {
 

@@ -1,16 +1,14 @@
 package com.serviceproviderframework;
 
 /**
- * @Author: Zezhao.Zhu
- * @Description: 服务提供者
- * @Date: 11:11 2018/5/25
+ * @description: 服务提供者
+ * @author: zhuzz
+ * @date: 2019/1/3 16:23
  */
 public class ProviderImpl implements Provider {
 
     @Override
     public Service newService() {
-        // TODO Auto-generated method stub
         return new ServiceImpl();
     }
-
 }

@@ -1,10 +1,14 @@
 package com.DesignPattern.Builder;
 
+/**
+ * @description:
+ * @author: zhuzz
+ * @date: 2019/1/3 16:15
+ */
 public class MailSender implements Sender {
 
-	public void Send() {
-		System.out.println("this is mailsender!");
-
-	}
-
+    @Override
+    public void send() {
+        System.out.println("this is mailsender!");
+    }
 }

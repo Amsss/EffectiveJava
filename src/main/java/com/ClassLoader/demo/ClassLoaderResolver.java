@@ -1,10 +1,23 @@
 package com.ClassLoader.demo;
 
+/**
+ * @description:
+ * @author: zhuzz
+ * @date: 2019/1/3 16:00
+ */
 public abstract class ClassLoaderResolver {
-
-    private static IClassLoadStrategy s_strategy; // 类装载时初始化（见下面的静态语句块）
-    private static final int CALL_CONTEXT_OFFSET = 3; // 如果这个类重新设计时可能需要改变这个值
-    private static final CallerResolver CALLER_RESOLVER; // 类装载时初始化（见下面的静态语句块）
+    /**
+     * 类装载时初始化（见下面的静态语句块）
+     */
+    private static IClassLoadStrategy s_strategy;
+    /**
+     * 如果这个类重新设计时可能需要改变这个值
+     */
+    private static final int CALL_CONTEXT_OFFSET = 3;
+    /**
+     * 类装载时初始化（见下面的静态语句块）
+     */
+    private static final CallerResolver CALLER_RESOLVER;
 
     static {
         try {
@@ -46,6 +59,7 @@ public abstract class ClassLoaderResolver {
      * SecurityManager子类可见。只需要创建一个CallerResolver类的实例 不必安装一个实际的安全管理器
      */
     private static final class CallerResolver extends SecurityManager {
+        @Override
         protected Class[] getClassContext() {
             return super.getClassContext();
         }

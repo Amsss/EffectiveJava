@@ -6,7 +6,7 @@ import com.google.common.hash.Funnels;
 import java.nio.charset.Charset;
 
 /**
- * @description:
+ * @description: 布隆过滤器
  * @author: zhuzz
  * @date: 2018-12-29 17:49
  */

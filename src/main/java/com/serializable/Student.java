@@ -6,6 +6,11 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
+/**
+ * @description: 序列化
+ * @author: zhuzz
+ * @date: 2019/1/3 16:23
+ */
 public class Student implements Serializable {
     private static final long serialVersionUID = 1L;
     public static String aa = "111111111";

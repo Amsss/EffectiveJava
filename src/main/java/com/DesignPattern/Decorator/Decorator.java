@@ -1,5 +1,10 @@
 package com.DesignPattern.Decorator;
 
+/**
+ * @description: 装饰器模式
+ * @author: zhuzz
+ * @date: 2019/1/3 16:11
+ */
 public class Decorator implements Sourceable {  
 	  
     private Sourceable source;  
@@ -8,6 +13,7 @@ public class Decorator implements Sourceable {
         super();  
         this.source = source;  
     }  
+    @Override
     public void method() {
         System.out.println("before decorator!");  
         source.method();  
