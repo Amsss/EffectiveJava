@@ -1,6 +1,6 @@
 EffectiveJava
 ====
-记录各种Demo的使用
+记录各种Demo的使用（很垃圾 勿喷）
 ## Annotation
 ### 自定义注解demo
 
