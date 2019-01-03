@@ -1,5 +1,10 @@
 package com.bulidermodel;
 
+/**
+ * @description: 2222
+ * @author: zhuzz
+ * @date: 2019/1/3 15:34
+ */
 public class SIAMessage {
     private final String businessCode;
     private final String type;
@@ -73,8 +78,8 @@ public class SIAMessage {
             if(builder.message==null || builder.message.length()<1){
                 throw new IllegalArgumentException("message can not be empty!");
             }
-
-            if(builder.type==null || builder.type.length()<1){  //设置默认mime-type
+            //设置默认mime-type
+            if(builder.type==null || builder.type.length()<1){
                 builder.type = "application/json";
             }
 

@@ -1,5 +1,10 @@
 package com.bulidermodel;
 
+/**
+ * @description: 人员类
+ * @author: zhuzz
+ * @date: 2019/1/3 15:33
+ */
 public class Person {
     private final String name;
     private final String sex;

@@ -1,8 +1,22 @@
 package com.bulidermodel;
 
+/**
+ * @description: 车灯类
+ * @author: zhuzz
+ * @date: 2019/1/3 15:32
+ */
 public class Light {
+    /**
+     * 品牌
+     */
 	private String brand;
-    private String structure;   //结构
+    /**
+     * 结构
+     */
+    private String structure;
+    /**
+     * 生产日期
+     */
     private String producingDate;
 
     Light(String brand, String structure, String producingDate) {
@@ -16,9 +30,27 @@ public class Light {
         return new Builder();
     }
 
+    @Override
+    public String toString() {
+        return "Light{" +
+                "brand='" + brand + '\'' +
+                ", structure='" + structure + '\'' +
+                ", producingDate='" + producingDate + '\'' +
+                '}';
+    }
+
     public static class Builder{
+        /**
+         * 品牌
+         */
         private String brand;
-        private String structure;   //结构
+        /**
+         * 结构
+         */
+        private String structure;
+        /**
+         * 生产日期
+         */
         private String producingDate;
 
         public Builder brand(String brand){
@@ -37,7 +69,6 @@ public class Light {
         }
 
         public Light build(){
-
             return new Light(brand, structure, producingDate);
         }
     }

@@ -10,13 +10,34 @@ public class Car {
      * 制造商
      */
     private final String manufacturer;
-    private final String brand; // 品牌
-    private final String model; // 型号
-    private final String producingArea; // 产地
-    private final String producingDate; // 生产时间
-    private final Engine engine; // 发动机
-    private final Wheel wheel; //
-    private final Light light; // 车灯
+    /**
+     * 品牌
+     */
+    private final String brand;
+    /**
+     * 型号
+     */
+    private final String model;
+    /**
+     * 产地
+     */
+    private final String producingArea;
+    /**
+     * 生产时间
+     */
+    private final String producingDate;
+    /**
+     * 发动机
+     */
+    private final Engine engine;
+    /**
+     * 轮胎
+     */
+    private final Wheel wheel;
+    /**
+     * 车灯
+     */
+    private final Light light;
 
     Car(String manufacturer, String brand, String model, String producingArea,
         String producingDate, Engine engine, Wheel wheel, Light light) {
@@ -30,14 +51,52 @@ public class Car {
         this.light = light;
     }
 
+    @Override
+    public String toString() {
+        return "Car{" +
+                "manufacturer='" + manufacturer + '\'' +
+                ", brand='" + brand + '\'' +
+                ", model='" + model + '\'' +
+                ", producingArea='" + producingArea + '\'' +
+                ", producingDate='" + producingDate + '\'' +
+                ", engine=" + engine +
+                ", wheel=" + wheel +
+                ", light=" + light +
+                '}';
+    }
+
     public static class Builder {
-        private String manufacturer; // 制造商
-        private String brand; // 品牌
-        private String model; // 型号
-        private String producingArea; // 产地
-        private String producingDate; // 生产时间
+        /**
+         * 制造商
+         */
+        private String manufacturer;
+        /**
+         * 品牌
+         */
+        private String brand;
+        /**
+         * 型号
+         */
+        private String model;
+        /**
+         * 产地
+         */
+        private String producingArea;
+        /**
+         * 生产时间
+         */
+        private String producingDate;
+        /**
+         * 发动机
+         */
         private Engine engine;
+        /**
+         * 轮胎
+         */
         private Wheel wheel;
+        /**
+         * 车灯
+         */
         private Light light;
 
         public Builder(String manufacturer, String brand, String model) {
@@ -72,7 +131,6 @@ public class Car {
         }
 
         public Car build() {
-
             return new Car(manufacturer, brand, model, producingArea,
                     producingDate, engine, wheel, light);
         }
@@ -98,7 +156,6 @@ public class Car {
                         .producingDate("2016-02-01 00:00:00")
                         .build())
                 .build();
-
         System.out.println(car);
     }
 }
