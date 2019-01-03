@@ -15,7 +15,7 @@ public class LiuDeHuaProxy {
      * @方法说明：这个方法返回刘德华的代理对象：Person person = LiuDeHuaProxy.getProxy();//得到一个代理对象
      */
     public Person getProxy() {
-        // 使用Proxy.newProxyInstance(ClassLoader loader, Class<?>[] interfaces,
+        // 使用Proxy.newProxyInstance(classLoader loader, Class<?>[] interfaces,
         // InvocationHandler h)返回某个对象的代理对象
         return (Person) Proxy.newProxyInstance(LiuDeHuaProxy.class
                         .getClassLoader(), ldh.getClass().getInterfaces(),
