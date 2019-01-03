@@ -6,10 +6,9 @@ import java.io.File;
 import java.io.FileOutputStream;
 
 /**
- * @Author: Zezhao.Zhu
- * @Description: 使用javassit动态生成一个java类
- * @Create: 2018/5/28 16:44
- * @Modified By：
+ * @description: 使用javassit动态生成一个java类
+ * @author: zhuzz
+ * @date: 2019/1/3 17:02
  */
 public class GenerateClassByJavassist {
 

@@ -1,7 +1,5 @@
 package com.genericType;
 
-import java.util.List;
-
 /**
  * @description: 当泛型遇见重载
  * @author: zhuzz
@@ -40,7 +38,4 @@ public class GenericTypes {
         System.out.println("invoke method (List<Integer> list)");
         return 1;
     }*/
-
-
-
 }
