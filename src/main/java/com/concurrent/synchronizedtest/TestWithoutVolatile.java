@@ -1,6 +1,10 @@
 package com.concurrent.synchronizedtest;
 
-
+/**
+ * @description: 
+ * @author: zhuzz
+ * @date: 2019/1/7 10:49
+ */
 public class TestWithoutVolatile {
     private static boolean bChanged;
 

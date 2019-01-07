@@ -1,5 +1,10 @@
 package com.concurrent.synchronizedtest;
 
+/**
+ * @description: 
+ * @author: zhuzz
+ * @date: 2019/1/7 10:50
+ */
 public class TestWithVolatile {
     private static volatile boolean bChanged;
 

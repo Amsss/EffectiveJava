@@ -1,22 +1,16 @@
-/**
- * @文件名：WriteCorrectThread.java 
- * @作者:zhuzz
- * @创建时间： 2018-1-24 下午10:47:07
- * @版本:V1.0
- * 版权：版权所有 bsoft 保留所有权力。
- */
 package com.concurrent;
 
 /**
- * @author zhuzz
- * @类功能说明:
- * @创建时间:2018-1-24 下午10:47:07
+ * @description:
+ * @author: zhuzz
+ * @date: 2019/1/7 10:47
  */
+public class WriteCorrectThread extends Thread {
 
-public class WriteCorrectThread  extends Thread {
-	public void run() {
-		while (true) {
-			System.out.println(Thread.currentThread().getName()+"write");
+    @Override
+    public void run() {
+        while (true) {
+            System.out.println(Thread.currentThread().getName() + "write");
 			/*
 			long start = System.currentTimeMillis();
 			int queue = ThreadConstants.uploadOriginalDataQueue.size();
@@ -52,6 +46,7 @@ public class WriteCorrectThread  extends Thread {
 					long end = System.currentTimeMillis();
 					logger.info("成功上传OriginalData数据200条.cost:"+(end-start)+"ms");
 				}
-		*/}
-	}
+		*/
+        }
+    }
 }

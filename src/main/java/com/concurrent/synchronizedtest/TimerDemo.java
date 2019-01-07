@@ -3,6 +3,11 @@ package com.concurrent.synchronizedtest;
 import java.util.Timer;
 import java.util.concurrent.TimeUnit;
 
+/**
+ * @description: 
+ * @author: zhuzz
+ * @date: 2019/1/7 10:50
+ */
 public class TimerDemo {
     public static void main(String[] args) {
         //创建定时器对象

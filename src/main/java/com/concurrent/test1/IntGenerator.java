@@ -1,20 +1,20 @@
 package com.concurrent.test1;
 
 /**
- * @author zhuzz
- * @类功能说明:
- * @创建时间:2018-2-26 下午4:27:56
+ * @description:
+ * @author: zhuzz
+ * @date: 2019/1/7 10:55
  */
 public abstract class IntGenerator {
-	private volatile boolean canceled = false;
+    private volatile boolean canceled = false;
 
-	public abstract int next();
+    public abstract int next();
 
-	public void cancel() {
-		canceled = true;
-	}
+    public void cancel() {
+        canceled = true;
+    }
 
-	public boolean isCanceled() {
-		return canceled;
-	}
+    public boolean isCanceled() {
+        return canceled;
+    }
 }

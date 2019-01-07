@@ -5,9 +5,9 @@ import java.lang.management.ThreadInfo;
 import java.lang.management.ThreadMXBean;
 
 /**
- * @Description: volatile变量多线程自增测试
+ * @description: volatile变量多线程自增测试
  * @author: zhuzz
- * @date: 2018-06-24 9:39
+ * @date: 2019/1/7 10:54
  */
 public class VolatileTest {
     public static final int THREADS_COUNT = 20;

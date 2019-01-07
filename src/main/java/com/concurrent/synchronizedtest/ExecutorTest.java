@@ -5,6 +5,11 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
+/**
+ * @description:
+ * @author: zhuzz
+ * @date: 2019/1/7 10:44
+ */
 public class ExecutorTest {
     public static void main(String args[]) {
         Random random = new Random();
@@ -28,7 +33,6 @@ public class ExecutorTest {
         }
     }
 }
-
 
 class ExecutorThread implements Runnable {
     private final String name;

@@ -1,9 +1,3 @@
-/**
- * @文件名：TestHarness.java
- * @作者:zhuzz
- * @创建时间： 2018-1-16 下午5:17:31
- * @版本:V1.0 版权：版权所有 bsoft 保留所有权力。
- */
 package com.concurrent;
 
 import java.util.HashMap;
@@ -11,13 +5,12 @@ import java.util.Map;
 import java.util.concurrent.CountDownLatch;
 
 /**
- * @author zhuzz
- * @类功能说明:
- * @创建时间:2018-1-16 下午5:17:31
+ * @description:
+ * @author: zhuzz
+ * @date: 2019/1/7 10:48
  */
-
 public class TestHarness {
-    public static long TimeTask(int nThreads, final Runnable task) throws Exception {
+    public static long timeTask(int nThreads, final Runnable task) throws Exception {
         final CountDownLatch startGate = new CountDownLatch(1);
         final CountDownLatch endGate = new CountDownLatch(0);
         for (int i = 0; i < nThreads; i++) {
@@ -36,8 +29,7 @@ public class TestHarness {
             });
             t.sleep(1);
             t.start();
-        }
-        ;
+        };
         long start1 = System.currentTimeMillis();
         long start = System.nanoTime();
         //startGate.countDown();

@@ -1,4 +1,4 @@
-package com.concurrent.threadLocal;
+package com.concurrent.threadlocal;
 
 /**
  * @description: ThreadLocal测试
@@ -39,9 +39,9 @@ public class MyThreadLocal {
         @Override
         public void run() {
             for (int i = 0; i < 5; i++) {
-                // threadLocal.get方法获取线程变量
+                // threadlocal.get方法获取线程变量
                 if (null == MyThreadLocal.THREAD_LOCAL.get()) {
-                    // threadLocal.et方法设置线程变量
+                    // threadlocal.et方法设置线程变量
                     MyThreadLocal.THREAD_LOCAL.set(0);
                     System.out.println("线程" + name + ": 0");
                 } else {

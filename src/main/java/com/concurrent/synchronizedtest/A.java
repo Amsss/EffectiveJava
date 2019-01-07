@@ -1,5 +1,10 @@
 package com.concurrent.synchronizedtest;
 
+/**
+ * @description:
+ * @author: zhuzz
+ * @date: 2019/1/7 10:44
+ */
 public class A {
     public static volatile int i = 0;
 

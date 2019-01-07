@@ -2,6 +2,11 @@ package com.concurrent.synchronizedtest;
 
 import java.util.concurrent.TimeUnit;
 
+/**
+ * @description:
+ * @author: zhuzz
+ * @date: 2019/1/7 10:45
+ */
 public class MyClass {
 
     public static synchronized void log1(String msg1, String msg2) {

@@ -3,6 +3,11 @@ package com.concurrent.synchronizedtest;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
+/**
+ * @description:
+ * @author: zhuzz
+ * @date: 2019/1/7 10:46
+ */
 public class SynchronizedTest {
 
     Thread t1 = new Thread(new Runnable() {
