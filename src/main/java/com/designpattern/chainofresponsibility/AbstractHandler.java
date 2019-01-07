@@ -16,5 +16,4 @@ public abstract class AbstractHandler {
     public void setHandler(Handler handler) {
         this.handler = handler;
     }
-
 }

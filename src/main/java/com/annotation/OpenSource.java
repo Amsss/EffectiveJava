@@ -2,10 +2,10 @@ package com.annotation;
 
 /**
  * @author: zhuzz
- * @description: 描述
+ * @description: OpenSource类
  * @date: 2018/10/4 19:55
  */
-@Description("OpenSource,You are what you read.")
+@Description("OpenSource, You are what you read.")
 public class OpenSource {
 
     @Name(originate = "主办方：China", community = "sky")

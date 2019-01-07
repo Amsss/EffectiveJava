@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @Description: 测试list为final的情况下对for each 循环的影响
+ * @description: 测试list为final的情况下对for each 循环的影响
  * @author: zhuzz
  * @date: 2018-06-12 14:50
  */
@@ -15,7 +15,7 @@ public class A {
         list.add("a");
         list.add("b");
         list.add("c");
-        for (final String b :list) {
+        for (final String b : list) {
             System.out.println(b);
         }
     }

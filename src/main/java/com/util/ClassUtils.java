@@ -14,10 +14,9 @@ import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 
 /**
- * @Author: zhuzz
- * @Description:
- * @Create: 2018/5/15 17:39
- * @Modified By：
+ * @description:
+ * @author: zhuzz
+ * @date: 2019/1/7 12:09
  */
 public class ClassUtils {
 

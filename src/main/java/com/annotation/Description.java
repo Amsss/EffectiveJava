@@ -3,7 +3,7 @@ package com.annotation;
 import java.lang.annotation.*;
 
 /**
- * @description:
+ * @description: 自定义Description注解类
  * @author: zhuzz
  * @date: 2018/12/24 19:39
  */

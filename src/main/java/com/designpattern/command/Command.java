@@ -1,5 +1,13 @@
 package com.designpattern.command;
 
-public interface Command {  
+/**
+ * @description:
+ * @author: zhuzz
+ * @date: 2019/1/7 11:28
+ */
+public interface Command {
+    /**
+     *
+     */
     void exe();
 } 

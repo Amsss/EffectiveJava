@@ -5,7 +5,7 @@ import com.google.common.primitives.Chars;
 import java.util.List;
 
 /**
- * @Description: Chars是基本char类型的实用工具类
+ * @description: Chars是基本char类型的实用工具类
  * @author: zhuzz
  * @date: 2018-09-28 16:03
  */

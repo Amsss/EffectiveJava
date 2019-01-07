@@ -4,6 +4,11 @@ import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
+/**
+ * @description:
+ * @author: zhuzz
+ * @date: 2019/1/7 12:03
+ */
 public class LiuDeHuaProxy {
     // 设计一个类变量记住代理类要代理的目标对象
     private Person ldh = new LiuDeHua();
@@ -15,7 +20,7 @@ public class LiuDeHuaProxy {
      * @方法说明：这个方法返回刘德华的代理对象：Person person = LiuDeHuaProxy.getProxy();//得到一个代理对象
      */
     public Person getProxy() {
-        // 使用Proxy.newProxyInstance(classLoader loader, Class<?>[] interfaces,
+        // 使用Proxy.newProxyInstance(classloader loader, Class<?>[] interfaces,
         // InvocationHandler h)返回某个对象的代理对象
         return (Person) Proxy.newProxyInstance(LiuDeHuaProxy.class
                         .getClassLoader(), ldh.getClass().getInterfaces(),
@@ -49,7 +54,9 @@ public class LiuDeHuaProxy {
                             return method.invoke(ldh, args);// 代理对象调用真实目标对象的dance方法去处理用户请求
                         }
                         return null;
-                    };
+                    }
+
+                    ;
                 });
     }
 }

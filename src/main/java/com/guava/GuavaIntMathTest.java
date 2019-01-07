@@ -5,7 +5,7 @@ import com.google.common.math.IntMath;
 import java.math.RoundingMode;
 
 /**
- * @Description: IntMath提供整型的实用方法
+ * @description: IntMath提供整型的实用方法
  * @author: zhuzz
  * @date: 2018-09-28 16:05
  */

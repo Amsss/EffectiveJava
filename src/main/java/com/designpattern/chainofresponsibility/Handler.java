@@ -6,5 +6,8 @@ package com.designpattern.chainofresponsibility;
  * @date: 2018/10/9 13:58
  */
 public interface Handler {
+    /**
+     *
+     */
     void operator();
 }

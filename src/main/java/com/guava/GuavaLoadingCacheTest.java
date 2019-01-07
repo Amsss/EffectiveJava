@@ -1,4 +1,4 @@
-package com.Guava;
+package com.guava;
 
 import com.google.common.base.MoreObjects;
 import com.google.common.cache.CacheBuilder;
@@ -11,7 +11,7 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @Description: Guava通过接口LoadingCache提供了一个非常强大的基于内存的LoadingCache<K，V>。在缓存中自动加载值，它提供了许多实用的方法，在有缓存需求时非常有用
+ * @description: Guava通过接口LoadingCache提供了一个非常强大的基于内存的LoadingCache<K，V>。在缓存中自动加载值，它提供了许多实用的方法，在有缓存需求时非常有用
  * @author: zhuzz
  * @date: 2018-09-28 15:40
  */

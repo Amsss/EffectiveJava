@@ -5,7 +5,7 @@ import com.google.common.math.LongMath;
 import java.math.RoundingMode;
 
 /**
- * @Description: LongMath提供long基础类型的实用方法
+ * @description: LongMath提供long基础类型的实用方法
  * @author: zhuzz
  * @date: 2018-09-28 16:06
  */

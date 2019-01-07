@@ -5,7 +5,7 @@ import com.google.common.primitives.Shorts;
 import java.util.List;
 
 /**
- * @Description: Shorts是基本类型short的实用工具类
+ * @description: Shorts是基本类型short的实用工具类
  * @author: zhuzz
  * @date: 2018-09-28 15:58
  */

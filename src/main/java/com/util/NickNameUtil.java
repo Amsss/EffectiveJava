@@ -3,6 +3,11 @@ package com.util;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * @description:
+ * @author: zhuzz
+ * @date: 2019/1/7 12:09
+ */
 public class NickNameUtil {
 
     private static StringBuilder regEx = new StringBuilder("[")

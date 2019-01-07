@@ -1,4 +1,4 @@
-package com.DesignPattern.Builder;
+package com.designpattern.builder;
 
 /**
  * @description:

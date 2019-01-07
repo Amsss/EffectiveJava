@@ -5,7 +5,7 @@ import com.google.common.primitives.Ints;
 import java.util.List;
 
 /**
- * @Description: 整数Ints是原始的int类型的实用工具类
+ * @description: 整数Ints是原始的int类型的实用工具类
  * @author: zhuzz
  * @date: 2018-09-28 16:00
  */

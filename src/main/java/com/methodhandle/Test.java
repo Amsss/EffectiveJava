@@ -2,10 +2,11 @@ package com.methodhandle;
 
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.MethodType;
+
 import static java.lang.invoke.MethodHandles.lookup;
 
 /**
- * @description: 方法分派规则(大失败:网上解释https://www.zhihu.com/question/40427344)
+ * @description: 方法分派规则(大失败 : 网上解释https : / / www.zhihu.com / question / 40427344)
  * @author: zhuzzd
  * @date: 2018-06-19 17:08
  */

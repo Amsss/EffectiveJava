@@ -1,7 +1,7 @@
 package com.guava;
 
 /**
- * @Description:
+ * @description:
  * @author: zhuzz
  * @date: 2018-09-28 14:48
  */

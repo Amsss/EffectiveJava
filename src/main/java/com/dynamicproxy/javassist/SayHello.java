@@ -1,13 +1,12 @@
 package com.dynamicproxy.javassist;
 
 /**
- * 
- *@author zhuzz
- * @类功能说明:
- * @创建时间:2017-11-21 下午1:53:42
+ * @description:
+ * @author: zhuzz
+ * @date: 2019/1/7 12:02
  */
 public class SayHello {
-	public void say() {
-		System.out.println("hello everyone");
-	}
+    public void say() {
+        System.out.println("hello everyone");
+    }
 }

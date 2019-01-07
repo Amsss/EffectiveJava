@@ -1,7 +1,7 @@
 package com.calculation;
 
 /**
- * @Description: 2(2n + 1)魔方阵
+ * @description: 2(2n + 1)魔方阵
  * @author: zhuzz
  * @date: 2018-09-12 16:26
  */

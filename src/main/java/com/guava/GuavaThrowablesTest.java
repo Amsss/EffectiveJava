@@ -5,7 +5,7 @@ import com.google.common.base.Throwables;
 import java.io.IOException;
 
 /**
- * @Description: Throwable类提供了相关的Throwable接口的实用方法
+ * @description: Throwable类提供了相关的Throwable接口的实用方法
  * @author: zhuzz
  * @date: 2018-09-28 13:58
  */

@@ -5,7 +5,7 @@ import com.google.common.primitives.Booleans;
 import java.util.List;
 
 /**
- * @Description: Booleans是布尔型基本的实用工具类
+ * @description: Booleans是布尔型基本的实用工具类
  * @author: zhuzz
  * @date: 2018-09-28 16:04
  */

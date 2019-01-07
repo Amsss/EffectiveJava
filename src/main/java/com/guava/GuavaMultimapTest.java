@@ -1,4 +1,4 @@
-package com.Guava;
+package com.guava;
 
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.Multimap;
@@ -9,7 +9,7 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * @Description: 多重映射接口扩展映射，使得其键一次可被映射到多个值
+ * @description: 多重映射接口扩展映射，使得其键一次可被映射到多个值
  * @author: zhuzz
  * @date: 2018-09-28 16:07
  */

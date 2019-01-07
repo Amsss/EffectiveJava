@@ -1,11 +1,11 @@
-package com.DesignPattern.Singleton.demo;
+package com.designpattern.singleton.demo;
 
 import java.io.Serializable;
 
 /**
- * @Author: Zezhao.Zhu
- * @Description: 单例模式（弊端：在该类其他静态方法被调用的时候也会实例化--没有延迟加载机制）
- * @Date: 11:34 2018/5/25
+ * @description: 单例模式（弊端：在该类其他静态方法被调用的时候也会实例化--没有延迟加载机制）
+ * @author: zhuzz
+ * @date: 2019/1/7 11:55
  */
 public class SerSingleton implements Serializable {
     /**
@@ -22,10 +22,11 @@ public class SerSingleton implements Serializable {
     public static SerSingleton getInstance() {
         return INSTANCE;
     }
+
     /**
-     * @Author: Zezhao.Zhu
-     * @Description: 如果该对象被用于序列化，可以保证对象在序列化前后保持一致
-     * @Date: 12:04 2018/5/25
+     * 如果该对象被用于序列化，可以保证对象在序列化前后保持一致
+     *
+     * @return
      */
     public Object readResolve() {
         return INSTANCE;

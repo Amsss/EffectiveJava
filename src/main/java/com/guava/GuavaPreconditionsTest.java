@@ -3,7 +3,7 @@ package com.guava;
 import com.google.common.base.Preconditions;
 
 /**
- * @Description: Preconditions提供静态方法来检查方法或构造函数，被调用是否给定适当的参数。它检查的先决条件。其方法失败抛出IllegalArgumentException
+ * @description: Preconditions提供静态方法来检查方法或构造函数，被调用是否给定适当的参数。它检查的先决条件。其方法失败抛出IllegalArgumentException
  * @author: zhuzz
  * @date: 2018-09-28 13:57
  */

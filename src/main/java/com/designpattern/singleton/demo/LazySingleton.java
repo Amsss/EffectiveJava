@@ -1,10 +1,9 @@
-package com.DesignPattern.Singleton.demo;
+package com.designpattern.singleton.demo;
 
 /**
- * @Author: Zezhao.Zhu
- * @Description:
- * @Create: 2018/5/25 11:46
- * @Modified By：
+ * @description:
+ * @author: zhuzz
+ * @date: 2019/1/7 11:54
  */
 public class LazySingleton {
     private LazySingleton() {

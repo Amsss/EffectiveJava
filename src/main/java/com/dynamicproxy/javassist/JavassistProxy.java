@@ -1,11 +1,15 @@
 package com.dynamicproxy.javassist;
 
-
 import javassist.util.proxy.MethodHandler;
 import javassist.util.proxy.ProxyFactory;
 
 import java.lang.reflect.Method;
 
+/**
+ * @description:
+ * @author: zhuzz
+ * @date: 2019/1/7 12:02
+ */
 public class JavassistProxy implements MethodHandler {
     ProxyFactory proxyFactory = new ProxyFactory();
 

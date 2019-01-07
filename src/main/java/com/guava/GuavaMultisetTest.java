@@ -1,4 +1,4 @@
-package com.Guava;
+package com.guava;
 
 import com.google.common.collect.HashMultiset;
 import com.google.common.collect.Multiset;
@@ -7,7 +7,7 @@ import java.util.Iterator;
 import java.util.Set;
 
 /**
- * @Description: Multiset接口扩展设置有重复的元素，并提供了各种实用的方法来处理这样的元素在集合中出现
+ * @description: Multiset接口扩展设置有重复的元素，并提供了各种实用的方法来处理这样的元素在集合中出现
  * @author: zhuzz
  * @date: 2018-09-28 14:59
  */

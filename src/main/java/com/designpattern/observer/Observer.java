@@ -1,5 +1,13 @@
-package com.DesignPattern.Observer;
+package com.designpattern.observer;
 
-public interface Observer {  
+/**
+ * @description:
+ * @author: zhuzz
+ * @date: 2019/1/7 11:50
+ */
+public interface Observer {
+    /**
+     *
+     */
     void update();
 }

@@ -1,11 +1,11 @@
-package com.Guava;
+package com.guava;
 
 import com.google.common.base.Joiner;
 
 import java.util.Arrays;
 
 /**
- * @Description: Joiner 提供了各种方法来处理字符串加入操作，对象等
+ * @description: Joiner 提供了各种方法来处理字符串加入操作，对象等
  * @author: zhuzz
  * @date: 2018-09-28 15:52
  */

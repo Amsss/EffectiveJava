@@ -1,8 +1,8 @@
 package com.enums;
 
 /**
- * @author: zhuzz
  * @description: 描述
+ * @author: zhuzz
  * @date: 2018/10/4 19:57
  */
 public class TrafficLight {

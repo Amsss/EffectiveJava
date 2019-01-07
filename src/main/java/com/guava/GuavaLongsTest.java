@@ -5,7 +5,7 @@ import com.google.common.primitives.Longs;
 import java.util.List;
 
 /**
- * @Description: Longs是基本类型long的实用工具类
+ * @description: Longs是基本类型long的实用工具类
  * @author: zhuzz
  * @date: 2018-09-28 16:00
  */

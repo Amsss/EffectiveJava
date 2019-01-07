@@ -5,10 +5,10 @@ package com.designpattern.decorator;
  * @author: zhuzz
  * @date: 2019/1/3 16:10
  */
-public class Source implements Sourceable {  
-	  
+public class Source implements Sourceable {
+
     @Override
     public void method() {
-        System.out.println("the original method!");  
-    }  
+        System.out.println("the original method!");
+    }
 }

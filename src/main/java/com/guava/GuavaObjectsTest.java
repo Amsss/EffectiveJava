@@ -3,7 +3,7 @@ package com.guava;
 import com.google.common.base.Objects;
 
 /**
- * @Description: Objects类提供适用于所有对象，如equals, hashCode等辅助函数
+ * @description: Objects类提供适用于所有对象，如equals, hashCode等辅助函数
  * @author: zhuzz
  * @date: 2018-09-28 13:58
  */

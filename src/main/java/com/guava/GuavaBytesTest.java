@@ -5,7 +5,7 @@ import com.google.common.primitives.Bytes;
 import java.util.List;
 
 /**
- * @Description: Bytes是byte的基本类型实用工具类。
+ * @description: Bytes是byte的基本类型实用工具类。
  * @author: zhuzz
  * @date: 2018-09-28 15:57
  */

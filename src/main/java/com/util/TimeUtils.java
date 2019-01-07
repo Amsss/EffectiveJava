@@ -13,7 +13,7 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 
 /**
- * @escription: 时间工具类
+ * @description: 时间工具类
  * @author: zhuzz
  * @date: 2018-06-25 17:18
  */

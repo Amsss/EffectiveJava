@@ -1,6 +1,5 @@
 package com.method;
 
-
 import com.annotation.MyAnnotation;
 
 import java.lang.annotation.Annotation;
@@ -60,7 +59,8 @@ public class MethodTest {
         // 调用方法
         List<String> arrayList = new ArrayList<String>();
         method.invoke(obj, arrayList, new String[]{"1", "2"});
-        System.out.println(arrayList);//[1,2]
+        //[1,2]
+        System.out.println(arrayList);
 
         //方法定义所在的类
         Class<?> declaringClass = method.getDeclaringClass();

@@ -3,8 +3,8 @@ package com.util;
 import java.util.*;
 
 /**
- * @author zhuzz
  * @description: Map工具类
+ * @author zhuzz
  * @date: 2017-10-27 上午10:31:04
  */
 public class HashMapUtils<K, V> extends HashMap<K, V> {

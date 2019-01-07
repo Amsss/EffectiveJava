@@ -5,7 +5,7 @@ import com.google.common.primitives.Floats;
 import java.util.List;
 
 /**
- * @Description: Floats是float基本类型的实用工具类
+ * @description: Floats是float基本类型的实用工具类
  * @author: zhuzz
  * @date: 2018-09-28 16:01
  */

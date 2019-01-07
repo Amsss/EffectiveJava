@@ -5,7 +5,11 @@ import java.util.Hashtable;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-
+/**
+ * @description:
+ * @author: zhuzz
+ * @date: 2019/1/7 12:03
+ */
 public class Test {
     public static void main(String[] args) {
         System.out.println(Planet.MERCURY.surfaceGravity());

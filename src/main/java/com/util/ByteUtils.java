@@ -1,7 +1,7 @@
 package com.util;
 
 /**
- * @Description: Bytes数组处理工具类
+ * @description: Bytes数组处理工具类
  * @author: zhuzz
  * @date: 2018-06-20 16:17
  */

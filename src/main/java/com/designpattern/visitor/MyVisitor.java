@@ -1,8 +1,14 @@
 package com.designpattern.visitor;
 
-public class MyVisitor implements Visitor {  
-	  
+/**
+ * @description:
+ * @author: zhuzz
+ * @date: 2019/1/7 11:58
+ */
+public class MyVisitor implements Visitor {
+
+    @Override
     public void visit(Subject sub) {
-        System.out.println("visit the subject："+sub.getSubject());  
-    }  
+        System.out.println("visit the subject：" + sub.getSubject());
+    }
 }

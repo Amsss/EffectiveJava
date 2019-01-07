@@ -1,9 +1,14 @@
 package com.designpattern.abstractfactory;
 
-public class SendMailFactory implements Provider{
+/**
+ * @description:
+ * @author: zhuzz
+ * @date: 2019/1/7 11:06
+ */
+public class SendMailFactory implements Provider {
 
-	public Sender produce() {
-		return new MailSender();
-	}
-
+    @Override
+    public Sender produce() {
+        return new MailSender();
+    }
 }

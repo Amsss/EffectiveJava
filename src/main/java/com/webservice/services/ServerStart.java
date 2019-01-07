@@ -3,9 +3,9 @@ package com.webservice.services;
 import javax.xml.ws.Endpoint;
 
 /**
- * @Author: Zezhao.Zhu
- * @Description: 发布Webservice
- * @Date: 14:38 2018/5/9
+ * @description: 发布Webservice
+ * @author: zhuzz
+ * @date: 2019/1/4 11:09
  */
 public class ServerStart {
     public static void main(String[] args) {

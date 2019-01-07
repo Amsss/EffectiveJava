@@ -6,15 +6,17 @@ import java.sql.SQLException;
 import java.util.Vector;
 
 /**
- * @Author: Zezhao.Zhu
- * @Description: 享元模式实现数据库连接池
- * @Date: 18:21 2018/5/28
+ * @description: 享元模式实现数据库连接池
+ * @author: zhuzz
+ * @date: 2019/1/7 11:35
  */
 public class ConnectionPool {
 
     private Vector<Connection> pool;
 
-    /*公有属性*/
+    /**
+     * 公有属性
+     */
     private String url = "jdbc:mysql://localhost:3306/test";
     private String username = "root";
     private String password = "root";

@@ -1,10 +1,9 @@
 package com.jvm;
 
 /**
- * @Author: Zezhao.Zhu
- * @Description: 栈深度测试：局部变量表内容越多，栈帧越大，栈深度越小（通过-Xss可以设置栈的大小）
- * @Create: 2018/5/29 11:53
- * @Modified By：
+ * @description: 栈深度测试：局部变量表内容越多，栈帧越大，栈深度越小（通过-Xss可以设置栈的大小）
+ * @author: zhuzz
+ * @date: 2019/1/7 12:07
  */
 public class StackOverFlow {
     private int count = 0;

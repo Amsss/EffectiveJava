@@ -1,8 +1,8 @@
 package com.leetcode;
 
 /**
- * @author: zhuzz
  * @description:
+ * @author: zhuzz
  * @date: 2018/10/12 23:02
  */
 public class AddTwoNumbers {

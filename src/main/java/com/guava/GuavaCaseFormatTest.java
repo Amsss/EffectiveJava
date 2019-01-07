@@ -3,7 +3,7 @@ package com.guava;
 import com.google.common.base.CaseFormat;
 
 /**
- * @Description: CaseFormat是一种实用工具类，以提供不同的ASCII字符格式之间的转换。
+ * @description: CaseFormat是一种实用工具类，以提供不同的ASCII字符格式之间的转换。
  * @author: zhuzz
  * @date: 2018-09-28 15:53
  */

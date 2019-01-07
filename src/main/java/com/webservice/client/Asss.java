@@ -9,6 +9,11 @@ import javax.xml.rpc.ServiceException;
 import javax.xml.rpc.encoding.XMLType;
 import java.rmi.RemoteException;
 
+/**
+ * @description:
+ * @author: zhuzz
+ * @date: 2019/1/7 12:09
+ */
 public class Asss {
 
     public static void main(String[] args) {

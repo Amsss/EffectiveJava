@@ -1,5 +1,13 @@
 package com.designpattern.bridge;
 
-public interface Sourceable {  
+/**
+ * @description:
+ * @author: zhuzz
+ * @date: 2019/1/7 11:25
+ */
+public interface Sourceable {
+    /**
+     *
+     */
     void method();
 }

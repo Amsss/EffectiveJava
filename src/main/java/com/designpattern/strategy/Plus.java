@@ -1,10 +1,15 @@
 package com.designpattern.strategy;
 
-public class Plus extends AbstractCalculator implements ICalculator {  
-	  
-    @Override  
-    public int calculate(String exp) {  
-        int arrayInt[] = split(exp,"\\+");  
-        return arrayInt[0]+arrayInt[1];  
-    }  
+/**
+ * @description:
+ * @author: zhuzz
+ * @date: 2019/1/7 11:57
+ */
+public class Plus extends AbstractCalculator implements ICalculator {
+
+    @Override
+    public int calculate(String exp) {
+        int arrayInt[] = split(exp, "\\+");
+        return arrayInt[0] + arrayInt[1];
+    }
 } 

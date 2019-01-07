@@ -3,7 +3,7 @@ package com.jvm.overload;
 import java.io.Serializable;
 
 /**
- * @Description: 重载方法匹配优先级
+ * @description: 重载方法匹配优先级
  * @author: zhuzz
  * @date: 2018-06-19 10:15
  */

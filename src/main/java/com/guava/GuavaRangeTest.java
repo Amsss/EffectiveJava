@@ -1,4 +1,4 @@
-package com.Guava;
+package com.guava;
 
 import com.google.common.collect.ContiguousSet;
 import com.google.common.collect.DiscreteDomain;
@@ -6,7 +6,7 @@ import com.google.common.collect.Range;
 import com.google.common.primitives.Ints;
 
 /**
- * @Description: Range 表示一个间隔或一个序列。它被用于获取一组数字/串在一个特定范围之内
+ * @description: Range 表示一个间隔或一个序列。它被用于获取一组数字/串在一个特定范围之内
  * @author: zhuzz
  * @date: 2018-09-28 13:58
  */

@@ -3,7 +3,7 @@ package com.guava;
 import com.google.common.base.CharMatcher;
 
 /**
- * @Description: CharMatcher提供了各种方法来处理各种JAVA char类型值。
+ * @description: CharMatcher提供了各种方法来处理各种JAVA char类型值。
  * @author: zhuzz
  * @date: 2018-09-28 15:53
  */

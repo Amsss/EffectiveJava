@@ -1,7 +1,7 @@
 package com.jvm.dispatch;
 
 /**
- * @Description: 单分派、多分派演示   JAVA语言是静态多分派 动态单分配的语言 1.8以前
+ * @description: 单分派、多分派演示   JAVA语言是静态多分派 动态单分配的语言 1.8以前
  * @author: zhuzz
  * @date: 2018-06-19 10:45
  */

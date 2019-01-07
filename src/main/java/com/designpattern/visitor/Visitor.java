@@ -1,5 +1,14 @@
 package com.designpattern.visitor;
 
-public interface Visitor {  
+/**
+ * @description:
+ * @author: zhuzz
+ * @date: 2019/1/7 11:59
+ */
+public interface Visitor {
+    /**
+     *
+     * @param sub
+     */
     void visit(Subject sub);
 }
