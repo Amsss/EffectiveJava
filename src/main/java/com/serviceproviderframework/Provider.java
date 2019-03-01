@@ -6,5 +6,10 @@ package com.serviceproviderframework;
  * @date: 2019/1/3 16:24
  */
 public interface Provider {
+
+    /**
+     *
+     * @return
+     */
     Service newService();
 }

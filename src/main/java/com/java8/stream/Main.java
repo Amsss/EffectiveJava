@@ -88,7 +88,7 @@ public class Main {
         a.add("2");
         a.add("3");
         b.add("2");
-        //String A = ArrayList::new;
+        //String Test = ArrayList::new;
         //a.stream().1
         //System.out.println(b);
     }

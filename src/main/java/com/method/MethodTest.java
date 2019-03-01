@@ -99,9 +99,9 @@ public class MethodTest {
         int parameterCount = method.getParameterCount();// 参数个数 2
         // 方法参数——泛型
         Class<?>[] parameterTypes = method.getParameterTypes();
-        // 打印 [interface java.util.List, class [Ljava.lang.Object;]
+        // 打印 [interface java.util.list, class [Ljava.lang.Object;]
         Type[] genericParameterTypes = method.getGenericParameterTypes();
-        // 打印 [java.util.List<T>, T[]]
+        // 打印 [java.util.list<T>, T[]]
         for (Type type : genericParameterTypes) {
             if (type instanceof ParameterizedType) { // 参数类型
                 System.out.println("ParameterizedType类型：" + type);

@@ -14,7 +14,7 @@ public class Tree {
     }
 
     public static void main(String[] args) {
-        Tree tree = new Tree("A");
+        Tree tree = new Tree("Test");
         TreeNode nodeB = new TreeNode("B");
         TreeNode nodeC = new TreeNode("C");
 

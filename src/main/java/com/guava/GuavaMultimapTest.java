@@ -52,9 +52,9 @@ public class GuavaMultimapTest {
     }
 
     private Multimap<String, String> getMultimap() {
-        //Map<String, List<String>>
+        //Map<String, list<String>>
         // lower -> a, b, c, d, e
-        // upper -> A, B, C, D
+        // upper -> Test, B, C, D
 
         Multimap<String, String> multimap = ArrayListMultimap.create();
 
@@ -64,7 +64,7 @@ public class GuavaMultimapTest {
         multimap.put("lower", "d");
         multimap.put("lower", "e");
 
-        multimap.put("upper", "A");
+        multimap.put("upper", "Test");
         multimap.put("upper", "B");
         multimap.put("upper", "C");
         multimap.put("upper", "D");

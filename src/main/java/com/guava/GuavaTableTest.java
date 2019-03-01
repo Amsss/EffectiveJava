@@ -40,7 +40,7 @@ public class GuavaTableTest {
         //get Map corresponding to IBM
         Map<String,String> ibmEmployees =  employeeTable.row("IBM");
 
-        System.out.println("List of IBM Employees");
+        System.out.println("list of IBM Employees");
         for(Map.Entry<String, String> entry : ibmEmployees.entrySet()){
             System.out.println("Emp Id: " + entry.getKey() + ", Name: " + entry.getValue());
         }

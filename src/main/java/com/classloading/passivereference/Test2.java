@@ -9,6 +9,6 @@ package com.classloading.passivereference;
  */
 public class Test2 {
     public static void main(String[] args) {
-        SuperClass [] superClasses = new SuperClass[10];
+        SuperClass[] superClasse = new SuperClass[10];
     }
 }

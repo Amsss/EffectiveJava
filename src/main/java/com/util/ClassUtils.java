@@ -63,7 +63,7 @@ public class ClassUtils {
      *
      * @param clazz           类
      * @param annotationClass 注解类
-     * @return a A object.
+     * @return a Test object.
      */
     public static <A extends Annotation> A getClassAnnotation(Class<?> clazz, Class<A> annotationClass) {
         return clazz.getAnnotation(annotationClass);
@@ -75,7 +75,7 @@ public class ClassUtils {
      * @param clazz           类
      * @param annotationClass 注解类
      * @param fieldName       成员属性名
-     * @return a A object.
+     * @return a Test object.
      */
     public static <A extends Annotation> A getFieldAnnotation(Class<?> clazz,
                                                               Class<A> annotationClass, String fieldName) throws Exception {
@@ -101,7 +101,7 @@ public class ClassUtils {
      * @param annotationClass 注解类
      * @param methodName      方法名
      * @param paramType       方法参数
-     * @return a A object.
+     * @return a Test object.
      */
     public static <A extends Annotation> A getMethodAnnotation(Class<?> clazz,
                                                                Class<A> annotationClass, String methodName, Class<?>... paramType)

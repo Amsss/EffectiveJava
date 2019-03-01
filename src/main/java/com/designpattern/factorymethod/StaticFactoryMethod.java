@@ -24,7 +24,7 @@ public class StaticFactoryMethod {
         //BigInteger i = BigInteger.probablePrime(3, new Random(100));
         //System.out.println(i);
         //Boolean.valueOf(true);
-        //List<String> a = new ArrayList<String>();
+        //list<String> a = new ArrayList<String>();
         //EnumSet a = EnumSet;
     }
 }

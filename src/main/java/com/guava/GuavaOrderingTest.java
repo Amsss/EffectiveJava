@@ -25,15 +25,15 @@ public class GuavaOrderingTest {
         numbers.add(new Integer(43));
         numbers.add(new Integer(16));
         Ordering ordering = Ordering.natural();
-        System.out.println("Input List: ");
+        System.out.println("Input list: ");
         System.out.println(numbers);
 
         Collections.sort(numbers, ordering);
-        System.out.println("Sorted List: ");
+        System.out.println("Sorted list: ");
         System.out.println(numbers);
 
         System.out.println("======================");
-        System.out.println("List is sorted: " + ordering.isOrdered(numbers));
+        System.out.println("list is sorted: " + ordering.isOrdered(numbers));
         System.out.println("Minimum: " + ordering.min(numbers));
         System.out.println("Maximum: " + ordering.max(numbers));
 
@@ -41,11 +41,11 @@ public class GuavaOrderingTest {
         System.out.println("Reverse: " + numbers);
 
         numbers.add(null);
-        System.out.println("Null added to Sorted List: ");
+        System.out.println("Null added to Sorted list: ");
         System.out.println(numbers);
 
         Collections.sort(numbers, ordering.nullsFirst());
-        System.out.println("Null first Sorted List: ");
+        System.out.println("Null first Sorted list: ");
         System.out.println(numbers);
         System.out.println("======================");
 
@@ -62,7 +62,7 @@ public class GuavaOrderingTest {
         names.add("Vikas");
         names.add("Deepak");
 
-        System.out.println("Another List: ");
+        System.out.println("Another list: ");
         System.out.println(names);
         Collections.sort(names, ordering.nullsFirst());
         System.out.println("Null first  sorted list: ");

@@ -13,7 +13,7 @@ import java.io.Serializable;
  */
 public class Student implements Serializable {
     private static final long serialVersionUID = 1L;
-    public static String aa = "111111111";
+    public String aa = "111111111";
     public Integer id;
     public String name;
 
@@ -22,7 +22,7 @@ public class Student implements Serializable {
         this.name = name;
     }
 
-    public static void main(String args[]) throws Exception {
+    public static void main(String[] args) throws Exception {
         String file = "student.ser";
         // Serializable  序列化
         ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream(file));
@@ -30,8 +30,8 @@ public class Student implements Serializable {
         outputStream.close();
         // Deserializable  反序列化
         ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream(file));
-        Student a = (Student) inputStream.readObject();
-        System.out.println(a.aa);
+        Student student = (Student) inputStream.readObject();
+        System.out.println(student.aa);
         inputStream.close();
     }
 }  

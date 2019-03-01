@@ -61,13 +61,13 @@ public class Validation {
      */
     public static final String STR_ENG_NUM_ = "^\\w+$";
     /**
-     * 匹配由数字和26个英文字母组成的字符串 ^[A-Za-z0-9]+$
+     * 匹配由数字和26个英文字母组成的字符串 ^[Test-Za-z0-9]+$
      */
-    public static final String STR_ENG_NUM = "^[A-Za-z0-9]+";
+    public static final String STR_ENG_NUM = "^[Test-Za-z0-9]+";
     /**
-     * 匹配由26个英文字母组成的字符串  ^[A-Za-z]+$
+     * 匹配由26个英文字母组成的字符串  ^[Test-Za-z]+$
      */
-    public static final String STR_ENG = "^[A-Za-z]+$";
+    public static final String STR_ENG = "^[Test-Za-z]+$";
     /**
      * 过滤特殊字符串正则
      * regEx="[`~!@#$%^&*()+=|{}':;',\\[\\].<>/?~！@#￥%……&*（）——+|{}【】‘；：”“’。，、？]";
@@ -115,7 +115,7 @@ public class Validation {
     /**
      * 机构代码
      */
-    public static final String JIGOU_CODE = "^[A-Z0-9]{8}-[A-Z0-9]$";
+    public static final String JIGOU_CODE = "^[Test-Z0-9]{8}-[Test-Z0-9]$";
 
     /**
      * 匹配数字组成的字符串  ^[0-9]+$

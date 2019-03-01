@@ -9,5 +9,6 @@ public class SuperSuperClass {
     static {
         System.out.println("SuperSuperClass static init!");
     }
+
     public static int superSuperValue = 123;
 }

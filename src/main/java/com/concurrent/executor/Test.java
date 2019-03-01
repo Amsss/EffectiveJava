@@ -21,11 +21,9 @@ public class Test {
                     while (true) {
 
                     }
-                };
+                }
             }).get();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        } catch (ExecutionException e) {
+        } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
         }
         System.out.println(outPut);
