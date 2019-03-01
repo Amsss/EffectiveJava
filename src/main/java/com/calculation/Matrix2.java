@@ -25,6 +25,7 @@ public class Matrix2 {
         }
         return matrix;
     }
+
     public static void main(String[] args) {
         int[][] magic = Matrix2.magicFourN(8);
         for (int k = 0; k < magic.length; k++) {

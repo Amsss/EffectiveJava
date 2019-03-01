@@ -21,19 +21,22 @@ public class ShellSort {
             System.out.println(num[i]);
         }
     }
+
     public void shellArray(int[] num) {
         int i = 1;
-        int tem, in ;
-        for (; i < num.length / 3;) {
+        int tem, in;
+        for (; i < num.length / 3; ) {
             i = 3 * i + 1;
         }
-        for (; i >= 1;) {
+        for (; i >= 1; ) {
             for (int j = i; j < num.length; j++) {
-                tem = num[j]; in = j;
-                while ( in > i - 1 && num[ in -i] >= tem) {
-                    num[ in ] = num[ in -i]; in = in -i;
+                tem = num[j];
+                in = j;
+                while (in > i - 1 && num[in - i] >= tem) {
+                    num[in] = num[in - i];
+                    in = in - i;
                 }
-                num[ in ] = tem;
+                num[in] = tem;
             }
             i = (i - 1) / 3;
         }

@@ -9,6 +9,8 @@ import java.util.concurrent.TimeUnit;
  */
 public class Li {
 
+    private final static int COUNT = 10000;
+
     /**
      * 相当于B类有参数为CallBack callBack的f()---->背景三
      *
@@ -18,7 +20,7 @@ public class Li {
     public void executeMessage(CallBack callBack, String question) {
         System.out.println("小王问的问题--->" + question);
         //模拟小李办自己的事情需要很长时间  
-        for (int i = 0; i < 10000; i++) {
+        for (int i = 0; i < COUNT; i++) {
 
         }
         try {

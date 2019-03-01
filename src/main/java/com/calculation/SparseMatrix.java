@@ -23,6 +23,7 @@ public class SparseMatrix {
         }
         return array;
     }
+
     public static void main(String[] args) {
         int[][] sparse = {
                 {

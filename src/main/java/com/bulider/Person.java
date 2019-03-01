@@ -11,7 +11,7 @@ public class Person {
     private final int high;
     private final int weight;
 
-    private Person(Personbuilder bd) {
+    private Person(PersonBuilder bd) {
         //验证builder参数
         if (bd.name == null || "".endsWith(bd.name)) {
             throw new IllegalStateException("builder参数异常");
@@ -28,19 +28,19 @@ public class Person {
                 + ", weight=" + weight + "]";
     }
 
-    public static class Personbuilder implements Builder<Person> {
+    public static class PersonBuilder implements Builder<Person> {
         private final String name;
         private final String sex;
         private int x = 0;
         private int y = 0;
         private int z = 0;
 
-        public Personbuilder(String name, String sex) {
+        public PersonBuilder(String name, String sex) {
             this.name = name;
             this.sex = sex;
         }
 
-        public Personbuilder nameX(int x) {
+        public PersonBuilder nameX(int x) {
             if (x == 0) {
                 throw new IllegalArgumentException("传入参数无效");
             }
@@ -48,12 +48,12 @@ public class Person {
             return this;
         }
 
-        public Personbuilder nameY(int y) {
+        public PersonBuilder nameY(int y) {
             this.y = y;
             return this;
         }
 
-        public Personbuilder nameZ(int z) {
+        public PersonBuilder nameZ(int z) {
 
             this.z = z;
             return this;
@@ -66,8 +66,7 @@ public class Person {
     }
 
     public static void main(String[] args) {
-
-        Person a = new Personbuilder("朱泽沼", "男").nameX(1).nameY(2).nameZ(3).build();
+        Person a = new PersonBuilder("朱泽沼", "男").nameX(1).nameY(2).nameZ(3).build();
         System.out.println(a);
     }
 }

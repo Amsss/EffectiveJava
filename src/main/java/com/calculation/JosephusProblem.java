@@ -37,8 +37,7 @@ public class JosephusProblem {
         for (int i = 0; i < 41; i++) {
             if (man[i] > (41 - alive)) {
                 System.out.print("L");
-            }
-            else {
+            } else {
                 System.out.print("D");
             }
             if ((i + 1) % 5 == 0) {

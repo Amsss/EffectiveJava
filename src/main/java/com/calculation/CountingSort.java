@@ -8,6 +8,7 @@ import java.util.Arrays;
  * @date: 2018-12-26 11:22
  */
 public class CountingSort {
+
     public static void sort(int[] arr) {
         // 计算最大最小值，严谨实现最好用ifPresent检查下
         int max = Arrays.stream(arr).max().getAsInt();

@@ -8,12 +8,12 @@ package com.annotation;
 @Description("OpenSource, You are what you read.")
 public class OpenSource {
 
-    @Name(originate = "主办方：China", community = "sky")
+    @Name(originate = "地区：China", community = "社区: sky")
     public String getName1() {
         return null;
     }
 
-    @Name(originate = "主办方：America", community = "sky")
+    @Name(originate = "地区：America", community = "社区: sky")
     public String getName2() {
         return "Helloworld!";
     }

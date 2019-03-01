@@ -10,6 +10,7 @@ public class QuickSort2 {
     public static void sort(int[] number) {
         sort(number, 0, number.length - 1);
     }
+
     private static void sort(int[] number, int left, int right) {
         if (left < right) {
             int s = number[(left + right) / 2];

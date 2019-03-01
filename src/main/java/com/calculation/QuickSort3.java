@@ -18,6 +18,7 @@ public class QuickSort3 {
             sort(number, q + 1, right);
         }
     }
+
     private static int partition(int number[], int left, int right) {
         int s = number[right];
         int i = left - 1;
@@ -30,6 +31,7 @@ public class QuickSort3 {
         swap(number, i + 1, right);
         return i + 1;
     }
+
     private static void swap(int[] number, int i, int j) {
         int t;
         t = number[i];

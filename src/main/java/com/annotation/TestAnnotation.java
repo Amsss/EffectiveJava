@@ -14,16 +14,16 @@ public class TestAnnotation {
     public static void main(String[] args) throws Exception {
         //加载类
         String className = "com.annotation.OpenSource";
-        Class classs = Class.forName(className);
+        Class classObject = Class.forName(className);
         //判断是否带@Description注解
-        boolean flag = classs.isAnnotationPresent(Description.class);
+        boolean flag = classObject.isAnnotationPresent(Description.class);
         if (flag) {
-            Description des = (Description) classs.getAnnotation(Description.class);
+            Description des = (Description) classObject.getAnnotation(Description.class);
             System.out.println("描述:" + des.value());
             System.out.println("-----------------");
         }
         //把JavaEyer这一类有利用到@Name的全部方法保存到Set中去
-        Method[] method = classs.getMethods();
+        Method[] method = classObject.getMethods();
         Set<Method> set = new HashSet<>(16);
         for (Method aMethod : method) {
             boolean otherFlag = aMethod.isAnnotationPresent(Name.class);
@@ -33,8 +33,8 @@ public class TestAnnotation {
         }
         for (Method m : set) {
             Name name = m.getAnnotation(Name.class);
-            System.out.println(name.originate());
-            System.out.println("创建的社区:" + name.community());
+            System.out.println("地区:" + name.originate());
+            System.out.println("社区:" + name.community());
         }
     }
 } 

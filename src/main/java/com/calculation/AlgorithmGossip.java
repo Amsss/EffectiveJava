@@ -36,7 +36,7 @@ public class AlgorithmGossip {
         while (true) {
             System.out.print(">>");
             String input = buf.readLine();
-            if ("-1".equals(input)){
+            if ("-1".equals(input)) {
                 break;
             }
             list.add(input);

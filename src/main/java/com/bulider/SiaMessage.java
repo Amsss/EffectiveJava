@@ -5,13 +5,13 @@ package com.bulider;
  * @author: zhuzz
  * @date: 2019/1/3 15:34
  */
-public class SIAMessage {
+public class SiaMessage {
     private final String businessCode;
     private final String type;
     private final String message;
     private final int timeout;
 
-    SIAMessage(String businessCode, String type, String message, int timeout) {
+    SiaMessage(String businessCode, String type, String message, int timeout) {
         this.businessCode = businessCode;
         this.type = type;
         this.message = message;
@@ -62,11 +62,11 @@ public class SIAMessage {
             return this;
         }
 
-        public SIAMessage build() {
+        public SiaMessage build() {
 
             initDefaultValue(this);
 
-            return new SIAMessage(businessCode, message, type, timeout);
+            return new SiaMessage(businessCode, message, type, timeout);
         }
 
         private void initDefaultValue(Builder builder) {
@@ -91,7 +91,7 @@ public class SIAMessage {
 
     @Override
     public String toString() {
-        return "SIAMessage{" +
+        return "SiaMessage{" +
                 "businessCode='" + businessCode + '\'' +
                 ", type='" + type + '\'' +
                 ", message='" + message + '\'' +
@@ -100,13 +100,13 @@ public class SIAMessage {
     }
 
 	public static void main(String[] args) {
-		SIAMessage message = new Builder().setBusinessCode("yrd")
+		SiaMessage message = new Builder().setBusinessCode("yrd")
 				.setMessage("hello world").setTimeout(1000).build();
 
 		System.out.println(message);
 
 		// 2.
-		message = SIAMessage.custom().setBusinessCode("yrd")
+		message = SiaMessage.custom().setBusinessCode("yrd")
 				.setMessage("hello world").setTimeout(1000).build();
 
 		System.out.println(message);

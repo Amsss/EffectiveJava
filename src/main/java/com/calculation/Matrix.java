@@ -33,6 +33,7 @@ public class Matrix {
         }
         return matrix;
     }
+
     public static void main(String[] args) {
         int[][] magic = Matrix.magicOdd(5);
         for (int k = 0; k < magic.length; k++) {

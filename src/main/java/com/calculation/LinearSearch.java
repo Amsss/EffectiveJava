@@ -19,6 +19,7 @@ public class LinearSearch {
         }
         return i - 1;
     }
+
     public static void main(String[] args) {
         int[] number = {
                 1, 4, 2, 6, 7, 3, 9, 8

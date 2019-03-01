@@ -34,21 +34,21 @@ public class PermutationAndCombination {
         int[] mun2 = {
                 11, 22, 33, 44, 55, 66, 77, 88, 99
         };
-        for (int j = 0; j < mun1.length ; j++) {
+        for (int j = 0; j < mun1.length; j++) {
             System.out.print(mun1[j] + " ");
         }
         System.out.println();
-        for (int j = 0; j < mun2.length ; j++) {
+        for (int j = 0; j < mun2.length; j++) {
             System.out.print(mun2[j] + " ");
         }
         System.out.println();
         System.arraycopy(mun1, 0, mun2, 0, 1);
-        for (int j = 0; j < mun1.length ; j++) {
+        for (int j = 0; j < mun1.length; j++) {
             System.out.print(mun1[j] + " ");
         }
         System.out.println();
         mun1[1] = 20;
-        for (int j = 0; j < mun2.length ; j++) {
+        for (int j = 0; j < mun2.length; j++) {
             System.out.print(mun2[j] + " ");
         }
         System.out.println();

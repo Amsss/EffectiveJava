@@ -26,6 +26,7 @@ public class FibonacciSearch {
         }
         return -1;
     }
+
     private static int[] createFibonacci(int max) {
         int[] fib = new int[max];
         for (int i = 0; i < fib.length; i++) {
@@ -38,6 +39,7 @@ public class FibonacciSearch {
         }
         return fib;
     }
+
     private static int findX(int[] fib, int n, int des) {
         int i = 0;
         while (fib[i] <= n) {
@@ -46,6 +48,7 @@ public class FibonacciSearch {
         i--;
         return i;
     }
+
     public static void main(String[] args) {
         int[] number = {
                 1, 4, 2, 6, 7, 3, 9, 8

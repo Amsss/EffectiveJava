@@ -10,25 +10,37 @@ package com.calculation;
 //******孩子节点对换位置,返回叶子节点个数删除叶子节点,并输出所删除的叶子节点**//
 public class BinTree {
     public final static int MAX = 40;
-    BinTree[] elements = new BinTree[MAX]; // 层次遍历时保存各个节点
-    int front; // 层次遍历时队首
-    int rear; // 层次遍历时队尾
-    private Object data; // 数据元数
-    private BinTree left, right; // 指向左,右孩子结点的链
-    public BinTree() {}
-    public BinTree(Object data) { // 构造有值结点
+    // 层次遍历时保存各个节点
+    BinTree[] elements = new BinTree[MAX];
+    // 层次遍历时队首
+    int front;
+    // 层次遍历时队尾
+    int rear;
+    // 数据元数
+    private Object data;
+    // 指向左,右孩子结点的链
+    private BinTree left, right;
+
+    public BinTree() {
+    }
+
+    // 构造有值结点
+    public BinTree(Object data) {
         this.data = data;
         left = right = null;
     }
-    public BinTree(Object data, BinTree left, BinTree right) { // 构造有值结点
+    // 构造有值结点
+    public BinTree(Object data, BinTree left, BinTree right) {
         this.data = data;
         this.left = left;
         this.right = right;
     }
+
     @Override
     public String toString() {
         return data.toString();
     }
+
     // 前序遍历二叉树
     public static void preOrder(BinTree parent) {
         if (parent == null) {
@@ -38,6 +50,7 @@ public class BinTree {
         preOrder(parent.left);
         preOrder(parent.right);
     }
+
     // 中序遍历二叉树
     public void inOrder(BinTree parent) {
         if (parent == null) {
@@ -47,6 +60,7 @@ public class BinTree {
         System.out.print(parent.data + " ");
         inOrder(parent.right);
     }
+
     // 后序遍历二叉树
     public void postOrder(BinTree parent) {
         if (parent == null) {
@@ -56,6 +70,7 @@ public class BinTree {
         postOrder(parent.right);
         System.out.print(parent.data + " ");
     }
+
     // 层次遍历二叉树
     public void LayerOrder(BinTree parent) {
         elements[0] = parent;
@@ -78,6 +93,7 @@ public class BinTree {
             }
         }
     }
+
     // 返回树的叶节点个数
     public int leaves() {
         if (this == null) {
@@ -88,6 +104,7 @@ public class BinTree {
         }
         return (left == null ? 0 : left.leaves()) + (right == null ? 0 : right.leaves());
     }
+
     // 结果返回树的高度
     public int height() {
         int heightOfTree;
@@ -99,6 +116,7 @@ public class BinTree {
         heightOfTree = leftHeight < rightHeight ? rightHeight : leftHeight;
         return 1 + heightOfTree;
     }
+
     // 如果对象不在树中,结果返回-1;否则结果返回该对象在树中所处的层次,规定根节点为第一层
     public int level(Object object) {
         int levelInTree;
@@ -116,6 +134,7 @@ public class BinTree {
         levelInTree = leftLevel < rightLevel ? rightLevel : leftLevel;
         return 1 + levelInTree;
     }
+
     // 将树中的每个节点的孩子对换位置
     public void reflect() {
         if (this == null) {
@@ -131,6 +150,7 @@ public class BinTree {
         left = right;
         right = temp;
     }
+
     // 将树中的所有节点移走,并输出移走的节点
     public void defoliate() {
         if (this == null) {
@@ -156,6 +176,7 @@ public class BinTree {
             right = null;
         }
     }
+
     /**
      * @param args
      */
@@ -169,7 +190,7 @@ public class BinTree {
         BinTree f = new BinTree("F", h, i);
         BinTree b = new BinTree("B", d, e);
         BinTree c = new BinTree("C", f, null);
-        BinTree tree = new BinTree("A", b, c);
+        BinTree tree = new BinTree("Test", b, c);
         System.out.println("前序遍历二叉树结果: ");
         tree.preOrder(tree);
         System.out.println();

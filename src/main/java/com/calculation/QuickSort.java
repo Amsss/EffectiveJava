@@ -9,6 +9,7 @@ public class QuickSort {
     public static void sort(int[] number) {
         sort(number, 0, number.length - 1);
     }
+
     private static void sort(int[] number, int left, int right) {
         if (left < right) {
             int s = number[left];
@@ -36,6 +37,7 @@ public class QuickSort {
             // 对右边进行递回
         }
     }
+
     private static void swap(int[] number, int i, int j) {
         int t;
         t = number[i];

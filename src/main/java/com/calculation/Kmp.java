@@ -10,7 +10,7 @@ public class Kmp {
     /**
      * KMP算法
      *
-     * @param str 匹配源
+     * @param str  匹配源
      * @param dest 匹配字符串
      * @param next next数组
      * @return 匹配字符串在源中的位置
@@ -49,7 +49,7 @@ public class Kmp {
         String s = "aaabaaabaaabaaaab";
         String t = "aaaab";
         Long start1 = System.nanoTime();
-        BruteForce.BFIndex(s, t);
+        BruteForce.bFIndex(s, t);
         Long end1 = System.nanoTime();
         System.out.println("BF算法所需时间：" + (end1 - start1) + "ns");
         Long start2 = System.nanoTime();

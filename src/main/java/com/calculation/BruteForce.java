@@ -7,7 +7,7 @@ package com.calculation;
  */
 public class BruteForce {
 
-    public static int BFIndex(String s, String t) {
+    public static int bFIndex(String s, String t) {
         int i = 0, j = 0;
         while (i < s.length() && j < t.length()) {
             if (s.charAt(i) == t.charAt(j)) {
@@ -27,6 +27,6 @@ public class BruteForce {
     public static void main(String[] args) {
         String s = "aaabaaabaaabaaaab";
         String t = "aaaab";
-        System.out.println(BFIndex(s, t));
+        System.out.println(bFIndex(s, t));
     }
 }

@@ -8,8 +8,9 @@ package com.bulider;
 public interface Builder<T> {
 
     /**
+     * 构建方法
      *
-     * @return
+     * @return T
      */
     T build();
 }

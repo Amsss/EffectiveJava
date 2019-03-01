@@ -8,6 +8,7 @@ package com.calculation;
 public class TriangleArray {
     private int[] arr;
     private int length;
+
     public TriangleArray(int[][] array) {
         length = array.length;
         arr = new int[length * (1 + length) / 2];
@@ -20,10 +21,12 @@ public class TriangleArray {
             }
         }
     }
+
     public int getValue(int i, int j) {
         int loc = length * i - i * (i + 1) / 2 + j;
         return arr[loc];
     }
+
     public static void main(String[] args) {
         int[][] array = {
                 {
