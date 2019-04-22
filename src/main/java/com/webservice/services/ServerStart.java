@@ -8,6 +8,7 @@ import javax.xml.ws.Endpoint;
  * @date: 2019/1/4 11:09
  */
 public class ServerStart {
+
     public static void main(String[] args) {
         String address = "http://127.0.0.1:8444/webService";
         Endpoint.publish(address, new WebServiceImpl());

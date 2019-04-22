@@ -1,6 +1,7 @@
 package com.util;
 
 import java.nio.charset.Charset;
+import java.util.Random;
 
 /**
  * @description: 字节数组转换工具类
@@ -8,6 +9,11 @@ import java.nio.charset.Charset;
  * @date: 2019-01-08 14:40
  */
 public class BytesUtils {
+
+    private BytesUtils() {
+
+    }
+
     public static final String GBK = "GBK";
     public static final String UTF8 = "UTF-8";
     public static final char[] ASCII = "0123456789ABCDEF".toCharArray();
@@ -966,7 +972,21 @@ public class BytesUtils {
     //111111111111111111111111111111111111111111111111111111111111111
     //1111111111111111111111111111111
     public static void main(String[] args) {
-        byte[] x = new byte[10];
+        int i = 2147483647;
+        i >>>= 33;
+        System.out.println(i);
+        long l = -1;
+        l >>>= 10;
+        System.out.println(l);
+        short s = -1;
+        s >>>= 100;
+        //byte、short、char在做移位运算之前，会被自动转换为int类型，然后再进行运算。
+        //byte、short、int、char类型的数据经过移位运算后结果都为int型。
+        System.out.println(s);
+        byte b = -1;
+        b >>>= 1;
+        System.out.println(b);
+        /*byte[] x = new byte[10];
         System.out.println(Integer.toBinaryString(-128));
         System.out.println(Integer.toBinaryString(-127));
         x[0]= -128;
@@ -981,6 +1001,104 @@ public class BytesUtils {
         byte[] a = BytesUtils.intToBytesx(2147483647);
         System.out.println(a);
         byte[] b = BytesUtils.intToBytes1(2147483647);
-        System.out.println(b);
+        System.out.println(b);*/
+        boolean a = true;
+        boolean b2 = false;
+        while (a = b2){
+            System.out.println("111");
+        }
+        int i1 = 200;
+        long l1 = i1;
+        int www = (int) l1;
+    }
+
+    public static void main1(String[] args) {
+        char c = 0xffff; // max char hex value
+        byte b = 0x7f; // max byte hex value
+        short s = 0x7fff; // max short hex value
+        int i1 = 0x2f; // Hexadecimal (lowercase)
+        int i2 = 0X2F; // Hexadecimal (uppercase)
+        int i3 = 0177; // Octal (leading zero)
+        // Hex and Oct also work with long.
+        long n1 = 200L; // long suffix
+        long n2 = 200l; // long suffix
+        long n3 = 200;
+        //! long l6(200); // not allowed
+        float f1 = 1;
+        float f2 = 1F; // float suffix
+        float f3 = 1f; // float suffix
+        float f4 = 1e-45f; // 10 to the power
+        float f5 = 1e+9f; // float suffix
+        double d1 = 1d; // double suffix
+        double d2 = 1D; // double suffix
+        double d3 = 47e47d; // 10 to the power
+        Random rand = new Random();
+        int i = rand.nextInt();
+        int j = rand.nextInt();
+        pBinInt("-1", -1);
+        pBinInt("+1", +1);
+        int maxpos = 2147483647;
+        pBinInt("maxpos", maxpos);
+        int maxneg = -2147483648;
+        pBinInt("maxneg", maxneg);
+        pBinInt("i", i);
+        pBinInt("~i", ~i);
+        pBinInt("-i", -i);
+        pBinInt("j", j);
+        pBinInt("i & j", i & j);
+        pBinInt("i | j", i | j);
+        pBinInt("i ^ j", i ^ j);
+        pBinInt("i << 5", i << 5);
+        pBinInt("i >> 5", i >> 5);
+        pBinInt("(~i) >> 5", (~i) >> 5);
+        pBinInt("i >>> 5", i >>> 5);
+        pBinInt("(~i) >>> 5", (~i) >>> 5);
+
+        long l = rand.nextLong();
+        long m = rand.nextLong();
+        pBinLong("-1L", -1L);
+        pBinLong("+1L", +1L);
+        long ll = 9223372036854775807L;
+        pBinLong("maxpos", ll);
+        long lln = -9223372036854775808L;
+        pBinLong("maxneg", lln);
+        pBinLong("l", l);
+        pBinLong("~l", ~l);
+        pBinLong("-l", -l);
+        pBinLong("m", m);
+        pBinLong("l & m", l & m);
+        pBinLong("l | m", l | m);
+        pBinLong("l ^ m", l ^ m);
+        pBinLong("l << 5", l << 5);
+        pBinLong("l >> 5", l >> 5);
+        pBinLong("(~l) >> 5", (~l) >> 5);
+        pBinLong("l >>> 5", l >>> 5);
+        pBinLong("(~l) >>> 5", (~l) >>> 5);
+    }
+    static void pBinInt(String s, int i) {
+        System.out.println(
+                s + ", int: " + i + ", binary: ");
+        System.out.print("   ");
+        for(int j = 31; j >=0; j--) {
+            if(((1 << j) &  i) != 0) {
+                System.out.print("1");
+            } else {
+                System.out.print("0");
+            }
+        }
+        System.out.println();
+    }
+    static void pBinLong(String s, long l) {
+        System.out.println(
+                s + ", long: " + l + ", binary: ");
+        System.out.print("   ");
+        for(int i = 63; i >=0; i--) {
+            if(((1L << i) & l) != 0) {
+                System.out.print("1");
+            } else {
+                System.out.print("0");
+            }
+        }
+        System.out.println();
     }
 }

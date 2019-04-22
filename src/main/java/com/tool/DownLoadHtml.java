@@ -1,4 +1,4 @@
-package com.util;
+package com.tool;
 
 import java.io.BufferedReader;
 import java.io.FileWriter;

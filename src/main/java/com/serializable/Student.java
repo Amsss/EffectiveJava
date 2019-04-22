@@ -1,10 +1,10 @@
 package com.serializable;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
-import java.io.Serializable;
+import java.io.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * @description: 序列化
@@ -23,6 +23,15 @@ public class Student implements Serializable {
     }
 
     public static void main(String[] args) throws Exception {
+        List<Map<String,Object>> map = new ArrayList<>(16);
+        Map<String, Object> ma1 = new HashMap<>();
+        ma1.put("111","22");
+        map.add(ma1);
+        List<Map<String,Object>> map2 = deepCopy(map);
+        Map<String,Object> ma2 = map2.get(0);
+        ma2.put("111","222");
+        map2.clear();
+
         String file = "student.ser";
         // Serializable  序列化
         ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream(file));
@@ -34,4 +43,19 @@ public class Student implements Serializable {
         System.out.println(student.aa);
         inputStream.close();
     }
+
+    public static <T> List<T> deepCopy(List<T> src) throws IOException, ClassNotFoundException {
+        ByteArrayOutputStream byteOut = new ByteArrayOutputStream();
+        ObjectOutputStream out = new ObjectOutputStream(byteOut);
+        out.writeObject(src);
+
+
+        ByteArrayInputStream byteIn = new ByteArrayInputStream(byteOut.toByteArray());
+        ObjectInputStream in = new ObjectInputStream(byteIn);
+        @SuppressWarnings("unchecked")
+        List<T> dest = (List<T>) in.readObject();
+        return dest;
+    }
+
+
 }  

@@ -1,5 +1,6 @@
 package com.util;
 
+import java.text.DecimalFormat;
 import java.util.*;
 
 /**
@@ -21,11 +22,17 @@ public class HashMapUtils<K, V> extends HashMap<K, V> {
     }
 
     public static void main(String[] args) {
+        DecimalFormat DECIMAL_FORMAT1 = new DecimalFormat("0.00%");
+        System.out.println(DECIMAL_FORMAT1.format(1));
+        DecimalFormat DECIMAL_FORMAT2 = new DecimalFormat("0.00");
+        System.out.println(DECIMAL_FORMAT2.format(1));
         Map<String, Object> map2 = new HashMap<String, Object>(16) {
             {
                 put("11", "22");
             }
         };
+        Double b  = Double.valueOf(10)/3;
+        System.out.println(b);
         Map<String, Object> map1 = new HashMap<>(16);
         map1.put("11", "222");
         Double a = -1.00 / 1.00;

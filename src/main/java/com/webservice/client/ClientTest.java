@@ -16,5 +16,4 @@ public class ClientTest {
         MyWebServiceImpl MyWebService = factory.getMyWebServiceImplPort();
         String result = MyWebService.sayHello("jack");
     }
-
 }
