@@ -1,4 +1,4 @@
-package com.util;
+package com.utils;
 
 import java.text.DecimalFormat;
 import java.util.*;
@@ -8,13 +8,13 @@ import java.util.*;
  * @author zhuzz
  * @date: 2017-10-27 上午10:31:04
  */
-public class HashMapUtils<K, V> extends HashMap<K, V> {
+public class HashMapUtil<K, V> extends HashMap<K, V> {
     /**
      *
      */
     private static final long serialVersionUID = 1L;
 
-    private HashMapUtils() {
+    private HashMapUtil() {
     }
 
     public static <K, V> HashMap<K, V> newInstance() {
@@ -38,7 +38,7 @@ public class HashMapUtils<K, V> extends HashMap<K, V> {
         Double a = -1.00 / 1.00;
         System.out.println(a.isNaN());
         /*System.out.println(map1);
-        Map<String, Object> map = HashMapUtils.newInstance();
+        Map<String, Object> map = HashMapUtil.newInstance();
         map.put("Test", 1);
         map.put("B", 2);
         map.put("C", 3);

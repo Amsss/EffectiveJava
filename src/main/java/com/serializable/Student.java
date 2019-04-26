@@ -48,14 +48,10 @@ public class Student implements Serializable {
         ByteArrayOutputStream byteOut = new ByteArrayOutputStream();
         ObjectOutputStream out = new ObjectOutputStream(byteOut);
         out.writeObject(src);
-
-
         ByteArrayInputStream byteIn = new ByteArrayInputStream(byteOut.toByteArray());
         ObjectInputStream in = new ObjectInputStream(byteIn);
         @SuppressWarnings("unchecked")
         List<T> dest = (List<T>) in.readObject();
         return dest;
     }
-
-
 }  

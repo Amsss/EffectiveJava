@@ -10,7 +10,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
 public class Test {
 
     private String name;
-    private int age = 0;
+    private int age = 1;
     private static String country = "cn";
     private AtomicBoolean abc;
 

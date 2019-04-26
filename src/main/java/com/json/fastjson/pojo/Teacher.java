@@ -1,5 +1,7 @@
 package com.json.fastjson.pojo;
 
+import lombok.*;
+
 import java.util.List;
 
 /**
@@ -7,62 +9,39 @@ import java.util.List;
  * @author: zhuzz
  * @date: 2018-10-30 17:15
  */
+@Data
+/*@AllArgsConstructor
+@NoArgsConstructor*/
+@RequiredArgsConstructor
 public class Teacher {
+    /**
+     *
+     */
+    @NonNull
     private String teacherName;
+    /**
+     *
+     */
+    @NonNull
     private Integer teacherAge;
+    /**
+     *
+     */
+    @NonNull
     private Course course;
+    /**
+     *
+     */
+    @NonNull
     private List<Student> students;
 
-    public Teacher() {
-    }
+   /* public Teacher() {
+    }*/
 
-    public Teacher(String teacherName, Integer teacherAge, Course course, List<Student> students) {
+   /* public Teacher(String teacherName, Integer teacherAge, Course course, List<Student> students) {
         this.teacherName = teacherName;
         this.teacherAge = teacherAge;
         this.course = course;
         this.students = students;
-    }
-
-    public String getTeacherName() {
-        return teacherName;
-    }
-
-    public void setTeacherName(String teacherName) {
-        this.teacherName = teacherName;
-    }
-
-    public Integer getTeacherAge() {
-        return teacherAge;
-    }
-
-    public void setTeacherAge(Integer teacherAge) {
-        this.teacherAge = teacherAge;
-    }
-
-    public Course getCourse() {
-        return course;
-    }
-
-    public void setCourse(Course course) {
-        this.course = course;
-    }
-
-    public List<Student> getStudents() {
-        return students;
-    }
-
-    public void setStudents(List<Student> students) {
-        this.students = students;
-    }
-
-
-    @Override
-    public String toString() {
-        return "Teacher{" +
-                "teacherName='" + teacherName + '\'' +
-                ", teacherAge=" + teacherAge +
-                ", course=" + course +
-                ", students=" + students +
-                '}';
-    }
+    }*/
 }

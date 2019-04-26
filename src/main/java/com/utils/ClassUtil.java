@@ -1,4 +1,4 @@
-package com.util;
+package com.utils;
 
 import java.io.File;
 import java.io.FileFilter;
@@ -18,7 +18,7 @@ import java.util.jar.JarFile;
  * @author: zhuzz
  * @date: 2019/1/7 12:09
  */
-public class ClassUtils {
+public class ClassUtil {
 
     /**
      * 是否有注解

@@ -1,4 +1,4 @@
-package com.util;
+package com.utils;
 
 import java.nio.charset.Charset;
 import java.util.Random;
@@ -8,9 +8,9 @@ import java.util.Random;
  * @author: zhuzz
  * @date: 2019-01-08 14:40
  */
-public class BytesUtils {
+public class BytesUtil {
 
-    private BytesUtils() {
+    private BytesUtil() {
 
     }
 
@@ -998,9 +998,9 @@ public class BytesUtils {
         System.out.println(Integer.toBinaryString(0));
         System.out.println(Integer.toBinaryString(-1));
         System.out.println();
-        byte[] a = BytesUtils.intToBytesx(2147483647);
+        byte[] a = BytesUtil.intToBytesx(2147483647);
         System.out.println(a);
-        byte[] b = BytesUtils.intToBytes1(2147483647);
+        byte[] b = BytesUtil.intToBytes1(2147483647);
         System.out.println(b);*/
         boolean a = true;
         boolean b2 = false;

@@ -1,4 +1,4 @@
-package com.classloading;
+package com.collection.list;
 
 import java.util.AbstractList;
 import java.util.Arrays;
@@ -6,21 +6,21 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * @description:
+ * @description: 数组转List
  * @author: zhuzz
  * @date: 2019/1/7 10:43
  */
 public class AA {
 
     private static final String[] PRIVATE_VALUES = {"aa", "bb"};
+
     public static final List<String> VALUES = Collections.unmodifiableList(Arrays.asList(PRIVATE_VALUES));
 
-    public static String[] VALUES() {
+    public static String[] getPrivateValues() {
         return PRIVATE_VALUES.clone();
     }
 
     public static List<Integer> intArrayAsList(final int[] a) {
-
         if (a == null) {
             throw new NullPointerException();
         }
@@ -46,6 +46,7 @@ public class AA {
     }
 
     public static void main(String[] args) {
-        List<Integer> a = AA.intArrayAsList(new int[]{1, 2, 3});
+        List<Integer> a = AA.intArrayAsList(new int[]{2, 1, 3});
+        System.out.println(a);
     }
 }

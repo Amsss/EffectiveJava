@@ -9,7 +9,11 @@ public class ClassLoadContext {
 
     private final Class<?> m_caller;
 
-    //返回类给ClassLoaderResolver或ResourceLoader使用
+    /**
+     * 返回类给ClassLoaderResolver或ResourceLoader使用
+     *
+     * @return
+     */
     public final Class<?> getCallerClass() {
         return m_caller;
     }
@@ -17,5 +21,4 @@ public class ClassLoadContext {
     ClassLoadContext(final Class<?> caller) {
         m_caller = caller;
     }
-
 }

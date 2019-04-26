@@ -1,9 +1,6 @@
 package com.collection.list;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 /**
  * @description: 测试list为final的情况下对for each 循环的影响
@@ -13,6 +10,9 @@ import java.util.Set;
 public class Test {
 
     public static void main(String[] args) {
+        Map<String,Object> map = new HashMap<>(16);
+        Set<String> list1 = map.keySet();
+        Set<String> map1 = new HashSet<>(16);
         Set<String> set = new HashSet<>();
         set.add("20180101");
         set.add("20180106");

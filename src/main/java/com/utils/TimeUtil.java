@@ -1,4 +1,4 @@
-package com.util;
+package com.utils;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,9 +17,9 @@ import java.util.GregorianCalendar;
  * @author: zhuzz
  * @date: 2018-06-25 17:18
  */
-public class TimeUtils {
+public class TimeUtil {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(TimeUtils.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(TimeUtil.class);
 
     /**
      * the milli second of a day
