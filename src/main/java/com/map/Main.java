@@ -19,7 +19,7 @@ public class Main {
         array.add(2);
         array.add(3);
 
-        mySet set = new mySet(array.iterator());
+        Set<Integer> set = new mySet(array.iterator());
         System.out.println(set);
 
     }

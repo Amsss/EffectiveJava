@@ -24,7 +24,8 @@ public class Test {
         list2.add("111");
         System.out.println(list2.contains("111"));
         System.out.println(list2.contains("1111"));
-
+        ArrayList<String> list11 = new ArrayList<>(4);
+        LinkedList<String> list1111 = new LinkedList<String>();
         List<String> list = new ArrayList<>(4);
         list.add("a");
         list.add("b");

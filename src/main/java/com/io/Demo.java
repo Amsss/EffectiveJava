@@ -1,9 +1,11 @@
-package com.io.inputstream;
+package com.io;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @description:
@@ -15,7 +17,7 @@ public class Demo {
     /**
      * 字节流 读文件内容
      *
-     * @throws IOException
+     * @throws IOException 2
      */
     private static void test1() throws IOException {
         String fileName = "D:" + File.separator + "hello.txt";
@@ -28,6 +30,7 @@ public class Demo {
     }
 
     public static void main(String[] args) throws IOException {
+
         test1();
     }
 }
