@@ -4,11 +4,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @author: zhuzz
  * @description:
+ * @author: zhuzz
  * @date: 2018/10/12 22:53
  */
 public class TwoSum {
+
     public static void main(String[] args) {
         int [] a = {2, 11, 5, 7};
         int[] c = twoSum3(a,9);
@@ -17,7 +18,7 @@ public class TwoSum {
 
     public static int[] twoSum(int[] nums, int target) {
         int [] a = new int[2];
-        Map<Integer, Integer> map = new HashMap<>();
+        Map<Integer, Integer> map = new HashMap<>(16);
         for (int i = 0; i < nums.length ; i++) {
             if(map.containsKey(target - nums[i])) {
                 a [0] = nums[i];
@@ -31,10 +32,8 @@ public class TwoSum {
 
     public static int[] twoSum2(int[] nums, int target) {
         int[] indices = new int[2];
-        Map<Integer,Integer> map = new HashMap<>();
-
+        Map<Integer,Integer> map = new HashMap<>(16);
         for (int i = 0; i < nums.length; i++) {
-
             if (map.containsKey(nums[i])) {
                 indices[0]=map.get(nums[i]);
                 indices[1]=i;

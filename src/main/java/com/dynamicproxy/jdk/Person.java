@@ -1,20 +1,23 @@
 package com.dynamicproxy.jdk;
 
+/**
+ * @description:
+ * @author: zhuzz
+ * @date: 2019/1/7 12:03
+ */
 public interface Person {
 
-	/**
-	 * 
-	 * @方法说明：唱歌
-	 * @param name
-	 * @return
-	 */
-	String sing(String name);
+    /**
+     * @param name
+     * @return
+     * @方法说明：唱歌
+     */
+    String sing(String name);
 
-	/**
-	 * 
-	 * @方法说明：跳舞
-	 * @param name
-	 * @return
-	 */
-	String dance(String name);
+    /**
+     * @param name
+     * @return
+     * @方法说明：跳舞
+     */
+    String dance(String name);
 }

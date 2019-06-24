@@ -1,14 +1,15 @@
 package com.compare;
 
-import java.util.Date;
-import java.util.concurrent.TimeUnit;
-
+/**
+ * @description:
+ * @author: zhuzz
+ * @date: 2018/12/24 10:01
+ */
 public class Com implements Comparable<String> {
 
+    @Override
     public int compareTo(String o) {
         // TODO Auto-generated method stub
         return 0;
     }
-
-
 }

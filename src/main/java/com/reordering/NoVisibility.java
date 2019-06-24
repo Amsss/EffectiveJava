@@ -1,7 +1,7 @@
 package com.reordering;
 
 /**
- * @Description: "重排序"现象
+ * @description: "重排序"现象
  * @author: zhuzz
  * @date: 2018-07-10 14:04
  */

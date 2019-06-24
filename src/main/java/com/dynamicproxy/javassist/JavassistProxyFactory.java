@@ -6,10 +6,9 @@ import javassist.util.proxy.ProxyFactory;
 import java.lang.reflect.Method;
 
 /**
- * @Author: Zezhao.Zhu
- * @Description:
- * @Create: 2018/5/25 17:26
- * @Modified By：
+ * @description:
+ * @author: zhuzz
+ * @date: 2019/1/7 12:02
  */
 public class JavassistProxyFactory<T> {
     private T target;
@@ -41,6 +40,7 @@ public class JavassistProxyFactory<T> {
              *
              * 调用代理类实例上的代理方法的父类方法（即实体类ConcreteClassNoInterface中对应的方法）
              */
+            @Override
             public Object invoke(Object self, Method thismethod, Method proceed, Object[] args) throws Throwable {
                 System.out.println("--------------------------------");
                 System.out.println(self.getClass());

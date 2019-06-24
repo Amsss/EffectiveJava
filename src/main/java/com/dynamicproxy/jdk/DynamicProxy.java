@@ -1,16 +1,14 @@
 package com.dynamicproxy.jdk;
 
-
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
 /**
- * @Description:
+ * @description:
  * @author: zhuzz
- * @date: 2018-06-20 9:52
+ * @date: 2019/1/7 12:03
  */
-
 public class DynamicProxy implements InvocationHandler {
 
     Object originalObj;

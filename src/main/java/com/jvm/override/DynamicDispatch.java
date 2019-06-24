@@ -1,7 +1,7 @@
 package com.jvm.override;
 
 /**
- * @Description: 方法动态分配演示
+ * @description: 方法动态分配演示
  * @author: zhuzz
  * @date: 2018-06-19 9:55
  */
