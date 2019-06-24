@@ -15,10 +15,10 @@ public class GuavaBimapTest {
         empIDNameMap.put(new Integer(101), "Mahesh");
         empIDNameMap.put(new Integer(102), "Sohan");
         empIDNameMap.put(new Integer(103), "Ramesh");
-        empIDNameMap.put(106, null);
+        empIDNameMap.put(106, "Mahesh");
 
         //Emp Id of Employee "Mahesh"
-        System.out.println(empIDNameMap.inverse().get(null));
+        System.out.println(empIDNameMap.inverse());
         System.out.println(empIDNameMap.values());
     }
 }
