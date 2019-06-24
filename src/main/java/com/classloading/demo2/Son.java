@@ -1,4 +1,4 @@
-package com.classloading;
+package com.classloading.demo2;
 
 /**
  * @description:

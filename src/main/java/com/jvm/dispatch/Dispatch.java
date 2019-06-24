@@ -21,6 +21,7 @@ public class Dispatch {
     }
 
     public static class Son extends Father {
+        @Override
         public void hardChoice(QQ arg) {
             System.out.println("son choice qq");
         }

@@ -1,4 +1,4 @@
-package com.classloading;
+package com.classloading.demo1;
 
 /**
  * @description:
@@ -6,6 +6,9 @@ package com.classloading;
  * @date: 2019-04-25 11:36
  */
 abstract class Glyph {
+    /**
+     *
+     */
     abstract void draw();
     Glyph() {
         System.out.println("Glyph() before draw()");

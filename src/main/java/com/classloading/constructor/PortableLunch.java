@@ -9,5 +9,6 @@ class PortableLunch extends Lunch {
     PortableLunch() {
         System.out.println("PortableLunch()");
     }
+
     private Bread xxx = new Bread();
 }

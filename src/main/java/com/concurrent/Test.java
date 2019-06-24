@@ -10,4 +10,8 @@ public class Test {
     public static void timeRun() {
 
     }
+
+    public static void main(String[] args) {
+
+    }
 }

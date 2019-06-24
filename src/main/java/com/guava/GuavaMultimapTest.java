@@ -17,7 +17,6 @@ public class GuavaMultimapTest {
     public static void main(String args[]) {
         GuavaMultimapTest tester = new GuavaMultimapTest();
         Multimap<String, String> multimap = tester.getMultimap();
-
         List<String> lowerList = (List<String>) multimap.get("lower");
         System.out.println("Initial lower case list");
         System.out.println(lowerList.toString());
