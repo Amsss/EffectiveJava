@@ -61,7 +61,7 @@ public class Dish {
                 //.map(Dish::getName)
                 .map(Dish::getName)
                 // 截断流，使其元素不超过给定的数量
-                .limit(3)
+                .limit(10)
                 // 将流转换为列表
                 .collect(toList());
         int calories = menu.stream()
