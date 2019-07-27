@@ -1,4 +1,4 @@
-package com.java8.test;
+package com.java8.serialization;
 
 import java.io.Serializable;
 import java.util.Comparator;

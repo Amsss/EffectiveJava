@@ -30,6 +30,7 @@ public class Test {
         list.add("a");
         list.add("b");
         list.add("c");
+        list.add(0,"222");
         for (final String b : list) {
             //循环过程中禁止修改 例如： b = "11";
             System.out.println(b);

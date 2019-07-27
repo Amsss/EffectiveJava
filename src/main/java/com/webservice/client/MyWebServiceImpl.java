@@ -16,7 +16,7 @@ import javax.xml.ws.ResponseWrapper;
  * @author: zhuzz
  * @date: 2019/4/22 11:18
  */
-@WebService(name = "myWebServiceImpl", targetNamespace = "http://impl.service.test.zhuzz.com/")
+@WebService(name = "myWebServiceImpl", targetNamespace = "http://impl.service.serialization.zhuzz.com/")
 @XmlSeeAlso({ObjectFactory.class})
 public interface MyWebServiceImpl {
 
@@ -27,8 +27,8 @@ public interface MyWebServiceImpl {
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "sayHello", targetNamespace = "http://impl.service.test.zhuzz.com/", className = "com.zhuzz.test.service.impl.SayHello")
-    @ResponseWrapper(localName = "sayHelloResponse", targetNamespace = "http://impl.service.test.zhuzz.com/", className = "com.zhuzz.test.service.impl.SayHelloResponse")
-    @Action(input = "http://impl.service.test.zhuzz.com/myWebServiceImpl/sayHelloRequest", output = "http://impl.service.test.zhuzz.com/myWebServiceImpl/sayHelloResponse")
+    @RequestWrapper(localName = "sayHello", targetNamespace = "http://impl.service.serialization.zhuzz.com/", className = "com.zhuzz.serialization.service.impl.SayHello")
+    @ResponseWrapper(localName = "sayHelloResponse", targetNamespace = "http://impl.service.serialization.zhuzz.com/", className = "com.zhuzz.serialization.service.impl.SayHelloResponse")
+    @Action(input = "http://impl.service.serialization.zhuzz.com/myWebServiceImpl/sayHelloRequest", output = "http://impl.service.serialization.zhuzz.com/myWebServiceImpl/sayHelloResponse")
     String sayHello(@WebParam(name = "arg0", targetNamespace = "") String arg0);
 }

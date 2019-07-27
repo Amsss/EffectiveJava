@@ -13,7 +13,7 @@ public class Test {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             try {
-                DriverManager.getConnection("jdbc:mysql://localhost:3306/test", "root", "123");
+                DriverManager.getConnection("jdbc:mysql://localhost:3306/serialization", "root", "123");
             } catch (SQLException e) {
                 e.printStackTrace();
             }

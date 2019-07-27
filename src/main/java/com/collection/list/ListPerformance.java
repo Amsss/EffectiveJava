@@ -49,7 +49,7 @@ public class ListPerformance {
                 @Override
                 void test(List a) {
                     int half = a.size() / 2;
-                    String s = "test";
+                    String s = "serialization";
                     ListIterator it = a.listIterator(half);
                     for (int i = 0; i < size * 10; i++) {
                         it.add(s);

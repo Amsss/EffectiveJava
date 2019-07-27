@@ -18,7 +18,7 @@ public class GZIPcompress {
             BufferedOutputStream out =
                     new BufferedOutputStream(
                             new GZIPOutputStream(
-                                    new FileOutputStream("test.gz")));
+                                    new FileOutputStream("serialization.gz")));
             System.out.println("Writing file");
             int c;
             while((c = in.read()) != -1) {
@@ -31,7 +31,7 @@ public class GZIPcompress {
                     new BufferedReader(
                             new InputStreamReader(
                                     new GZIPInputStream(
-                                            new FileInputStream("test.gz"))));
+                                            new FileInputStream("serialization.gz"))));
             String s;
             while((s = in2.readLine()) != null) {
                 System.out.println(s);

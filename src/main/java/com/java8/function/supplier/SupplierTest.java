@@ -4,7 +4,7 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 
 /**
- * @description:
+ * @description: 创建对象的
  * @author: zhuzz
  * @date: 2019-02-28 10:50
  */

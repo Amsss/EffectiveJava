@@ -15,5 +15,12 @@ public class Test {
         System.out.println(stats.getMax());
         System.out.println(stats.getSum());
         System.out.println(stats.getAverage());
+        Arrays.stream(new int[]{ 1, 2, 3, 4, 5, 6 })
+                .parallel()
+                .max()
+                .ifPresent(System.out::println);
+        int [] a = new int[]{1,22222222,2,2,1};
+        Arrays.parallelSort(a);
+        System.out.println(a);
     }
 }

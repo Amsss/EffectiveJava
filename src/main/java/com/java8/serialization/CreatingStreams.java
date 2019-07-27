@@ -1,4 +1,4 @@
-package com.java8.test;
+package com.java8.serialization;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -17,7 +17,6 @@ public class CreatingStreams {
         int i=10;
         int j =-5;
         System.out.println(cmp.compare(i, j));
-
         try {
             //写入字节流
             ByteArrayOutputStream out = new ByteArrayOutputStream();

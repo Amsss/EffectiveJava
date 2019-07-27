@@ -1,10 +1,9 @@
 package com.java8.stream;
 
-import com.java8.coloncolon.Test1;
+import com.java8.methodreference.Test1;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.Supplier;
 import java.util.stream.Stream;
 
 /**
@@ -17,11 +16,11 @@ public class Test {
     private static List<Dish> menu;
 
     public static void main(String[] args) {
-        /*streamMethodA();
+        streamMethodA();
         streamMethodB();
         streamMethodC();
         streamMethodD();
-        streamMethodE();*/
+        streamMethodE();
         streamMethodF();
         streamMethodG();
         streamMethodH();

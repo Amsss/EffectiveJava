@@ -43,9 +43,9 @@ class Student {
         }
         Student student = (Student) object;
         // no need to handle null here
-        // Objects.equal("test", "test") == true
-        // Objects.equal("test", null) == false
-        // Objects.equal(null, "test") == false
+        // Objects.equal("serialization", "serialization") == true
+        // Objects.equal("serialization", null) == false
+        // Objects.equal(null, "serialization") == false
         // Objects.equal(null, null) == true
         return Objects.equal(firstName, student.firstName) // first name can be null
                 && Objects.equal(lastName, student.lastName) // last name can be null

@@ -14,10 +14,10 @@ public class ZipCompress {
     public static void main(String[] args) {
         String [] fileArray = new String[]{"B.txt","C.txt","D.txt"};
         try {
-            FileOutputStream f = new FileOutputStream("test.zip");
+            FileOutputStream f = new FileOutputStream("serialization.zip");
             CheckedOutputStream csum = new CheckedOutputStream(f, new Adler32());
             ZipOutputStream out = new ZipOutputStream(new BufferedOutputStream(csum));
-            out.setComment("A test of Java Zipping");
+            out.setComment("A serialization of Java Zipping");
             // Can't read the above comment, though
             for (int i = 0; i < fileArray.length; i++) {
                 System.out.println("Writing file " + fileArray[i]);
@@ -36,7 +36,7 @@ public class ZipCompress {
             System.out.println("Checksum: " + csum.getChecksum().getValue());
             // Now extract the files:
             System.out.println("Reading file");
-            FileInputStream fi = new FileInputStream("test.zip");
+            FileInputStream fi = new FileInputStream("serialization.zip");
             CheckedInputStream csumi = new CheckedInputStream(fi, new Adler32());
             ZipInputStream in2 = new ZipInputStream(new BufferedInputStream(csumi));
             ZipEntry ze;
@@ -52,7 +52,7 @@ public class ZipCompress {
             in2.close();
             // Alternative way to open and read
             // zip files:
-            ZipFile zf = new ZipFile("test.zip");
+            ZipFile zf = new ZipFile("serialization.zip");
             Enumeration e = zf.entries();
             while (e.hasMoreElements()) {
                 ZipEntry ze2 = (ZipEntry) e.nextElement();

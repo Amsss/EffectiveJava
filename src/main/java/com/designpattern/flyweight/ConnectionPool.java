@@ -17,7 +17,7 @@ public class ConnectionPool {
     /**
      * 公有属性
      */
-    private String url = "jdbc:mysql://localhost:3306/test";
+    private String url = "jdbc:mysql://localhost:3306/serialization";
     private String username = "root";
     private String password = "root";
     private String driverClassName = "com.mysql.jdbc.Driver";

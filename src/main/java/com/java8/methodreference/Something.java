@@ -1,4 +1,4 @@
-package com.java8.coloncolon;
+package com.java8.methodreference;
 
 /**
  * @description:
@@ -6,7 +6,6 @@ package com.java8.coloncolon;
  * @date: 2019-02-28 10:07
  */
 public class Something {
-    // constructor methods
     Something() {
     }
 
@@ -14,12 +13,10 @@ public class Something {
         System.out.println(something);
     }
 
-    // static methods
     static String startsWith(String s) {
         return String.valueOf(s.charAt(0));
     }
 
-    // object methods
     String endWith(String s) {
         return String.valueOf(s.charAt(s.length() - 1));
     }

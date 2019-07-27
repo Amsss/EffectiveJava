@@ -20,8 +20,18 @@ public class MathUtil {
     private MathUtil(){}
 
     public static void main(String[] args) {
+        double a = 0.3;
+        double b = 0.1;
+        System.out.println(a-b);
+        // 这种失去了精度
+        BigDecimal bb = new BigDecimal(a);
+        // 先转成String再进行转换
+        BigDecimal cc = BigDecimal.valueOf(a);
+        //BigDecimal bb = BigDecimal.valueOf(a);
+        System.out.println(bb);
+        System.out.println(cc);
         BigDecimal xx = BigDecimal.valueOf(99.99);
-        long a  = xx.setScale( 0, BigDecimal.ROUND_UP ).longValue();
-        System.out.println(a);
+        long x  = xx.setScale( 0, BigDecimal.ROUND_UP ).longValue();
+        System.out.println(x);
     }
 }

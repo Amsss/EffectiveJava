@@ -10,7 +10,7 @@ import javax.xml.namespace.QName;
 /**
  * This object contains factory methods for each 
  * Java content interface and Java element interface 
- * generated in the com.zhuzz.test.service.impl package. 
+ * generated in the com.zhuzz.serialization.service.impl package.
  * <p>An ObjectFactory allows you to programatically 
  * construct new instances of the Java representation 
  * for XML content. The Java representation of XML 
@@ -24,11 +24,11 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _SayHello_QNAME = new QName("http://impl.service.test.zhuzz.com/", "sayHello");
-    private final static QName _SayHelloResponse_QNAME = new QName("http://impl.service.test.zhuzz.com/", "sayHelloResponse");
+    private final static QName _SayHello_QNAME = new QName("http://impl.service.serialization.zhuzz.com/", "sayHello");
+    private final static QName _SayHelloResponse_QNAME = new QName("http://impl.service.serialization.zhuzz.com/", "sayHelloResponse");
 
     /**
-     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: com.zhuzz.test.service.impl
+     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: com.zhuzz.serialization.service.impl
      * 
      */
     public ObjectFactory() {
@@ -54,7 +54,7 @@ public class ObjectFactory {
      * Create an instance of {@link JAXBElement }{@code <}{@link SayHello }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://impl.service.test.zhuzz.com/", name = "sayHello")
+    @XmlElementDecl(namespace = "http://impl.service.serialization.zhuzz.com/", name = "sayHello")
     public JAXBElement<SayHello> createSayHello(SayHello value) {
         return new JAXBElement<SayHello>(_SayHello_QNAME, SayHello.class, null, value);
     }
@@ -63,7 +63,7 @@ public class ObjectFactory {
      * Create an instance of {@link JAXBElement }{@code <}{@link SayHelloResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://impl.service.test.zhuzz.com/", name = "sayHelloResponse")
+    @XmlElementDecl(namespace = "http://impl.service.serialization.zhuzz.com/", name = "sayHelloResponse")
     public JAXBElement<SayHelloResponse> createSayHelloResponse(SayHelloResponse value) {
         return new JAXBElement<SayHelloResponse>(_SayHelloResponse_QNAME, SayHelloResponse.class, null, value);
     }

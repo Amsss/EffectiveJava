@@ -17,7 +17,7 @@ import java.rmi.RemoteException;
 public class Asss {
 
     public static void main(String[] args) {
-        //test();
+        //serialization();
         try {
             String endpoint = "http://55.33.0.9:8861/webServiceEntry?wsdl";
             String soapActionURI = "http://tempuri.org/ISearch/buildBSXml";
@@ -57,7 +57,7 @@ public class Asss {
         String url = "http://localhost:8555/webService?wsdl";
         String namespace = "http://tempuri.org/";
         String methodName = "sayHello";
-        String soapActionURI = "http://impl.service.test.zhuzz.com/myWebServiceImpl/sayHelloRequest";
+        String soapActionURI = "http://impl.service.serialization.zhuzz.com/myWebServiceImpl/sayHelloRequest";
         Service service = new Service();
         Call call;
         try {

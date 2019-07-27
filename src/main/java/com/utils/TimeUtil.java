@@ -573,6 +573,9 @@ public class TimeUtil {
 
     public static void main(String[] args) {
         System.out.println(Instant.now().toEpochMilli());
+        String str1="2018-07-05";
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM");
+        LocalDateTime parse = LocalDateTime.parse(str1, dtf);
     }
 
 }

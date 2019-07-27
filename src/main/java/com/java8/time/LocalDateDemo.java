@@ -1,6 +1,9 @@
 package com.java8.time;
 
+import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
+
 import java.time.*;
+import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoField;
 
 /**
@@ -10,9 +13,39 @@ import java.time.temporal.ChronoField;
  */
 public class LocalDateDemo {
     public static void main(String[] args) {
+        System.out.println(LocalTime.now());
+        System.out.println(LocalTime.now().format(DateTimeFormatter.ofPattern("HH:mm")));
+        System.out.println(Year.now().toString());
+        System.out.println(YearMonth.parse("2019-02").plusMonths(-1).toString());
+        YearMonth yearMonth = YearMonth.now();
+        System.out.println(yearMonth.plusMonths(-1));
+        LocalDate dateOfBirth = LocalDate.of(2010, 7, 8);
+        System.out.println(dateOfBirth.format(DateTimeFormatter.ofPattern("yyyy.MM")));
+
+        MonthDay birthday = MonthDay.of(dateOfBirth.getMonth(), dateOfBirth.getDayOfMonth());
+        MonthDay currentMonthDay = MonthDay.from(LocalDate.now());
+        if(currentMonthDay.equals(birthday)){
+            System.out.println("Many Many happy returns of the day !!");
+        }else{
+            System.out.println("Sorry, today is not your birthday");
+        }
+
+        LocalDate java8Release = LocalDate.of(2014, Month.MARCH, 14);
+        Period periodToNextJavaRelease =
+                Period.between(dateOfBirth, java8Release);
+        System.out.println("Months left between today and Java 8 release : " + periodToNextJavaRelease.getMonths() );
+        periodToNextJavaRelease.getDays();
+
+        String dayAfterTommorrow = "20140116";
+        LocalDate formatted = LocalDate.parse(dayAfterTommorrow,
+                DateTimeFormatter.BASIC_ISO_DATE);
+        System.out.printf("Date generated from String %s is %s %n", dayAfterTommorrow, formatted);
+
+
         LocalDate now = LocalDate.now().plusDays(-1);
-        //=================================
         LocalDate date = LocalDate.parse("2017-12-12");
+        int x = date.getMonth().getValue();
+        String dateString = date.toString();
         LocalTime time = LocalTime.parse("14:22:28");
         //LocalDateTime，是LocalDate和LocalTime的合体。它同时表示了日期和时间，但不带有时区信息，你可以直接创建，也可以通过合并日期和时间对象构造
         Instant instant = Instant.now();
@@ -22,9 +55,6 @@ public class LocalDateDemo {
         System.out.println("TimeTest.testInstant 时间戳 ： " + instant.atZone(ZoneId.systemDefault()).toInstant().toEpochMilli());
         methodA();
         methodB();
-
-
-
     }
 
     /**

@@ -18,14 +18,14 @@ import javax.xml.ws.WebServiceFeature;
  * Generated source version: 2.2
  * 
  */
-@WebServiceClient(name = "myWebServiceImplService", targetNamespace = "http://impl.service.test.zhuzz.com/", wsdlLocation = "http://172.16.171.54:8221/webService?wsdl")
+@WebServiceClient(name = "myWebServiceImplService", targetNamespace = "http://impl.service.serialization.zhuzz.com/", wsdlLocation = "http://172.16.171.54:8221/webService?wsdl")
 public class MyWebServiceImplService
     extends Service
 {
 
     private final static URL MYWEBSERVICEIMPLSERVICE_WSDL_LOCATION;
     private final static WebServiceException MYWEBSERVICEIMPLSERVICE_EXCEPTION;
-    private final static QName MYWEBSERVICEIMPLSERVICE_QNAME = new QName("http://impl.service.test.zhuzz.com/", "myWebServiceImplService");
+    private final static QName MYWEBSERVICEIMPLSERVICE_QNAME = new QName("http://impl.service.serialization.zhuzz.com/", "myWebServiceImplService");
 
     static {
         URL url = null;
@@ -70,7 +70,7 @@ public class MyWebServiceImplService
      */
     @WebEndpoint(name = "myWebServiceImplPort")
     public MyWebServiceImpl getMyWebServiceImplPort() {
-        return super.getPort(new QName("http://impl.service.test.zhuzz.com/", "myWebServiceImplPort"), MyWebServiceImpl.class);
+        return super.getPort(new QName("http://impl.service.serialization.zhuzz.com/", "myWebServiceImplPort"), MyWebServiceImpl.class);
     }
 
     /**
@@ -82,7 +82,7 @@ public class MyWebServiceImplService
      */
     @WebEndpoint(name = "myWebServiceImplPort")
     public MyWebServiceImpl getMyWebServiceImplPort(WebServiceFeature... features) {
-        return super.getPort(new QName("http://impl.service.test.zhuzz.com/", "myWebServiceImplPort"), MyWebServiceImpl.class, features);
+        return super.getPort(new QName("http://impl.service.serialization.zhuzz.com/", "myWebServiceImplPort"), MyWebServiceImpl.class, features);
     }
 
     private static URL __getWsdlLocation() {

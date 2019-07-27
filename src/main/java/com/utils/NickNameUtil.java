@@ -52,10 +52,10 @@ public class NickNameUtil {
 
     public static void main(String[] args) {
         System.out.println(normalize("$$$$111$$11$$$"));
-		/*Pattern pattern = Pattern.compile("(another) (test)");
+		/*Pattern pattern = Pattern.compile("(another) (serialization)");
 	    StringBuffer sb = new StringBuffer();
 
-	    String candidateString = "This is another test.";
+	    String candidateString = "This is another serialization.";
 
 	    String replacement = "$1 AAA $2";
 	    Matcher m = pattern.matcher(candidateString);
