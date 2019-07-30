@@ -9,5 +9,10 @@ import java.rmi.RemoteException;
  * @date: 2019-07-04 22:16
  */
 public interface PerfectTimeI  extends Remote {
+    /**
+     *
+     * @return
+     * @throws RemoteException
+     */
     long getPerfectTime() throws RemoteException;
 }

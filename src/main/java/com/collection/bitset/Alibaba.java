@@ -1,4 +1,4 @@
-package com.bitset;
+package com.collection.bitset;
 
 import java.util.*;
 

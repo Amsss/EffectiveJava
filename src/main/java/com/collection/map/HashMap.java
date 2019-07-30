@@ -1,4 +1,4 @@
-package com.map;
+package com.collection.map;
 
 import java.util.AbstractMap;
 import java.util.Map;

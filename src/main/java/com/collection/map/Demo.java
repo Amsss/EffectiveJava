@@ -1,6 +1,4 @@
-package com.map;
-
-import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
+package com.collection.map;
 
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;

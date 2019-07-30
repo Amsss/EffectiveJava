@@ -16,9 +16,7 @@ public class Candy {
     public static void main(String[] args) {
         try {
             Candy.class.newInstance();
-        } catch (InstantiationException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
+        } catch (InstantiationException | IllegalAccessException e) {
             e.printStackTrace();
         }
     }

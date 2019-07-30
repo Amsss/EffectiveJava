@@ -3,7 +3,7 @@ package com.utils;
 import java.lang.reflect.Modifier;
 
 /**
- * @description:
+ * @description: 反射工具类
  * @author: zhuzz
  * @date: 2019-03-11 14:59
  */
@@ -18,7 +18,7 @@ public class ReflectUtil {
         testModifier(ReflectUtil.class.getMethod("main", String[].class).getModifiers());
     }
 
-    public static void testModifier(int mod) {
+    private static void testModifier(int mod) {
         System.out.println("----------------------【mod=" + mod + "】----------------------");
         System.out.println("【toString】" + Modifier.toString(mod));
         System.out.println("【isPublic】" + Modifier.isPublic(mod));

@@ -25,12 +25,10 @@ public class MethodTest {
      * 一个完整方法包含的属性有： 方法上使用的注解、方法的修饰符、方法上定义的泛型参数、方法的返回值、方法名称、方法参数(泛型、注解)、方法抛出的异常
      */
     @MyAnnotation
-    private <T> boolean add(@MyAnnotation List<T> list, T... params) throws RuntimeException,
-            Exception {
+    private <T> boolean add(@MyAnnotation List<T> list, T... params) throws RuntimeException, Exception {
         if (null == list) {
             throw new RuntimeException("list = null");
         }
-
         if (null == params) {
             return false;
         }

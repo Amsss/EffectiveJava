@@ -4,7 +4,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * @description:
+ * @description: 正则表达式
  * @author: zhuzz
  * @date: 2019/1/7 12:09
  */
@@ -33,7 +33,7 @@ public class NickNameUtil {
      * @param nickName
      * @return
      */
-    public static String normalize(String nickName) {
+    private static String normalize(String nickName) {
         Matcher matcher = nickPattern.matcher(nickName);
         int count = 0;
         StringBuffer sb = new StringBuffer();

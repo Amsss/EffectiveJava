@@ -1,11 +1,14 @@
-package com.controlframework;
+package com.framework.control;
 
 /**
- * @description:
+ * @description: 控制类
  * @author: zhuzz
  * @date: 2019-04-24 18:06
  */
 public class Controller {
+    /**
+     *
+     */
     private EventSet es = new EventSet();
 
     public void addEvent(AbstractEvent c) {

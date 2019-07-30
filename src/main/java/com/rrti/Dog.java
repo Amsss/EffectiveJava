@@ -18,9 +18,7 @@ public class Dog  implements Pet {
             System.out.println(Dog.class.getSuperclass());
             Class<?>[] xx = Dog.class.getInterfaces();
             System.out.println(xx[0]);
-        } catch (InstantiationException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
+        } catch (InstantiationException | IllegalAccessException e) {
             e.printStackTrace();
         }
     }

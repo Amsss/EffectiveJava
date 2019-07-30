@@ -22,10 +22,10 @@ public class HashMapUtil<K, V> extends HashMap<K, V> {
     }
 
     public static void main(String[] args) {
-        DecimalFormat DECIMAL_FORMAT1 = new DecimalFormat("0.00%");
-        System.out.println(DECIMAL_FORMAT1.format(1));
-        DecimalFormat DECIMAL_FORMAT2 = new DecimalFormat("0.00");
-        System.out.println(DECIMAL_FORMAT2.format(1));
+        DecimalFormat decimalFormat1 = new DecimalFormat("0.00%");
+        System.out.println(decimalFormat1.format(1));
+        DecimalFormat decimalFormat2 = new DecimalFormat("0.00");
+        System.out.println(decimalFormat2.format(1));
         Map<String, Object> map2 = new HashMap<String, Object>(16) {
             {
                 put("11", "22");

@@ -20,12 +20,13 @@ public class PerfectTime extends UnicastRemoteObject implements PerfectTimeI {
     // Must implement constructor to throw
     // RemoteException:
     public PerfectTime() throws RemoteException {
-    // super(); // Called automatically
+        // Called automatically
+        // super();
     }
 
     // Registration for RMI serving:
     public static void main(String[] args) {
-        System.setSecurityManager( new RMISecurityManager());
+        System.setSecurityManager(new RMISecurityManager());
         try {
             PerfectTime pt = new PerfectTime();
             Naming.bind("PerfectTime", pt);

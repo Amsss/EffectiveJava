@@ -16,7 +16,7 @@ public class MD5Util {
      * @param  text 加密后的报文
      * @return
      */
-    public static String getMD5StrJava(String text) {
+    private static String getMD5StrJava(String text) {
         try {
             // 得到一个信息摘要器
             MessageDigest digest = MessageDigest.getInstance("md5");
