@@ -1,7 +1,8 @@
 package com.leetcode;
 
 /**
- * @description: (2 - > 4 - > 3) + (5 -> 6 -> 4)   7 -> 0 -> 8
+ * @description: 2、
+ * (2 - > 4 - > 3) + (5 -> 6 -> 4)   7 -> 0 -> 8
  * @author: zhuzz
  * @date: 2018/10/12 23:02
  */

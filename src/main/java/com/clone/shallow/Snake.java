@@ -1,5 +1,7 @@
 package com.clone.shallow;
 
+import com.clone.deep.DepthReading;
+
 /**
  * @description: 这意味着只有第一段才是由Object.clone()复制的，所以此时进行的是一种“浅层复制”。若希望复制整条
  * 蛇——即进行“深层复制”——必须在被覆盖的clone()里采取附加的操作
@@ -32,9 +34,12 @@ public class Snake implements Cloneable {
     }
     @Override
     public Object clone() {
-        Object o = null;
+        Snake o = null;
         try {
-            o = super.clone();
+            o = (Snake) super.clone();
+            if(o.next != null) {
+                o.next = (Snake)o.next.clone();
+            }
         } catch (CloneNotSupportedException e) {}
         return o;
     }
