@@ -17,6 +17,7 @@ public class PropertiesUtil {
     private static Properties props = new Properties();
     static {
         try {
+
             InputStream is = PropertiesUtil.class.getClassLoader().getResourceAsStream(propertiesUrl);
             props.load(is);
         } catch (Exception e) {
