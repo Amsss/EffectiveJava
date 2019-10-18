@@ -16,18 +16,20 @@ public class JabberClientThread extends Thread {
     private static int counter = 0;
     private int id = counter++;
     private static int threadcount = 0;
+
     public static int threadCount() {
         return threadcount;
     }
+
     public JabberClientThread(InetAddress addr) {
         System.out.println("Making client " + id);
         threadcount++;
         try {
             socket =
                     new Socket(addr, MultiJabberServer.PORT);
-        } catch(IOException e) {
-        // If the creation of the socket fails,
-        // nothing needs to be cleaned up.
+        } catch (IOException e) {
+            // If the creation of the socket fails,
+            // nothing needs to be cleaned up.
         }
         try {
             in =
@@ -41,32 +43,35 @@ public class JabberClientThread extends Thread {
                                     new OutputStreamWriter(
                                             socket.getOutputStream())), true);
             start();
-        } catch(IOException e) {
+        } catch (IOException e) {
             // The socket should be closed on any
             // failures other than the socket
             // constructor:
             try {
                 socket.close();
-            } catch(IOException e2) {}
+            } catch (IOException e2) {
+            }
         }
         // Otherwise the socket will be closed by
         // the run() method of the thread.
     }
+
     @Override
     public void run() {
         try {
-            for(int i = 0; i < 25; i++) {
+            for (int i = 0; i < 25; i++) {
                 out.println("Client " + id + ": " + i);
                 String str = in.readLine();
                 System.out.println(str);
             }
             out.println("END");
-        } catch(IOException e) {
+        } catch (IOException e) {
         } finally {
             // Always close it:
             try {
                 socket.close();
-            } catch(IOException e) {}
+            } catch (IOException e) {
+            }
             threadcount--; // Ending this thread
         }
     }

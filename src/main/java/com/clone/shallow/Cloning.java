@@ -11,7 +11,7 @@ import java.util.Vector;
 public class Cloning {
     public static void main(String[] args) {
         Vector<Int> v = new Vector<>();
-        if(v instanceof Cloneable) {
+        if (v instanceof Cloneable) {
             System.out.println("ok");
         }
         for (int i = 0; i < 10; i++) {

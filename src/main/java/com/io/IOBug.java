@@ -17,12 +17,12 @@ public class IOBug {
         out.writeDouble(3.14159);
         out.writeBytes("That was the value of pi\n");
         out.writeBytes("This is pi/2:\n");
-        out.writeDouble(3.14159/2);
+        out.writeDouble(3.14159 / 2);
         out.close();
         DataInputStream in =
                 new DataInputStream(
                         new BufferedInputStream(
-        new FileInputStream("Data.txt")));
+                                new FileInputStream("Data.txt")));
         BufferedReader inbr =
                 new BufferedReader(
                         new InputStreamReader(in));

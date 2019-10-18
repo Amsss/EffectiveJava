@@ -18,7 +18,7 @@ public class SiaMessage {
         this.timeout = timeout;
     }
 
-    public static Builder custom(){
+    public static Builder custom() {
 
         return new Builder();
     }
@@ -49,14 +49,17 @@ public class SiaMessage {
             this.businessCode = businessCode;
             return this;
         }
+
         public Builder setType(String type) {
             this.type = type;
             return this;
         }
+
         public Builder setMessage(String message) {
             this.message = message;
             return this;
         }
+
         public Builder setTimeout(int timeout) {
             this.timeout = timeout;
             return this;
@@ -71,20 +74,20 @@ public class SiaMessage {
 
         private void initDefaultValue(Builder builder) {
 
-            if(builder.businessCode==null || builder.businessCode.length()<1){
+            if (builder.businessCode == null || builder.businessCode.length() < 1) {
                 throw new IllegalArgumentException("businessCode  can not be empty!");
             }
 
-            if(builder.message==null || builder.message.length()<1){
+            if (builder.message == null || builder.message.length() < 1) {
                 throw new IllegalArgumentException("message can not be empty!");
             }
             //设置默认mime-type
-            if(builder.type==null || builder.type.length()<1){
+            if (builder.type == null || builder.type.length() < 1) {
                 builder.type = "application/json";
             }
 
-            if(builder.timeout<1){
-                builder.timeout = 6*1000;
+            if (builder.timeout < 1) {
+                builder.timeout = 6 * 1000;
             }
         }
     }
@@ -99,17 +102,17 @@ public class SiaMessage {
                 '}';
     }
 
-	public static void main(String[] args) {
-		SiaMessage message = new Builder().setBusinessCode("yrd")
-				.setMessage("hello world").setTimeout(1000).build();
+    public static void main(String[] args) {
+        SiaMessage message = new Builder().setBusinessCode("yrd")
+                .setMessage("hello world").setTimeout(1000).build();
 
-		System.out.println(message);
+        System.out.println(message);
 
-		// 2.
-		message = SiaMessage.custom().setBusinessCode("yrd")
-				.setMessage("hello world").setTimeout(1000).build();
+        // 2.
+        message = SiaMessage.custom().setBusinessCode("yrd")
+                .setMessage("hello world").setTimeout(1000).build();
 
-		System.out.println(message);
-	}
+        System.out.println(message);
+    }
 
 }

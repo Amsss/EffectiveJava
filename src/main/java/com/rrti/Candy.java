@@ -9,6 +9,7 @@ public class Candy {
     public Candy(String AA) {
         System.out.println(AA);
     }
+
     static {
         System.out.println("Loading Candy");
     }

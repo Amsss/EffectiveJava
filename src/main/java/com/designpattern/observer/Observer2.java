@@ -1,7 +1,7 @@
 package com.designpattern.observer;
 
 /**
- * @description: 
+ * @description:
  * @author: zhuzz
  * @date: 2019/1/7 11:54
  */

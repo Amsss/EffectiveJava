@@ -1,7 +1,5 @@
 package com.java8.lambda;
 
-import java.util.logging.Filter;
-
 /**
  * @description: Lambda表达式
  * 能够接收Lambda表达式的参数类型，是一个只包含一个方法的接口。

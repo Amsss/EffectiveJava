@@ -17,7 +17,7 @@ public class GuavaJoinerTest {
     public static void main(String args[]) {
         System.out.println(Joiner.on(",")
                 .skipNulls()
-                .join(Arrays.asList(new StringBuffer("222"), "3", "4", "4", "3", "2",null, "", "", "").stream().filter(s -> s!=null&&!Strings.isNullOrEmpty(s.toString())).collect(Collectors.toList()))
+                .join(Arrays.asList(new StringBuffer("222"), "3", "4", "4", "3", "2", null, "", "", "").stream().filter(s -> s != null && !Strings.isNullOrEmpty(s.toString())).collect(Collectors.toList()))
         );
         String[] string = "".split(",");
         System.out.println(string);
@@ -29,7 +29,7 @@ public class GuavaJoinerTest {
         List<String> list = new ArrayList<>(2);
         System.out.println(Joiner.on(",")
                 .skipNulls()
-                .join(Arrays.asList(1, 2, 3, 4, 5, 6,null, "", "", "")));
+                .join(Arrays.asList(1, 2, 3, 4, 5, 6, null, "", "", "")));
         System.out.println(Joiner.on(",")
                 .skipNulls()
                 .join(list));

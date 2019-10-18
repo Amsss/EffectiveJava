@@ -24,7 +24,7 @@ public class SupplierTest {
     public static void main(String[] args) {
         //创建Supplier容器，声明为TestSupplier类型，此时并不会调用对象的构造方法，即不会创建对象
         Supplier<SupplierTest> sup = SupplierTest::new;
-        Function<Integer,SupplierTest> function = integer -> new SupplierTest(integer);
+        Function<Integer, SupplierTest> function = integer -> new SupplierTest(integer);
         System.out.println("----------------------");
         //调用get()方法，此时会调用对象的构造方法，即获得到真正对象
         SupplierTest supplierTest = sup.get();

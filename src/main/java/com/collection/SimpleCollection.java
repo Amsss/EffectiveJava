@@ -2,7 +2,6 @@ package com.collection;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Iterator;
 
 /**
  * @description:
@@ -12,7 +11,7 @@ import java.util.Iterator;
 public class SimpleCollection {
     public static void main(String[] args) {
         Collection c = new ArrayList();
-        for(int i = 0; i < 10; i++) {
+        for (int i = 0; i < 10; i++) {
             c.add(Integer.toString(i));
         }
         for (Object aC : c) {

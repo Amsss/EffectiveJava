@@ -21,19 +21,20 @@ public class NameCollector {
     Process listmgr;
     PrintStream nameList;
     DataInputStream addResult;
+
     public NameCollector() {
         try {
             listmgr = Runtime.getRuntime().exec("listmgr.exe");
             nameList = new PrintStream(new BufferedOutputStream(listmgr.getOutputStream()));
             addResult = new DataInputStream(new BufferedInputStream(listmgr.getInputStream()));
-        } catch(IOException e) {
+        } catch (IOException e) {
             System.err.println("Cannot start listmgr.exe");
             System.exit(1);
         }
         try {
             socket = new DatagramSocket(COLLECTOR_PORT);
             System.out.println("NameCollector Server started");
-            while(true) {
+            while (true) {
                 // Block until a datagram appears:
                 socket.receive(dp);
                 String rcvd = new String(dp.getData(), 0, 0, dp.getLength());
@@ -42,7 +43,7 @@ public class NameCollector {
                 nameList.flush();
                 byte[] resultBuf = new byte[BUFFER_SIZE];
                 int byteCount = addResult.read(resultBuf);
-                if(byteCount != -1) {
+                if (byteCount != -1) {
                     String result = new String(resultBuf, 0).trim();
                     // Extract the address and port from
                     // the received datagram to find out
@@ -53,19 +54,19 @@ public class NameCollector {
                     result.getBytes(0, byteCount, echoBuf, 0);
                     DatagramPacket echo = new DatagramPacket(echoBuf, echoBuf.length, senderAddress, senderPort);
                     socket.send(echo);
-                }
-                else {
+                } else {
                     System.out.println("Unexpected lack of result from listmgr.exe");
                 }
             }
-        } catch(SocketException e) {
+        } catch (SocketException e) {
             System.err.println("Can't open socket");
             System.exit(1);
-        } catch(IOException e) {
+        } catch (IOException e) {
             System.err.println("Communication error");
             e.printStackTrace();
         }
     }
+
     public static void main(String[] args) {
         new NameCollector();
     }

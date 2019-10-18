@@ -9,11 +9,11 @@ import java.lang.reflect.Modifier;
  */
 public class ReflectUtil {
 
-    private static final transient int temp = 1;
+    private static final transient int TEMP = 1;
 
     public static void main(String[] args) throws Exception {
         //154。private static final transient
-        testModifier(ReflectUtil.class.getDeclaredField("temp").getModifiers());
+        testModifier(ReflectUtil.class.getDeclaredField("TEMP").getModifiers());
         //9。public static
         testModifier(ReflectUtil.class.getMethod("main", String[].class).getModifiers());
     }

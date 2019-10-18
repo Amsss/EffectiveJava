@@ -20,7 +20,6 @@ import java.util.GregorianCalendar;
 public class TimeUtil {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(TimeUtil.class);
-
     /**
      * the milli second of a day
      */
@@ -129,17 +128,41 @@ public class TimeUtil {
      * date format MM月dd日 HH:mm
      */
     public static final String DATE_FMT_9 = "yyyy.MM.dd";
+    /**
+     *
+     */
     public static final String DATE_FMT_10 = "HH:mm";
+    /**
+     *
+     */
     public static final String DATE_FMT_11 = "yyyy.MM.dd HH:mm:ss";
     /**
      * date format yyyy年MM月dd日
      */
     public static final String DATE_FMT_12 = "MM月dd日";
+    /**
+     *
+     */
     public static final String DATE_FMT_13 = "yyyy年MM月dd日HH时mm分";
+    /**
+     *
+     */
     public static final String DATE_FMT_14 = "yyyyMM";
+    /**
+     *
+     */
     public static final String DATE_FMT_15 = "MM-dd HH:mm:ss";
+    /**
+     *
+     */
     public static final String DATE_FMT_16 = "yyyyMMddHHmm";
+    /**
+     *
+     */
     public static final String DATE_FMT_17 = "HHmmss";
+    /**
+     *
+     */
     public static final String DATE_FMT_18 = "yyyy";
     /**
      * date format yyyy-MM-dd HH:mm:ss
@@ -573,9 +596,8 @@ public class TimeUtil {
 
     public static void main(String[] args) {
         System.out.println(Instant.now().toEpochMilli());
-        String str1="2018-07-05";
+        String str1 = "2018-07-05";
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM");
         LocalDateTime parse = LocalDateTime.parse(str1, dtf);
     }
-
 }

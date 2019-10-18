@@ -8,5 +8,8 @@ package com.clone.shallow;
 public class Int3 extends Int2 {
     // Automatically duplicated
     private int j;
-    public Int3(int i) { super(i); }
+
+    public Int3(int i) {
+        super(i);
+    }
 }

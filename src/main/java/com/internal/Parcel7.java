@@ -15,6 +15,7 @@ public class Parcel7 {
             }
         }; // Semicolon required
     }
+
     public static void main(String[] args) {
         Parcel7 p = new Parcel7();
         Wrapping w = p.wrap(10);

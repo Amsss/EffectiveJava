@@ -7,13 +7,11 @@ package com.designpattern.visitor;
  */
 public interface Subject {
     /**
-     *
      * @param visitor
      */
     void accept(Visitor visitor);
 
     /**
-     *
      * @return
      */
     String getSubject();

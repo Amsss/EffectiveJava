@@ -8,9 +8,8 @@ import java.rmi.RemoteException;
  * @author: zhuzz
  * @date: 2019-07-04 22:16
  */
-public interface PerfectTimeI  extends Remote {
+public interface PerfectTimeI extends Remote {
     /**
-     *
      * @return
      * @throws RemoteException
      */

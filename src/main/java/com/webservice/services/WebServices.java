@@ -19,7 +19,6 @@ public interface WebServices {
     String sayHello1(String name);
 
     /**
-     *
      * @param name
      * @return
      */
@@ -27,7 +26,6 @@ public interface WebServices {
     String sayHello2(String name);
 
     /**
-     *
      * @param name
      * @return
      */

@@ -3,7 +3,10 @@ package com.java8.stream;
 import java.util.*;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
-import java.util.function.*;
+import java.util.function.BiConsumer;
+import java.util.function.BinaryOperator;
+import java.util.function.Function;
+import java.util.function.Supplier;
 import java.util.stream.Collector;
 import java.util.stream.IntStream;
 
@@ -64,7 +67,7 @@ public class Main {
             try {
                 lock.lock();
                 list3.add(i);
-            }finally {
+            } finally {
                 lock.unlock();
             }
         });

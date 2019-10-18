@@ -11,6 +11,7 @@ import java.net.Socket;
  */
 public class MultiJabberServer {
     static final int PORT = 8080;
+
     public static void main(String[] args) throws IOException {
         ServerSocket s = new ServerSocket(PORT);
         System.out.println("Server Started");

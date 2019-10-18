@@ -46,13 +46,13 @@ public class MyWorld {
                     new ObjectInputStream(
                             new ByteArrayInputStream(
                                     buf2.toByteArray()));
-            Vector animals1 = (Vector)in1.readObject();
-            Vector animals2 = (Vector)in1.readObject();
-            Vector animals3 = (Vector)in2.readObject();
+            Vector animals1 = (Vector) in1.readObject();
+            Vector animals2 = (Vector) in1.readObject();
+            Vector animals3 = (Vector) in2.readObject();
             System.out.println("animals1: " + animals1);
             System.out.println("animals2: " + animals2);
             System.out.println("animals3: " + animals3);
-        } catch(Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

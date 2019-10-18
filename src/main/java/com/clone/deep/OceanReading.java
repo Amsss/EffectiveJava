@@ -25,21 +25,23 @@ public class OceanReading implements Cloneable {
     }
 
     private TemperatureReading temperature;
-    public OceanReading(double tdata, double ddata){
+
+    public OceanReading(double tdata, double ddata) {
         temperature = new TemperatureReading(tdata);
         depth = new DepthReading(ddata);
     }
+
     @Override
     public Object clone() {
         OceanReading o = null;
         try {
-            o = (OceanReading)super.clone();
+            o = (OceanReading) super.clone();
         } catch (CloneNotSupportedException e) {
             e.printStackTrace();
         }
         // Must clone handles:
-        o.depth = (DepthReading)o.depth.clone();
-        o.temperature = (TemperatureReading)o.temperature.clone();
+        o.depth = (DepthReading) o.depth.clone();
+        o.temperature = (TemperatureReading) o.temperature.clone();
         return o; // Upcasts back to Object
     }
 

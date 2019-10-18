@@ -9,7 +9,7 @@ import com.google.common.collect.HashBiMap;
  * @date: 2018-09-28 15:12
  */
 public class GuavaBimapTest {
-    public static void main(String args[]){
+    public static void main(String args[]) {
         BiMap<Integer, String> empIDNameMap = HashBiMap.create();
 
         empIDNameMap.put(new Integer(101), "Mahesh");

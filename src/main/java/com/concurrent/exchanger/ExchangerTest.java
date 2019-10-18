@@ -12,7 +12,7 @@ import java.util.concurrent.Exchanger;
  * @author: zhuzz
  * @date: 2019-07-27 18:00
  */
-public class ExchangerTest extends Thread{
+public class ExchangerTest extends Thread {
     private Exchanger<String> exchanger;
     private String string;
     private String threadName;
@@ -40,10 +40,10 @@ public class ExchangerTest extends Thread{
     public static void main(String[] args) {
         CountDownLatch startGate = new CountDownLatch(1);
         Exchanger<String> exchanger = new Exchanger<>();
-        ExchangerTest test1 = new ExchangerTest(exchanger, "string1", "thread-1",startGate);
-        ExchangerTest test2 = new ExchangerTest(exchanger, "string2", "thread-2",startGate);
-        ExchangerTest test3 = new ExchangerTest(exchanger, "string3", "thread-3",startGate);
-        ExchangerTest test4 = new ExchangerTest(exchanger, "string4", "thread-4",startGate);
+        ExchangerTest test1 = new ExchangerTest(exchanger, "string1", "thread-1", startGate);
+        ExchangerTest test2 = new ExchangerTest(exchanger, "string2", "thread-2", startGate);
+        ExchangerTest test3 = new ExchangerTest(exchanger, "string3", "thread-3", startGate);
+        ExchangerTest test4 = new ExchangerTest(exchanger, "string4", "thread-4", startGate);
         test1.start();
         test2.start();
         test3.start();

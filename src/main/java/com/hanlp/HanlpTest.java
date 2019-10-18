@@ -50,7 +50,7 @@ public class HanlpTest {
      * @Description：测试各种分词
      * @Date：
      */
-    private static void Participle(){
+    private static void Participle() {
         //标准分词
         //HanLP.segment 其实是对 StandardTokenizer.segment 的包装。
         //HanLP中有一系列“开箱即用”的静态分词器，以 Tokenizer 结尾
@@ -68,8 +68,7 @@ public class HanlpTest {
         //索引分词
         //索引分词 IndexTokenizer 是面向搜索引擎的分词器，能够对长词全切分，另外通过 term.offset 可以获取单词在文本中的偏移量
         List<Term> termList = IndexTokenizer.segment("主副食品");
-        for (Term term : termList)
-        {
+        for (Term term : termList) {
             System.out.println(term + " [" + term.offset + ":" + (term.offset + term.word.length()) + "]");
         }
         //主副食品/n [0:4]
@@ -96,11 +95,10 @@ public class HanlpTest {
         System.out.println(SpeedTokenizer.segment(text));
         long start = System.currentTimeMillis();
         int pressure = 1000000;
-        for (int i = 0; i < pressure; ++i)
-        {
+        for (int i = 0; i < pressure; ++i) {
             SpeedTokenizer.segment(text);
         }
-        double costTime = (System.currentTimeMillis() - start) / (double)1000;
+        double costTime = (System.currentTimeMillis() - start) / (double) 1000;
         System.out.printf("分词速度：%.2f字每秒", text.length() * pressure / costTime);
 
 
@@ -112,8 +110,7 @@ public class HanlpTest {
         String[] testCase = new String[]{
                 "刘喜杰石国祥会见吴亚琴先进事迹报告团成员",
         };
-        for (String sentence : testCase)
-        {
+        for (String sentence : testCase) {
             System.out.println("N-最短分词：" + nShortSegment.seg(sentence) + "\n最短路分词：" + shortestSegment.seg(sentence));
         }
 
@@ -125,10 +122,8 @@ public class HanlpTest {
         segment.enablePartOfSpeechTagging(true);
         List<Term> crftermList = segment.seg("你看过穆赫兰道吗");
         System.out.println(crftermList);
-        for (Term term : crftermList)
-        {
-            if (term.nature == null)
-            {
+        for (Term term : crftermList) {
+            if (term.nature == null) {
                 System.out.println("识别到新词：" + term.word);
             }
         }
@@ -144,11 +139,11 @@ public class HanlpTest {
      * @Description：抽取关键字
      * @Date：
      */
-    private static List<String> hanLPSegment(String text){
+    private static List<String> hanLPSegment(String text) {
         List<String> wordList = new ArrayList<String>();
-        List<Term> words= HanLP.segment(text);
-        for(Term tm:words){
-            if(tm.nature== Nature.n||tm.nature== Nature.vn){
+        List<Term> words = HanLP.segment(text);
+        for (Term tm : words) {
+            if (tm.nature == Nature.n || tm.nature == Nature.vn) {
                 wordList.add(tm.word);
             }
         }
@@ -157,7 +152,7 @@ public class HanlpTest {
     }
 
 
-    private static void extractKeyword(){
+    private static void extractKeyword() {
         String content = "程序员(英文Programmer)是从事程序开发、维护的专业人员。一般将程序员分为程序设计人员和程序编码人员，但两者的界限并不非常清楚，特别是在中国。软件从业人员分为初级程序员、高级程序员、系统分析员和项目经理四大类。";
         //返回频次最高的5个关键词
         List<String> keywordList = HanLP.extractKeyword(content, 5);
@@ -169,7 +164,7 @@ public class HanlpTest {
      * @Description：提取摘要
      * @Date：
      */
-    private static void extractSummary(){
+    private static void extractSummary() {
         //同样是一句话调用，第一个参数指定文本，第二个参数指定需要提取几个句子:
 
         String document = "算法可大致分为基本算法、数据结构的算法、数论算法、计算几何的算法、图的算法、动态规划以及数值分析、加密算法、排序算法、检索算法、随机化算法、并行算法、厄米变形模型、随机森林算法。\n" +
@@ -180,11 +175,11 @@ public class HanlpTest {
         List<String> sentenceList = HanLP.extractSummary(document, 3);//3:返回的句子数
         System.out.println(sentenceList);
 
-        String summary = HanLP.getSummary(document,50);//返回的摘要长度
+        String summary = HanLP.getSummary(document, 50);//返回的摘要长度
         System.out.println(summary);
     }
 
-    private static void extractPhrase(){
+    private static void extractPhrase() {
         String text = "算法工程师\n" +
                 "算法（Algorithm）是一系列解决问题的清晰指令，也就是说，能够对一定规范的输入，在有限时间内获得所要求的输出。如果一个算法有缺陷，或不适合于某个问题，执行这个算法将不会解决这个问题。不同的算法可能用不同的时间、空间或效率来完成同样的任务。一个算法的优劣可以用空间复杂度与时间复杂度来衡量。算法工程师就是利用算法处理事物的人。\n" +
                 "\n" +
@@ -213,7 +208,7 @@ public class HanlpTest {
      * @Description：智能提示
      * @Date：
      */
-    private static void suggest_test(){
+    private static void suggest_test() {
         Suggester suggester = new Suggester();
         String[] titleArray =
                 (
@@ -223,8 +218,7 @@ public class HanlpTest {
                                 "日本保密法将正式生效 日媒指其损害国民知情权\n" +
                                 "英报告说空气污染带来“公共健康危机”"
                 ).split("\\n");
-        for (String title : titleArray)
-        {
+        for (String title : titleArray) {
             suggester.addSentence(title);
         }
 
@@ -238,7 +232,7 @@ public class HanlpTest {
      * @Description：简繁转换
      * @Date：
      */
-    private static void converto(){
+    private static void converto() {
         //简繁转换
         System.out.println(HanLP.convertToTraditionalChinese("“以后等你当上皇后，就能买草莓庆祝了”"));
         System.out.println(HanLP.convertToSimplifiedChinese("用筆記簿型電腦寫程式HelloWorld"));
@@ -247,57 +241,49 @@ public class HanlpTest {
         String text = "重载不是重任";
         List<Pinyin> pinyinList = HanLP.convertToPinyinList(text);
         System.out.print("原文,");
-        for (char c : text.toCharArray())
-        {
+        for (char c : text.toCharArray()) {
             System.out.printf("%c,", c);
         }
         System.out.println();
 
         System.out.print("拼音（数字音调）,");
-        for (Pinyin pinyin : pinyinList)
-        {
+        for (Pinyin pinyin : pinyinList) {
             System.out.printf("%s,", pinyin);
         }
         System.out.println();
 
         System.out.print("拼音（符号音调）,");
-        for (Pinyin pinyin : pinyinList)
-        {
+        for (Pinyin pinyin : pinyinList) {
             System.out.printf("%s,", pinyin.getPinyinWithToneMark());
         }
         System.out.println();
 
         System.out.print("拼音（无音调）,");
-        for (Pinyin pinyin : pinyinList)
-        {
+        for (Pinyin pinyin : pinyinList) {
             System.out.printf("%s,", pinyin.getPinyinWithoutTone());
         }
         System.out.println();
 
         System.out.print("声调,");
-        for (Pinyin pinyin : pinyinList)
-        {
+        for (Pinyin pinyin : pinyinList) {
             System.out.printf("%s,", pinyin.getTone());
         }
         System.out.println();
 
         System.out.print("声母,");
-        for (Pinyin pinyin : pinyinList)
-        {
+        for (Pinyin pinyin : pinyinList) {
             System.out.printf("%s,", pinyin.getShengmu());
         }
         System.out.println();
 
         System.out.print("韵母,");
-        for (Pinyin pinyin : pinyinList)
-        {
+        for (Pinyin pinyin : pinyinList) {
             System.out.printf("%s,", pinyin.getYunmu());
         }
         System.out.println();
 
         System.out.print("输入法头,");
-        for (Pinyin pinyin : pinyinList)
-        {
+        for (Pinyin pinyin : pinyinList) {
             System.out.printf("%s,", pinyin.getHead());
         }
         System.out.println();
@@ -308,7 +294,7 @@ public class HanlpTest {
      * @Description：中国人姓名识别
      * @Date：
      */
-    private static void nameRecognize(){
+    private static void nameRecognize() {
         //目前分词器基本上都默认开启了中国人名识别，比如HanLP.segment()接口中使用的分词器等等，用户不必手动开启；上面的代码只是为了强调。
         String[] testCase = new String[]{
                 "签约仪式前，秦光荣、李纪恒、仇和等一同会见了参加签约的企业家。",
@@ -320,8 +306,7 @@ public class HanlpTest {
                 "龚学平等领导,邓颖超生前",
         };
         Segment segment = HanLP.newSegment().enableNameRecognize(true);
-        for (String sentence : testCase)
-        {
+        for (String sentence : testCase) {
             List<Term> termList = segment.seg(sentence);
             System.out.println(termList);
         }
@@ -333,8 +318,7 @@ public class HanlpTest {
                 "世界上最长的姓名是简森·乔伊·亚历山大·比基·卡利斯勒·达夫·埃利奥特·福克斯·伊维鲁莫·马尔尼·梅尔斯·帕特森·汤普森·华莱士·普雷斯顿。",
         };
         Segment segment1 = HanLP.newSegment().enableTranslatedNameRecognize(true);
-        for (String sentence : testCase1)
-        {
+        for (String sentence : testCase1) {
             List<Term> termList = segment1.seg(sentence);
             System.out.println(termList);
         }
@@ -348,8 +332,7 @@ public class HanlpTest {
                 "蓝翔给宁夏固原市彭阳县红河镇黑牛沟村捐赠了挖掘机",
         };
         Segment areasegment = HanLP.newSegment().enablePlaceRecognize(true);
-        for (String sentence : areaCase)
-        {
+        for (String sentence : areaCase) {
             List<Term> termList = areasegment.seg(sentence);
             System.out.println(termList);
         }
@@ -364,15 +347,14 @@ public class HanlpTest {
                 "我经常在台川喜宴餐厅吃饭，",
                 "偶尔去地中海影城看电影。",
         };
-        Segment jgsegment =  HanLP.newSegment().enableOrganizationRecognize(true);
-        for (String sentence : jgCase)
-        {
+        Segment jgsegment = HanLP.newSegment().enableOrganizationRecognize(true);
+        for (String sentence : jgCase) {
             List<Term> termList = jgsegment.seg(sentence);
             System.out.println(termList);
         }
     }
 
-    private static void analysebysyntax(){
+    private static void analysebysyntax() {
         System.out.println(HanLP.parseDependency("把市场经济奉行的等价交换原则引入党的生活和国家机关政务活动中"));
         //System.out.println(CRFDependencyParser.compute("把市场经济奉行的等价交换原则引入党的生活和国家机关政务活动中"));
     }

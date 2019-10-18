@@ -7,7 +7,6 @@ package com.compare;
  */
 public interface Compare {
     /**
-     *
      * @param lhs
      * @param rhs
      * @return
@@ -15,7 +14,6 @@ public interface Compare {
     boolean lessThan(Object lhs, Object rhs);
 
     /**
-     *
      * @param lhs
      * @param rhs
      * @return

@@ -14,6 +14,7 @@ public class Test {
         System.out.println(hash(AA));
 
     }
+
     static int hash(Object key) {
         int h;
         return (key == null) ? 0 : (h = key.hashCode()) ^ (h >>> 16);

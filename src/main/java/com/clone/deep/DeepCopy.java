@@ -10,7 +10,7 @@ public class DeepCopy {
         OceanReading reading = new OceanReading(33.9, 100.5);
         // Now clone it:
         System.out.println(reading);
-        OceanReading r = (OceanReading)reading.clone();
+        OceanReading r = (OceanReading) reading.clone();
         r.getDepth().setDepth(11);
         r.getTemperature().setTemperature(111);
         System.out.println(reading);

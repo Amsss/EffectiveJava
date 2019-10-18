@@ -15,13 +15,13 @@ import java.util.function.Function;
  */
 public class HashMap<K, V> extends AbstractMap<K, V> {
 
-    static class Node<K,V> implements Map.Entry<K,V> {
+    static class Node<K, V> implements Map.Entry<K, V> {
         final int hash;
         final K key;
         V value;
-        Node<K,V> next;
+        Node<K, V> next;
 
-        Node(int hash, K key, V value, Node<K,V> next) {
+        Node(int hash, K key, V value, Node<K, V> next) {
             this.hash = hash;
             this.key = key;
             this.value = value;
@@ -51,7 +51,9 @@ public class HashMap<K, V> extends AbstractMap<K, V> {
         }
 
         @Override
-        public final String toString() { return key + "=" + value; }
+        public final String toString() {
+            return key + "=" + value;
+        }
 
         @Override
         public final boolean equals(Object o) {
@@ -59,7 +61,7 @@ public class HashMap<K, V> extends AbstractMap<K, V> {
                 return true;
             }
             if (o instanceof Map.Entry) {
-                Map.Entry<?,?> e = (Map.Entry<?,?>)o;
+                Map.Entry<?, ?> e = (Map.Entry<?, ?>) o;
                 return Objects.equals(key, e.getKey()) &&
                         Objects.equals(value, e.getValue());
             }

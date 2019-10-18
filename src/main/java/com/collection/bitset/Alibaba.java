@@ -1,6 +1,9 @@
 package com.collection.bitset;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.BitSet;
+import java.util.List;
+import java.util.Random;
 
 /**
  * @description: BitSet使用

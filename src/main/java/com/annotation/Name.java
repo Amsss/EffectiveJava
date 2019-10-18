@@ -13,13 +13,11 @@ import java.lang.annotation.*;
 @Documented
 public @interface Name {
     /**
-     *
      * @return
      */
     String originate();
 
     /**
-     *
      * @return
      */
     String community();

@@ -10,7 +10,7 @@ import java.util.*;
 public class Test {
 
     public static void main(String[] args) {
-        Map<String,Object> map = new HashMap<>(16);
+        Map<String, Object> map = new HashMap<>(16);
         Set<String> list1 = map.keySet();
         Set<String> map1 = new HashSet<>(16);
         Set<String> set = new HashSet<>();
@@ -30,7 +30,7 @@ public class Test {
         list.add("a");
         list.add("b");
         list.add("c");
-        list.add(0,"222");
+        list.add(0, "222");
         for (final String b : list) {
             //循环过程中禁止修改 例如： b = "11";
             System.out.println(b);

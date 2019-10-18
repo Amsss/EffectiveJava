@@ -3,8 +3,7 @@ package com.concurrent.lock.syn;
 import java.util.concurrent.locks.StampedLock;
 
 /**
- * @description:
- * synchronized是在JVM层面上实现的，不但可以通过一些监控工具监控synchronized的锁定，
+ * @description: synchronized是在JVM层面上实现的，不但可以通过一些监控工具监控synchronized的锁定，
  * 而且在代码执行时出现异常，JVM会自动释放锁定；
  * ReentrantLock、ReentrantReadWriteLock,、StampedLock都是对象层面的锁定，
  * 要保证锁定一定会被释放，就必须将unLock()放到finally{}中；

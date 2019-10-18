@@ -888,8 +888,8 @@ public class BytesUtil {
         return new byte[]{
                 (byte) (paramInt),
                 (byte) (paramInt >> 8),
-                (byte) (paramInt >> 16 ),
-                (byte) (paramInt >> 24 )};
+                (byte) (paramInt >> 16),
+                (byte) (paramInt >> 24)};
     }
 
     /**
@@ -902,21 +902,21 @@ public class BytesUtil {
      * double：双精度浮点型，用于存储带有小数点的数字，在内存中占64位，即8个字节，默认值0
      * char：字符型，用于存储单个字符，占16位，即2个字节，取值范围0~65535，默认值为空 Unicode字符由16位组成，因此，有(65535)个不同的字符可用
      * boolean：布尔类型，占1个字节，用于判断真或假（仅有两个值，即true、false），默认值false
-     *
+     * <p>
      * Java数据类型在内存中的存储
      * 1）基本数据类型的存储原理：所有的简单数据类型不存在“引用”的概念，基本数据类型都是直接存储在内存中的内存栈上的，数据本身的值就是存储在栈空间里面，而Java语言里面八种数据类型是这种存储模型；
      * 2）引用类型的存储原理:引用类型继承于Object类（也是引用类型）都是按照Java里面存储对象的内存模型来进行数据存储的，使用Java内存堆和内存栈来进行这种类型的数据存储，简单地讲，“引用”是存储在有序的内存栈上的，而对象本身的值存储在内存堆上的；
-     *
-     *
+     * <p>
+     * <p>
      * 十进制定点常量：如123、-456、0。
      * 八进制定点常量：以0前导，形式为0dd...d。如0123表示十进制数83，-011表示十进制数-9。
      * 十六进制定点常量：以0x或0X开头，如0x123表示十进制数291，-0X12表示十进制数-18。
-     *
+     * <p>
      * Java变量命名规则：
      * 1：必须以字母、下划线“_”、或“$”符号开头
      * 2：可以包括数字、区分大小写
      * 3：不能使用Java语言的关键字，例如int、class、public等
-
+     * <p>
      * Java中的六种运算符：
      * ·   算术运算符
      * ·   赋值运算符
@@ -924,7 +924,7 @@ public class BytesUtil {
      * ·   逻辑运算符
      * ·   位运算符
      * ·    三元运算符
-
+     * <p>
      * 算术运算符：
      * +：加法运算，求操作数的和
      * -：减法运算，求操作数的差
@@ -933,7 +933,7 @@ public class BytesUtil {
      * %：求余运算，求操作数相除的余数
      * ++：自增，操作数自加1
      * --：自减，操作数自减1
-
+     * <p>
      * 赋值运算符：
      * =：将右边的值赋给左边，例：int a = 1;
      * +=：左右两边的和相加赋给左边，例：int a = 1; a+=2;结果a的值为3
@@ -941,7 +941,7 @@ public class BytesUtil {
      * *=：两边数值相乘的值赋给左边，例：int a = 2;a*=2;结果a的值为4
      * /=：左边除以右边的值赋给左边，例：int a = 6;a/=2;结果a的值为3
      * %=：左边除以右边的余数赋给左边，例：int a =7;a%=2;结果a的值为1
-
+     * <p>
      * 关系运算符
      * >：大于，例：int a = 1;int b = 2;System.out.print(a > b);其结果为false
      * <：小于,例：int a = 1;int b = 2;System.out.print(a < b);其结果为true
@@ -950,18 +950,18 @@ public class BytesUtil {
      * ==：等于,例：int a = 1;int b = 2;System.out.print(a == b);其结果为false
      * !=：不等于,例：int a = 1;int b = 2;System.out.print(a != b);其结果为true
      * 其结果都是boolean类型，即要么是true要么是false
-     *
+     * <p>
      * 逻辑运算符
      * &&：与、并且(短路)，   两个条件同时为真时，结果为真
      * ||：或、或者(短路)，   两个条件有一个为真时，结果即为真
      * !：非，(!+条件)  条件为真时，结果为假
-     *
+     * <p>
      * Java中的数据类型转换
      * 1：自动数据类型转换（放大转换）
      * 满足自动数据类型转换条件：
      * 1）两种类型要兼容：如数值类型（整型和浮点型）
      * 2）目标类型大于源类型：例如int型数据可以自动转换为double类型
-     *
+     * <p>
      * 2：强制数据类型转换（缩小转换）
      * 在变量前加上括号，在括号中指定要强制转换的类型
      * 例：double a = 40.9;
@@ -1004,7 +1004,7 @@ public class BytesUtil {
         System.out.println(b);*/
         boolean a = true;
         boolean b2 = false;
-        while (a = b2){
+        while (a = b2) {
             System.out.println("111");
         }
         int i1 = 200;
@@ -1075,12 +1075,13 @@ public class BytesUtil {
         pBinLong("l >>> 5", l >>> 5);
         pBinLong("(~l) >>> 5", (~l) >>> 5);
     }
+
     static void pBinInt(String s, int i) {
         System.out.println(
                 s + ", int: " + i + ", binary: ");
         System.out.print("   ");
-        for(int j = 31; j >=0; j--) {
-            if(((1 << j) &  i) != 0) {
+        for (int j = 31; j >= 0; j--) {
+            if (((1 << j) & i) != 0) {
                 System.out.print("1");
             } else {
                 System.out.print("0");
@@ -1088,12 +1089,13 @@ public class BytesUtil {
         }
         System.out.println();
     }
+
     static void pBinLong(String s, long l) {
         System.out.println(
                 s + ", long: " + l + ", binary: ");
         System.out.print("   ");
-        for(int i = 63; i >=0; i--) {
-            if(((1L << i) & l) != 0) {
+        for (int i = 63; i >= 0; i--) {
+            if (((1L << i) & l) != 0) {
                 System.out.print("1");
             } else {
                 System.out.print("0");

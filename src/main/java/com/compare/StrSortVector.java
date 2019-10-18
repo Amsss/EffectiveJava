@@ -63,7 +63,7 @@ public class StrSortVector {
         sv.addElement("D");
         sv.addElement("a");
         Enumeration e = sv.elements();
-        while(e.hasMoreElements()) {
+        while (e.hasMoreElements()) {
             System.out.println(e.nextElement());
         }
     }

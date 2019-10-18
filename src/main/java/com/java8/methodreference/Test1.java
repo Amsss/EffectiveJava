@@ -30,7 +30,7 @@ public class Test1 {
         System.out.println(ss);
     }
 
-    private String print(String a){
+    private String print(String a) {
         System.out.println(a);
         return a;
     }

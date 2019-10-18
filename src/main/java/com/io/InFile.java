@@ -14,8 +14,9 @@ public class InFile extends DataInputStream {
                 new BufferedInputStream(
                         new FileInputStream(filename)));
     }
+
     public InFile(File file)
-        throws FileNotFoundException {
+            throws FileNotFoundException {
         this(file.getPath());
     }
 }

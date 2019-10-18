@@ -13,7 +13,7 @@ import java.util.List;
 public class Test {
     public static void main(String[] args) {
         List<String> AA = new ArrayList<>(16);
-        String [] bb = new String[]{"1","2","C","B","A"};
+        String[] bb = new String[]{"1", "2", "C", "B", "A"};
         AA.add("B");
         AA.add("C");
         AA.add("A");

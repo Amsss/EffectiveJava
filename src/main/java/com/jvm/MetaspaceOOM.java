@@ -7,8 +7,7 @@ import net.sf.cglib.proxy.MethodProxy;
 import java.lang.reflect.Method;
 
 /**
- * @description:
- * java8中metaspace总结如下：
+ * @description: java8中metaspace总结如下：
  * PermGen 空间的状况
  * 这部分内存空间将全部移除。
  * JVM的参数：PermSize 和 MaxPermSize 会被忽略并给出警告（如果在启用时设置了这两个参数）。

@@ -17,7 +17,7 @@ public class GuavaMultisetTest {
         Multiset<String> multiset = HashMultiset.create();
         multiset.add("a");
         multiset.add("b");
-        multiset.add("b",10);
+        multiset.add("b", 10);
         multiset.add("c");
         multiset.add("d");
         multiset.add("a");

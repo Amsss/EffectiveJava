@@ -65,10 +65,10 @@ public class ClassLoaderTest {
         // 设置该线程的上下文ClassLoader
         Thread.currentThread().setContextClassLoader(classLoader);
         // 使用loadClass方法加载class,这个class是在urls参数指定的classpath下边
-        Class clazz=classLoader.loadClass("com.jvm.classloader.ClassWillBeLoaded");
+        Class clazz = classLoader.loadClass("com.jvm.classloader.ClassWillBeLoaded");
         // 然后我们就可以用反射做些事情了
         Method taskMethod = clazz.getMethod("doTask", String.class, String.class);
-        Object returnValue = taskMethod.invoke(clazz.newInstance(),"serialization","success");
-        System.out.println((String)returnValue);
+        Object returnValue = taskMethod.invoke(clazz.newInstance(), "serialization", "success");
+        System.out.println((String) returnValue);
     }
 }

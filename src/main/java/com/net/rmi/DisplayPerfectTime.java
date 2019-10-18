@@ -1,7 +1,6 @@
 package com.net.rmi;
 
 import java.rmi.Naming;
-import java.rmi.RMISecurityManager;
 
 /**
  * @description:

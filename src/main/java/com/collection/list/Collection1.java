@@ -10,11 +10,12 @@ import java.util.Collection;
 public class Collection1 {
     public static Collection
     fill(Collection c, int start, int size) {
-        for(int i = start; i < start + size; i++) {
+        for (int i = start; i < start + size; i++) {
             c.add(Integer.toString(i));
         }
         return c;
     }
+
     // Default to a "start" of 0:
     public static Collection
     fill(Collection c, int size) {

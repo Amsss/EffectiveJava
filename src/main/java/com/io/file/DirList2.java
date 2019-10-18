@@ -14,6 +14,7 @@ public class DirList2 {
         // Creation of anonymous inner class:
         return new FilenameFilter() {
             String fn = afn;
+
             @Override
             public boolean accept(File dir, String n) {
                 // Strip path information:
@@ -22,19 +23,20 @@ public class DirList2 {
             }
         }; // End of anonymous inner class
     }
+
     public static void main(String[] args) {
         try {
             File path = new File(".");
             String[] list;
-            if(args.length == 0) {
+            if (args.length == 0) {
                 list = path.list(filter("."));
             } else {
                 list = path.list(filter(args[0]));
             }
-            for(int i = 0; i < list.length; i++) {
+            for (int i = 0; i < list.length; i++) {
                 System.out.println(list[i]);
             }
-        } catch(Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

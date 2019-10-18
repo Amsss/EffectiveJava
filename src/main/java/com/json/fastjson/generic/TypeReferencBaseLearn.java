@@ -18,7 +18,8 @@ import java.util.Map;
  */
 public class TypeReferencBaseLearn {
 
-    public static class IntMap extends HashMap<String, Integer> {}
+    public static class IntMap extends HashMap<String, Integer> {
+    }
 
     void test1() {
         IntMap intMap = new IntMap();
@@ -26,7 +27,7 @@ public class TypeReferencBaseLearn {
         System.out.println("getGenericSuperclass:" + intMap.getClass().getGenericSuperclass());
         Type type = intMap.getClass().getGenericSuperclass();
         if (type instanceof ParameterizedType) {
-            ParameterizedType p = (ParameterizedType)type;
+            ParameterizedType p = (ParameterizedType) type;
             for (Type t : p.getActualTypeArguments()) {
                 System.out.println(t);
             }
@@ -39,7 +40,7 @@ public class TypeReferencBaseLearn {
         System.out.println("getGenericSuperclass:" + intMap.getClass().getGenericSuperclass());
         Type type = intMap.getClass().getGenericSuperclass();
         if (type instanceof ParameterizedType) {
-            ParameterizedType p = (ParameterizedType)type;
+            ParameterizedType p = (ParameterizedType) type;
             for (Type t : p.getActualTypeArguments()) {
                 System.out.println(t);
             }
@@ -47,12 +48,13 @@ public class TypeReferencBaseLearn {
     }
 
     void test3() {
-        Map<String, Integer> intMap = new HashMap<String, Integer>(16){};
+        Map<String, Integer> intMap = new HashMap<String, Integer>(16) {
+        };
         System.out.println("getSuperclass:" + intMap.getClass().getSuperclass());
         System.out.println("getGenericSuperclass:" + intMap.getClass().getGenericSuperclass());
         Type type = intMap.getClass().getGenericSuperclass();
         if (type instanceof ParameterizedType) {
-            ParameterizedType p = (ParameterizedType)type;
+            ParameterizedType p = (ParameterizedType) type;
             for (Type t : p.getActualTypeArguments()) {
                 System.out.println(t);
             }
@@ -60,11 +62,13 @@ public class TypeReferencBaseLearn {
     }
 
     public static <T> Response<T> parseToMap(String json, Class<T> type) {
-        return JSON.parseObject(json, new TypeReference<Response<T>>(type) {});
+        return JSON.parseObject(json, new TypeReference<Response<T>>(type) {
+        });
     }
 
     public static <K, V> Map<K, V> parseToMap(String json, Class<K> keyType, Class<V> valueType) {
-        return JSON.parseObject(json, new TypeReference<Map<K, V>>(keyType, valueType) {});
+        return JSON.parseObject(json, new TypeReference<Map<K, V>>(keyType, valueType) {
+        });
     }
 
     public static void main(String[] args) {
@@ -87,7 +91,7 @@ public class TypeReferencBaseLearn {
         JSONObject jsonObj = new JSONObject();
         jsonObj.put("a", list);
         System.out.println(jsonObj);
-        new Runnable(){
+        new Runnable() {
 
 
             @Override
@@ -95,11 +99,12 @@ public class TypeReferencBaseLearn {
 
             }
         };
-        new Thread(){};
+        new Thread() {
+        };
 
 
-
-        List<String> list2 = jsonObj.getObject("a", new TypeReference<List<Integer>>(){});
+        List<String> list2 = jsonObj.getObject("a", new TypeReference<List<Integer>>() {
+        });
         System.out.println(list2);
     }
 }

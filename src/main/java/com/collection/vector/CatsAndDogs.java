@@ -13,13 +13,13 @@ public class CatsAndDogs {
         //TODO
         Vector cats = new Vector();
         Iterator iterator = cats.iterator();
-        for(int i = 0; i < 7; i++) {
+        for (int i = 0; i < 7; i++) {
             cats.addElement(new Cat(i));
         }
         // Not a problem to add a dog to cats:
         cats.addElement(new Dog(7));
-        for(int i = 0; i < cats.size(); i++) {
-            ((Cat)cats.elementAt(i)).print();
+        for (int i = 0; i < cats.size(); i++) {
+            ((Cat) cats.elementAt(i)).print();
         }
         // Dog is detected only at run-time
     }

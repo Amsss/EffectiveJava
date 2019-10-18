@@ -29,6 +29,7 @@ public class BinTree {
         this.data = data;
         left = right = null;
     }
+
     // 构造有值结点
     public BinTree(Object data, BinTree left, BinTree right) {
         this.data = data;

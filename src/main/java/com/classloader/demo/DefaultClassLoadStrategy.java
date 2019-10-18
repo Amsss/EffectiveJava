@@ -1,7 +1,7 @@
 package com.classloader.demo;
 
 /**
- * @description: 
+ * @description:
  * @author: zhuzz
  * @date: 2019/1/3 16:00
  */
