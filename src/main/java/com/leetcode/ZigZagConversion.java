@@ -36,7 +36,7 @@ public class ZigZagConversion {
 /*        for () {
 
         }*/
-                return result.toString();
+        return result.toString();
     }
 
     public static void main(String[] args) {

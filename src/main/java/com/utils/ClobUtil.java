@@ -1,6 +1,5 @@
 package com.utils;
 
-import java.io.IOException;
 import java.io.Reader;
 import java.io.StringReader;
 import java.sql.Connection;
@@ -13,7 +12,7 @@ import java.sql.SQLException;
  * @author: zhuzz
  * @date: 2019-07-30 17:17
  */
-public class ClobTest {
+public class ClobUtil {
     static String url = "jdbc:oracle:thin:@10.12.10.18:1521:orcl";
     static String user = "cwbe1_9999";
     static String pwd = "or777";

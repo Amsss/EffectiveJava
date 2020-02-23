@@ -1,8 +1,8 @@
 package com.asynccallback;
 
 /**
- * @description: 回调接口
  * @author zhuzz
+ * @description: 回调接口
  * @date: 2017-11-29 上午9:40:42
  */
 public interface CallBack {

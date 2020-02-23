@@ -12,10 +12,10 @@ import java.util.Comparator;
  * @date: 2019-07-04 23:57
  */
 public class CreatingStreams {
-    public static void main (String[] args){
-        Comparator cmp=new ComparatorFactory().makeComparator();
-        int i=10;
-        int j =-5;
+    public static void main(String[] args) {
+        Comparator cmp = new ComparatorFactory().makeComparator();
+        int i = 10;
+        int j = -5;
         System.out.println(cmp.compare(i, j));
         try {
             //写入字节流
@@ -28,7 +28,7 @@ public class CreatingStreams {
             ByteArrayInputStream ios = new ByteArrayInputStream(out.toByteArray());
             ObjectInputStream ois = new ObjectInputStream(ios);
             //返回生成的新对象
-            cmp = (Comparator)ois.readObject();
+            cmp = (Comparator) ois.readObject();
             ois.close();
             System.out.println("b");
         } catch (Exception e) {

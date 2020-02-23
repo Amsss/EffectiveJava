@@ -1,11 +1,12 @@
 package com.utils;
 
 import java.text.DecimalFormat;
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
- * @description: Map工具类
  * @author zhuzz
+ * @description: Map工具类
  * @date: 2017-10-27 上午10:31:04
  */
 public class HashMapUtil<K, V> extends HashMap<K, V> {
@@ -31,7 +32,7 @@ public class HashMapUtil<K, V> extends HashMap<K, V> {
                 put("11", "22");
             }
         };
-        Double b  = Double.valueOf(10)/3;
+        Double b = Double.valueOf(10) / 3;
         System.out.println(b);
         Map<String, Object> map1 = new HashMap<>(16);
         map1.put("11", "222");

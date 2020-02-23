@@ -6,5 +6,7 @@ package com.classloading.constructor;
  * @date: 2019-04-25 10:45
  */
 class Lunch extends Meal {
-    Lunch() { System.out.println("Lunch()");}
+    Lunch() {
+        System.out.println("Lunch()");
+    }
 }

@@ -10,6 +10,7 @@ abstract class Glyph {
      *
      */
     abstract void draw();
+
     Glyph() {
         System.out.println("Glyph() before draw()");
         draw();

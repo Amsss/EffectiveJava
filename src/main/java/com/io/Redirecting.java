@@ -24,13 +24,13 @@ public class Redirecting {
             System.setErr(out);
             BufferedReader br =
                     new BufferedReader(
-            new InputStreamReader(System.in));
+                            new InputStreamReader(System.in));
             String s;
-            while((s = br.readLine()) != null) {
+            while ((s = br.readLine()) != null) {
                 System.out.println(s);
             }
             out.close(); // Remember this!
-        } catch(IOException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }

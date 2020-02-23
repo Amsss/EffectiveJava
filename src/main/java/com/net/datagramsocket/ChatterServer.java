@@ -16,11 +16,12 @@ public class ChatterServer {
     private DatagramPacket dp = new DatagramPacket(buf, buf.length);
     // Can listen & send on the same socket:
     private DatagramSocket socket;
+
     public ChatterServer() {
         try {
             socket = new DatagramSocket(INPORT);
             System.out.println("Server started");
-            while(true) {
+            while (true) {
                 // Block until a datagram appears:
                 socket.receive(dp);
                 String rcvd = Dgram.toString(dp) +
@@ -36,14 +37,15 @@ public class ChatterServer {
                                 dp.getAddress(), dp.getPort());
                 socket.send(echo);
             }
-        } catch(SocketException e) {
+        } catch (SocketException e) {
             System.err.println("Can't open socket");
             System.exit(1);
-        } catch(IOException e) {
+        } catch (IOException e) {
             System.err.println("Communication error");
             e.printStackTrace();
         }
     }
+
     public static void main(String[] args) {
         new ChatterServer();
     }

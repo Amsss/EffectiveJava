@@ -6,9 +6,11 @@ package com.jvm.dispatch;
  * @date: 2018-06-19 10:45
  */
 public class Dispatch {
-    static class QQ {}
+    static class QQ {
+    }
 
-    static class _360 {}
+    static class _360 {
+    }
 
     public static class Father {
         public void hardChoice(QQ arg) {
@@ -37,4 +39,4 @@ public class Dispatch {
         father.hardChoice(new _360());
         son.hardChoice(new QQ());
     }
- }
+}

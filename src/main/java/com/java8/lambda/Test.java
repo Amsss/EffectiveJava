@@ -26,8 +26,8 @@ public class Test {
         List<String> languages = Arrays.asList("Scala", "C++", "Java", "Java", "Haskell", "Lisp");
         List<String> zz = new ArrayList<>(languages);
         zz.add(null);
-        Map<String,Object> map = new HashMap<>(16);
-        map.putIfAbsent("aaa","22");
+        Map<String, Object> map = new HashMap<>(16);
+        map.putIfAbsent("aaa", "22");
         System.out.println(map);
         String aa = "";
         zz.removeIf(s -> s == null || s.startsWith("J"));

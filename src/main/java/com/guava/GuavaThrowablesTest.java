@@ -10,26 +10,26 @@ import java.io.IOException;
  * @date: 2018-09-28 13:58
  */
 public class GuavaThrowablesTest {
-    public static void main(String args[]){
+    public static void main(String args[]) {
         GuavaThrowablesTest tester = new GuavaThrowablesTest();
         try {
             tester.showcaseThrowables();
         } catch (InvalidInputException e) {
             //get the root cause
             System.out.println(Throwables.getRootCause(e));
-        }catch (Exception e) {
+        } catch (Exception e) {
             //get the stack trace in string format
             System.out.println(Throwables.getStackTraceAsString(e));
         }
 
         try {
             tester.showcaseThrowables1();
-        }catch (Exception e) {
+        } catch (Exception e) {
             System.out.println(Throwables.getStackTraceAsString(e));
         }
     }
 
-    public void showcaseThrowables() throws InvalidInputException{
+    public void showcaseThrowables() throws InvalidInputException {
         try {
             sqrt(-3.0);
         } catch (Throwable e) {
@@ -39,9 +39,9 @@ public class GuavaThrowablesTest {
         }
     }
 
-    public void showcaseThrowables1(){
+    public void showcaseThrowables1() {
         try {
-            int[] data = {1,2,3};
+            int[] data = {1, 2, 3};
             getValue(data, 4);
         } catch (Throwable e) {
             Throwables.propagateIfInstanceOf(e, IndexOutOfBoundsException.class);
@@ -49,8 +49,8 @@ public class GuavaThrowablesTest {
         }
     }
 
-    public double sqrt(double input) throws InvalidInputException{
-        if(input < 0) {
+    public double sqrt(double input) throws InvalidInputException {
+        if (input < 0) {
             throw new InvalidInputException();
         }
         return Math.sqrt(input);

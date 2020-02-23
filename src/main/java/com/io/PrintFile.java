@@ -14,6 +14,7 @@ public class PrintFile extends PrintStream {
                 new BufferedOutputStream(
                         new FileOutputStream(filename)));
     }
+
     public PrintFile(File file)
             throws IOException {
         this(file.getPath());

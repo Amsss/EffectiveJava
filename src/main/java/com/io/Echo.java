@@ -16,11 +16,11 @@ public class Echo {
                         new BufferedInputStream(System.in));
         String s;
         try {
-            while((s = in.readLine()).length() != 0) {
+            while ((s = in.readLine()).length() != 0) {
                 System.out.println(s);
             }
             // An empty line terminates the program
-        } catch(IOException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }

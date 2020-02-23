@@ -7,7 +7,6 @@ package com.designpattern.interpreter;
  */
 public interface Expression {
     /**
-     *
      * @param context
      * @return
      */

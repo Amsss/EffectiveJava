@@ -17,22 +17,22 @@ import java.util.Map;
 public class DownLoadHtml {
 
     public static void main(String[] args) {
-        String pageURL = "https://m.8wenku.com/chapter/view?id=1690&chapter_no=20";
+        String pageUrl = "https://m.8wenku.com/chapter/view?id=1690&chapter_no=20";
         String filePath = "D:/3.html";
         try {
-            downHTML(pageURL, filePath);
+            downHtml(pageUrl, filePath);
         } catch (IOException e) {
             e.printStackTrace();
         }
         System.out.println("下载HTML页面完成");
     }
 
-    private static void downHTML(String pageURL, String filePath) throws IOException {
+    private static void downHtml(String pageUrl, String filePath) throws IOException {
         FileWriter fileWriter = null;
         BufferedReader bufferedReader = null;
         try {
             fileWriter = new FileWriter(filePath);
-            URL url = new URL(pageURL);
+            URL url = new URL(pageUrl);
             //打开连接
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             //设置请求属性

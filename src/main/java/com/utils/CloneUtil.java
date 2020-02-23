@@ -13,7 +13,8 @@ import java.util.Map;
  */
 public class CloneUtil {
 
-    private CloneUtil() {}
+    private CloneUtil() {
+    }
 
     public static <T> List<T> deepCopy(List<T> src) throws IOException, ClassNotFoundException {
         ByteArrayOutputStream byteOut = new ByteArrayOutputStream();
@@ -27,13 +28,13 @@ public class CloneUtil {
     }
 
     public static void main(String[] args) throws IOException, ClassNotFoundException {
-        List<Map<String,Object>> map = new ArrayList<>(16);
+        List<Map<String, Object>> map = new ArrayList<>(16);
         Map<String, Object> ma1 = new HashMap<>(16);
-        ma1.put("111","22");
+        ma1.put("111", "22");
         map.add(ma1);
-        List<Map<String,Object>> map2 = deepCopy(map);
-        Map<String,Object> ma2 = map2.get(0);
-        ma2.put("111","222");
+        List<Map<String, Object>> map2 = deepCopy(map);
+        Map<String, Object> ma2 = map2.get(0);
+        ma2.put("111", "222");
         map2.clear();
     }
 }

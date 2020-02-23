@@ -10,5 +10,6 @@ public class Gum {
         System.out.println("Loading Gum");
         x = 2;
     }
+
     static Integer x = 3;
 }

@@ -15,6 +15,7 @@ import java.util.Properties;
 public class PropertiesUtil {
     private static String propertiesUrl = "../hadoop.properties";
     private static Properties props = new Properties();
+
     static {
         try {
 

@@ -65,7 +65,7 @@ public class Dish {
                 // 将流转换为列表
                 .collect(toList());
         int calories = menu.stream()
-                .filter(a->a.calories>700)
+                .filter(a -> a.calories > 700)
                 .mapToInt(Dish::getCalories)
                 .boxed()
                 .reduce(0, Integer::sum);

@@ -22,7 +22,7 @@ public class CompletableFutureDemo {
 
     public void test1() throws ExecutionException, InterruptedException {
         CompletableFuture<String> completableFuture = new CompletableFuture<>();
-        singleThreadPool.execute(()->{
+        singleThreadPool.execute(() -> {
             // 模拟执行耗时任务
             System.out.println("task doing...");
             try {

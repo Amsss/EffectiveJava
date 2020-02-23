@@ -12,15 +12,15 @@ public class DirList {
         try {
             File path = new File(".");
             String[] list;
-            if(args.length == 0) {
+            if (args.length == 0) {
                 list = path.list(new DirFilter("src"));
             } else {
                 list = path.list(new DirFilter(args[0]));
             }
-            for(int i = 0; i < list.length; i++) {
+            for (int i = 0; i < list.length; i++) {
                 System.out.println(list[i]);
             }
-        } catch(Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

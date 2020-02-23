@@ -13,7 +13,7 @@ public class DirList3 {
         try {
             File path = new File(".");
             String[] list;
-            if(args.length == 0) {
+            if (args.length == 0) {
                 list = path.list();
             } else {
                 list = path.list(
@@ -26,10 +26,10 @@ public class DirList3 {
                             }
                         });
             }
-            for(int i = 0; i < list.length; i++) {
+            for (int i = 0; i < list.length; i++) {
                 System.out.println(list[i]);
             }
-        } catch(Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

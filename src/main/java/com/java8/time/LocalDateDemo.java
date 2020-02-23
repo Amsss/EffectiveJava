@@ -1,7 +1,5 @@
 package com.java8.time;
 
-import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
-
 import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoField;
@@ -24,16 +22,16 @@ public class LocalDateDemo {
 
         MonthDay birthday = MonthDay.of(dateOfBirth.getMonth(), dateOfBirth.getDayOfMonth());
         MonthDay currentMonthDay = MonthDay.from(LocalDate.now());
-        if(currentMonthDay.equals(birthday)){
+        if (currentMonthDay.equals(birthday)) {
             System.out.println("Many Many happy returns of the day !!");
-        }else{
+        } else {
             System.out.println("Sorry, today is not your birthday");
         }
 
         LocalDate java8Release = LocalDate.of(2014, Month.MARCH, 14);
         Period periodToNextJavaRelease =
                 Period.between(dateOfBirth, java8Release);
-        System.out.println("Months left between today and Java 8 release : " + periodToNextJavaRelease.getMonths() );
+        System.out.println("Months left between today and Java 8 release : " + periodToNextJavaRelease.getMonths());
         periodToNextJavaRelease.getDays();
 
         String dayAfterTommorrow = "20140116";
@@ -106,7 +104,7 @@ public class LocalDateDemo {
         LocalDateTime dt3 = date.atTime(13, 45, 20);
         LocalDateTime dt4 = date.atTime(time);
         LocalDateTime dt5 = time.atDate(date);
-        System.out.println("TimeTest.testLocalDateTimeCombine dt1: " + dt1 + "\td2: " + dt2 + "\tdt3: " + dt3+ "\tdt4: " + dt4 +"\tdt5: " +dt5);
+        System.out.println("TimeTest.testLocalDateTimeCombine dt1: " + dt1 + "\td2: " + dt2 + "\tdt3: " + dt3 + "\tdt4: " + dt4 + "\tdt5: " + dt5);
         LocalDate date1 = dt1.toLocalDate();
         LocalTime time1 = dt1.toLocalTime();
     }

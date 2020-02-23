@@ -12,7 +12,7 @@ import java.util.zip.*;
 public class ZipCompress {
 
     public static void main(String[] args) {
-        String [] fileArray = new String[]{"B.txt","C.txt","D.txt"};
+        String[] fileArray = new String[]{"B.txt", "C.txt", "D.txt"};
         try {
             FileOutputStream f = new FileOutputStream("serialization.zip");
             CheckedOutputStream csum = new CheckedOutputStream(f, new Adler32());
@@ -21,7 +21,7 @@ public class ZipCompress {
             // Can't read the above comment, though
             for (int i = 0; i < fileArray.length; i++) {
                 System.out.println("Writing file " + fileArray[i]);
-                BufferedReader in =new BufferedReader(new FileReader(fileArray[i]));
+                BufferedReader in = new BufferedReader(new FileReader(fileArray[i]));
                 out.putNextEntry(new ZipEntry(fileArray[i]));
                 int c;
                 while ((c = in.read()) !=

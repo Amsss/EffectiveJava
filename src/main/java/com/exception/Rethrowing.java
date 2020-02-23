@@ -11,10 +11,11 @@ public class Rethrowing {
                 "originating the exception in f()");
         throw new Exception("thrown from f()");
     }
+
     public static void g() throws Throwable {
         try {
             f();
-        } catch(Exception e) {
+        } catch (Exception e) {
             System.out.println(
                     "Inside g(), e.printStackTrace()");
             e.printStackTrace();
@@ -23,11 +24,12 @@ public class Rethrowing {
             throw e.fillInStackTrace(); // 18
         }
     }
+
     public static void
     main(String[] args) throws Throwable {
         try {
             g();
-        } catch(Exception e) {
+        } catch (Exception e) {
             System.out.println(
                     "Caught in main, e.printStackTrace()");
             e.printStackTrace();

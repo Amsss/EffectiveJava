@@ -1,13 +1,7 @@
 package com.java8.stream;
 
-import java.io.File;
-import java.io.IOException;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Path;
 import java.util.*;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 /**
  * @description:
@@ -77,14 +71,14 @@ public class Streams {
         // Group tasks by their status
         final Map<Integer, List<Map<String, Object>>> map = list111
                 .stream()
-                .collect(Collectors.groupingBy(map2-> (Integer) map2.get("no")));
-        
-        
+                .collect(Collectors.groupingBy(map2 -> (Integer) map2.get("no")));
+
+
         // Group tasks by their status
         final Map<Status, List<Task>> map1 = tasks
                 .stream()
                 .collect(Collectors.groupingBy(Task::getStatus));
-        
+
         System.out.println(map1);
 
         // Calculate the weight of each tasks (as percent of total points)

@@ -2,9 +2,9 @@ package com.collection.map;
 
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
-import java.util.HashMap;
 import java.util.Set;
 
 /**
@@ -14,15 +14,15 @@ import java.util.Set;
  */
 public class Demo {
     public static void main(String[] args) {
-        Map<String,Object> a = new HashMap<>(16);
-        a.put("1","111");
-        a.put("2","222");
+        Map<String, Object> a = new HashMap<>(16);
+        a.put("1", "111");
+        a.put("2", "222");
         Set<String> XX1 = new HashSet<>(16);
         Set<String> XX = a.keySet();
-        a.put("3","333");
-        a.put("4","444");
-        a.put("5","555");
-        a.put("6","666");
+        a.put("3", "333");
+        a.put("4", "444");
+        a.put("5", "555");
+        a.put("6", "666");
         System.out.println(XX);
         XX.remove("6");
         System.out.println(a);

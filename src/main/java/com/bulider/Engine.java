@@ -9,7 +9,7 @@ public class Engine {
     /**
      * 排量
      */
-	private final String pl;
+    private final String pl;
     /**
      * 最大输出功率
      */
@@ -25,7 +25,7 @@ public class Engine {
         this.rpm = rpm;
     }
 
-    public static Builder custom(){
+    public static Builder custom() {
         return new Builder();
     }
 
@@ -38,7 +38,7 @@ public class Engine {
                 '}';
     }
 
-    public static class Builder{
+    public static class Builder {
         /**
          * 排量
          */
@@ -52,22 +52,22 @@ public class Engine {
          */
         private int rpm;
 
-        public Builder pl(String pl){
+        public Builder pl(String pl) {
             this.pl = pl;
             return this;
         }
 
-        public Builder maxOutputPower(String maxOutputPower){
+        public Builder maxOutputPower(String maxOutputPower) {
             this.maxOutputPower = maxOutputPower;
             return this;
         }
 
-        public Builder rpm(int rpm){
+        public Builder rpm(int rpm) {
             this.rpm = rpm;
             return this;
         }
 
-        public Engine build(){
+        public Engine build() {
             return new Engine(pl, maxOutputPower, rpm);
         }
     }

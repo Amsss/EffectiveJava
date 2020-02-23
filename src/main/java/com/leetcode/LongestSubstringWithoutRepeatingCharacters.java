@@ -20,9 +20,9 @@ public class LongestSubstringWithoutRepeatingCharacters {
         Long start3 = System.nanoTime();
         System.out.println(lengthOfLongestSubstringBest("dvdf"));
         Long start4 = System.nanoTime();
-        System.out.println((start2 - start1)/1000);
-        System.out.println((start3 - start2)/1000);
-        System.out.println((start4 - start3)/1000);
+        System.out.println((start2 - start1) / 1000);
+        System.out.println((start3 - start2) / 1000);
+        System.out.println((start4 - start3) / 1000);
     }
 
     /**

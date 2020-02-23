@@ -7,7 +7,7 @@ import java.io.Serializable;
  * @author: zhuzz
  * @date: 2018-06-19 10:15
  */
-public class Overload extends Father{
+public class Overload extends Father {
     public static void sayHello(Object arg) {
         System.out.println("hello Object");
     }
@@ -30,6 +30,7 @@ public class Overload extends Father{
 
     /**
      * 变长参数的重载优先级是最低的
+     *
      * @param arg
      */
     public static void sayHello(char... arg) {
@@ -43,6 +44,7 @@ public class Overload extends Father{
     /**
      * char -> int -> long -> float -> double
      * (但不会匹配到byte和short类型的重载 因为char到byte或short的转型是不安全的）
+     *
      * @param args
      */
     public static void main(String[] args) {

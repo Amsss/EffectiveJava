@@ -29,7 +29,8 @@ public class TestHarness {
             });
             t.sleep(1);
             t.start();
-        };
+        }
+        ;
         long start1 = System.currentTimeMillis();
         long start = System.nanoTime();
         //startGate.countDown();
@@ -45,7 +46,7 @@ public class TestHarness {
     public static void main(String[] args) {
         long start1 = System.currentTimeMillis();
         long start = System.nanoTime();
-        Map map = new HashMap<>(1024>>16);
+        Map map = new HashMap<>(1024 >> 16);
         //startGate.countDown();
         //endGate.await();
         long end1 = System.currentTimeMillis();

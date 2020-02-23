@@ -29,14 +29,15 @@ public class Parcel4 {
         }
         return new PDestination(s);
     }
-/*    public static String base64Encoded1(byte[] param) {
-        return Base64Util.getEncoder().encodeToString(param);
-    }
 
-    public static String base64Encoded(byte[] param) {
+    /*    public static String base64Encoded1(byte[] param) {
+            return Base64Util.getEncoder().encodeToString(param);
+        }
 
-        return net.iharder.Base64Util.encodeBytes(param);
-    }*/
+        public static String base64Encoded(byte[] param) {
+
+            return net.iharder.Base64Util.encodeBytes(param);
+        }*/
     public static void main(String[] args) {
 /*        String A = "22222222";
         System.out.println(base64Encoded(A.getBytes()));

@@ -58,14 +58,14 @@ public class GuavaTester {
     public static void main(String args[]) {
         GuavaTester guavaTester = new GuavaTester();
 
-        Integer value1 =  null;
-        Integer value2 =  new Integer(10);
+        Integer value1 = null;
+        Integer value2 = new Integer(10);
         //Optional.fromNullable - allows passed parameter to be null.
         Optional<Integer> a = Optional.fromNullable(value1);
         //Optional.of - throws NullPointerException if passed parameter is null
         Optional<Integer> b = Optional.of(value2);
 
-        System.out.println(guavaTester.sum11(a,b));
+        System.out.println(guavaTester.sum11(a, b));
 
 
         Supplier<Integer> ultimateAnswerSupplier = () -> {

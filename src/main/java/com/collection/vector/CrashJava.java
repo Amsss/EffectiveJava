@@ -1,7 +1,5 @@
 package com.collection.vector;
 
-import java.util.Vector;
-
 /**
  * @description:
  * @author: zhuzz
@@ -12,6 +10,7 @@ public class CrashJava {
     public String toString() {
         return "CrashJava address: " + this + "\n";
     }
+
     public static void main(String[] args) {
 
         //Vector v = new Vector();

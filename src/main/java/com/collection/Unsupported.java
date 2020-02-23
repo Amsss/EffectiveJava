@@ -16,7 +16,8 @@ public class Unsupported {
             "six", "seven", "eight", "nine", "ten",
     };
     static List a = Arrays.asList(s);
-    static List a2 = Arrays.asList(new String[] { s[3], s[4], s[5] });
+    static List a2 = Arrays.asList(new String[]{s[3], s[4], s[5]});
+
     public static void main(String[] args) {
         print(a); // Iteration
         System.out.println(
@@ -32,12 +33,12 @@ public class Unsupported {
                         a.indexOf(s[5]));
         // Traverse backwards:
         ListIterator lit = a.listIterator(a.size());
-        while(lit.hasPrevious()) {
+        while (lit.hasPrevious()) {
             System.out.print(lit.previous());
         }
         System.out.println();
         // Set the elements to different values:
-        for(int i = 0; i < a.size(); i++) {
+        for (int i = 0; i < a.size(); i++) {
             a.set(i, "47");
         }
         print(a);

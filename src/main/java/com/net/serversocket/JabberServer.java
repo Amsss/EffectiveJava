@@ -41,7 +41,7 @@ public class JabberServer {
                     System.out.println("Echoing: " + str);
                     out.println(str);
                 }
-            // Always close the two sockets...
+                // Always close the two sockets...
             } finally {
                 System.out.println("closing...");
                 socket.close();

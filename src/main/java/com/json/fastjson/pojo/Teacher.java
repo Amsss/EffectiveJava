@@ -1,6 +1,8 @@
 package com.json.fastjson.pojo;
 
-import lombok.*;
+import lombok.Data;
+import lombok.NonNull;
+import lombok.RequiredArgsConstructor;
 
 import java.util.List;
 

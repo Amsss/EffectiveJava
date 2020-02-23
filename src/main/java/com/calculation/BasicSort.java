@@ -14,6 +14,7 @@ public class BasicSort {
      * 平均：有序序列：O(N^2)
      * 最差：逆序序列：O(N^2)
      * 所以时间复杂度为：O(N^2)
+     *
      * @param number
      */
     private static void selectionSort(int[] number) {
@@ -58,6 +59,7 @@ public class BasicSort {
     /**
      * 冒泡排序
      * 时间复杂度：O(N^2)
+     *
      * @param number
      */
     private static void bubbleSort(int[] number) {

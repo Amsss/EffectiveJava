@@ -9,8 +9,8 @@ import java.net.InetAddress;
  */
 public class WhoAmI {
     public static void main(String[] args)
-         throws Exception {
-        if(args.length != 1) {
+            throws Exception {
+        if (args.length != 1) {
             System.err.println("Usage: WhoAmI MachineName");
             System.exit(1);
         }

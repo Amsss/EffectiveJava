@@ -11,14 +11,16 @@ public class StringSortTest {
     static class StringCompare implements Compare {
         @Override
         public boolean lessThan(Object l, Object r) {
-            return ((String)l).toLowerCase().compareTo(((String)r).toLowerCase()) < 0;
+            return ((String) l).toLowerCase().compareTo(((String) r).toLowerCase()) < 0;
         }
+
         @Override
         public boolean
         lessThanOrEqual(Object l, Object r) {
-            return ((String)l).toLowerCase().compareTo(((String)r).toLowerCase()) <= 0;
+            return ((String) l).toLowerCase().compareTo(((String) r).toLowerCase()) <= 0;
         }
     }
+
     public static void main(String[] args) {
         SortVector sv = new SortVector(new StringCompare());
         sv.addElement("d");
@@ -31,7 +33,7 @@ public class StringSortTest {
         sv.addElement("a");
         sv.sort();
         Enumeration e = sv.elements();
-        while(e.hasMoreElements()) {
+        while (e.hasMoreElements()) {
             System.out.println(e.nextElement());
         }
     }

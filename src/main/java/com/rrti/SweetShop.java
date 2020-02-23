@@ -25,7 +25,7 @@ public class SweetShop {
         } catch (InstantiationException e) {
             e.printStackTrace();
         }
-        System.out.println( "After Class.forName(\"Gum\")");
+        System.out.println("After Class.forName(\"Gum\")");
         new Cookie();
         System.out.println("After creating Cookie");
     }

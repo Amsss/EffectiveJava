@@ -12,10 +12,12 @@ public class Logon implements Serializable {
     private Date date = new Date();
     private String username;
     private transient String password;
+
     Logon(String name, String pwd) {
         username = name;
         password = pwd;
     }
+
     @Override
     public String toString() {
         String pwd =
@@ -25,9 +27,10 @@ public class Logon implements Serializable {
                 "\n date: " + date.toString() +
                 "\n password: " + pwd;
     }
+
     public static void main(String[] args) {
         Logon a = new Logon("Hulk", "myLittlePony");
-        System.out.println( "logon a = " + a);
+        System.out.println("logon a = " + a);
         try {
             ObjectOutputStream o =
                     new ObjectOutputStream(
@@ -38,7 +41,7 @@ public class Logon implements Serializable {
             int seconds = 5;
             long t = System.currentTimeMillis()
                     + seconds * 1000;
-            while(System.currentTimeMillis() < t) {
+            while (System.currentTimeMillis() < t) {
             }
             // Now get them back:
             ObjectInputStream in =
@@ -46,9 +49,9 @@ public class Logon implements Serializable {
                             new FileInputStream("Logon.out"));
             System.out.println(
                     "Recovering object at " + new Date());
-            a = (Logon)in.readObject();
-            System.out.println( "logon a = " + a);
-        } catch(Exception e) {
+            a = (Logon) in.readObject();
+            System.out.println("logon a = " + a);
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

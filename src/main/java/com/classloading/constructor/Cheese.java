@@ -6,5 +6,7 @@ package com.classloading.constructor;
  * @date: 2019-04-25 10:44
  */
 class Cheese {
-    Cheese() { System.out.println("Cheese()"); }
+    Cheese() {
+        System.out.println("Cheese()");
+    }
 }

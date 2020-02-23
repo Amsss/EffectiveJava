@@ -7,7 +7,6 @@ package com.designpattern.visitor;
  */
 public interface Visitor {
     /**
-     *
      * @param sub
      */
     void visit(Subject sub);

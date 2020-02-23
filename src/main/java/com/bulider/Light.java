@@ -9,7 +9,7 @@ public class Light {
     /**
      * 品牌
      */
-	private String brand;
+    private String brand;
     /**
      * 结构
      */
@@ -25,7 +25,7 @@ public class Light {
         this.producingDate = producingDate;
     }
 
-    public static Builder custom(){
+    public static Builder custom() {
 
         return new Builder();
     }
@@ -39,7 +39,7 @@ public class Light {
                 '}';
     }
 
-    public static class Builder{
+    public static class Builder {
         /**
          * 品牌
          */
@@ -53,22 +53,22 @@ public class Light {
          */
         private String producingDate;
 
-        public Builder brand(String brand){
+        public Builder brand(String brand) {
             this.brand = brand;
             return this;
         }
 
-        public Builder structure(String structure){
+        public Builder structure(String structure) {
             this.structure = structure;
             return this;
         }
 
-        public Builder producingDate(String producingDate){
+        public Builder producingDate(String producingDate) {
             this.producingDate = producingDate;
             return this;
         }
 
-        public Light build(){
+        public Light build() {
             return new Light(brand, structure, producingDate);
         }
     }

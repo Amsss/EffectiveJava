@@ -18,7 +18,7 @@ public class Wang implements CallBack {
      *
      * @param li 小李
      */
-    public Wang(Li li) {
+    Wang(Li li) {
         this.li = li;
     }
 
@@ -27,7 +27,7 @@ public class Wang implements CallBack {
      *
      * @param question 就是小王要问的问题,1 + 1 = ?
      */
-    public void askQuestion(final String question) {
+    void askQuestion(final String question) {
         //这里用一个线程就是异步，  
         new Thread(() -> {
             /**
@@ -40,11 +40,10 @@ public class Wang implements CallBack {
         play();
     }
 
-    public void play() {
+    private void play() {
         try {
             TimeUnit.SECONDS.sleep(1);
         } catch (InterruptedException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
         System.out.println("我要逛街去了");

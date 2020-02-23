@@ -11,18 +11,18 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @description: Guava通过接口LoadingCache提供了一个非常强大的基于内存的LoadingCache<K，V>。在缓存中自动加载值，它提供了许多实用的方法，在有缓存需求时非常有用
+ * @description: Guava通过接口LoadingCache提供了一个非常强大的基于内存的LoadingCache<K ， V>。在缓存中自动加载值，它提供了许多实用的方法，在有缓存需求时非常有用
  * @author: zhuzz
  * @date: 2018-09-28 15:40
  */
 public class GuavaLoadingCacheTest {
-    public static void main(String args[]){
+    public static void main(String args[]) {
         //create a cache for employees based on their employee id
         LoadingCache employeeCache =
                 CacheBuilder.newBuilder()
                         .maximumSize(100) // maximum 100 records can be cached
                         .expireAfterAccess(30, TimeUnit.MINUTES) // cache will expire after 30 minutes of access
-                        .build(new CacheLoader(){
+                        .build(new CacheLoader() {
                             @Override
                             public Object load(Object empId) throws Exception {
                                 return getFromDatabase((String) empId);
@@ -52,7 +52,7 @@ public class GuavaLoadingCacheTest {
         }
     }
 
-    private static Employee getFromDatabase(String empId){
+    private static Employee getFromDatabase(String empId) {
         Employee e1 = new Employee("Mahesh", "Finance", "100");
         Employee e2 = new Employee("Rohan", "IT", "103");
         Employee e3 = new Employee("Sohan", "Admin", "110");
@@ -71,26 +71,32 @@ class Employee {
     String dept;
     String emplD;
 
-    public Employee(String name, String dept, String empID){
+    public Employee(String name, String dept, String empID) {
         this.name = name;
         this.dept = dept;
         this.emplD = empID;
     }
+
     public String getName() {
         return name;
     }
+
     public void setName(String name) {
         this.name = name;
     }
+
     public String getDept() {
         return dept;
     }
+
     public void setDept(String dept) {
         this.dept = dept;
     }
+
     public String getEmplD() {
         return emplD;
     }
+
     public void setEmplD(String emplD) {
         this.emplD = emplD;
     }

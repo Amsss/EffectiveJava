@@ -5,7 +5,7 @@ package com.java8.defaultmethod;
  * @author: zhuzz
  * @date: 2019-03-01 9:52
  */
-public class F implements E, D{
+public class F implements E, D {
     @Override
     public void hello() {
         D.super.hello();

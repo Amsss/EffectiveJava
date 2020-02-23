@@ -7,6 +7,12 @@ package com.io;
  */
 public class Counter {
     private int i = 1;
-    int read() { return i; }
-    void increment() { i++; }
+
+    int read() {
+        return i;
+    }
+
+    void increment() {
+        i++;
+    }
 }

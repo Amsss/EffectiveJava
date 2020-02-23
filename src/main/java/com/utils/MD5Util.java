@@ -13,7 +13,7 @@ public class MD5Util {
     /**
      * 利用java原生的摘要实现MD5加密
      *
-     * @param  text 加密后的报文
+     * @param text 加密后的报文
      * @return
      */
     private static String getMD5StrJava(String text) {

@@ -14,20 +14,20 @@ import java.util.Collection;
  */
 public class Annotations {
 
-    @Retention( RetentionPolicy.RUNTIME )
-    @Target( { ElementType.TYPE_USE, ElementType.TYPE_PARAMETER } )
+    @Retention(RetentionPolicy.RUNTIME)
+    @Target({ElementType.TYPE_USE, ElementType.TYPE_PARAMETER})
     public @interface NonEmpty {
     }
 
     public static class Holder<@NonEmpty T> extends @NonEmpty Object {
         public void method() throws @NonEmpty Exception {
-            if (this == null ){
+            if (this == null) {
                 throw new Exception("1");
             }
         }
     }
 
-    @SuppressWarnings( "unused" )
+    @SuppressWarnings("unused")
     public static void main(String[] args) {
         final Holder<String> holder = new @NonEmpty Holder<>();
         @NonEmpty Collection<@NonEmpty String> strings = new ArrayList<>();
